@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B995CC5A16345C5C0015E69D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B995CC5916345C5C0015E69D /* UIKit.framework */; };
+		B995CC5C16345C5C0015E69D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B995CC5B16345C5C0015E69D /* Foundation.framework */; };
+		B995CC5E16345C5C0015E69D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B995CC5D16345C5C0015E69D /* CoreGraphics.framework */; };
+		B995CC7E16345D360015E69D /* BNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B995CC7116345D360015E69D /* BNAppDelegate.m */; };
+		B995CC7F16345D360015E69D /* Calendar-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B995CC7216345D360015E69D /* Calendar-Info.plist */; };
+		B995CC8016345D360015E69D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B995CC7916345D360015E69D /* InfoPlist.strings */; };
+		B995CC8116345D360015E69D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B995CC7C16345D360015E69D /* main.m */; };
+		B995CC8716345DA40015E69D /* BNCalendarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B995CC8616345DA40015E69D /* BNCalendarController.m */; };
+		B995CC8A16345DBA0015E69D /* BNEventListController.m in Sources */ = {isa = PBXBuildFile; fileRef = B995CC8916345DBA0015E69D /* BNEventListController.m */; };
+		B995CC8D16345DE00015E69D /* BNEventEditorController.m in Sources */ = {isa = PBXBuildFile; fileRef = B995CC8C16345DE00015E69D /* BNEventEditorController.m */; };
+		B995CC9016345E1A0015E69D /* BNEventEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = B995CC8F16345E1A0015E69D /* BNEventEntity.m */; };
+		B995CC9316345E680015E69D /* BNEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B995CC9216345E680015E69D /* BNEventCell.m */; };
+		B995CC9F16345EDA0015E69D /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = B995CC9616345EDA0015E69D /* FMDatabase.m */; };
+		B995CCA016345EDA0015E69D /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B995CC9816345EDA0015E69D /* FMDatabaseAdditions.m */; };
+		B995CCA116345EDA0015E69D /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = B995CC9A16345EDA0015E69D /* FMDatabasePool.m */; };
+		B995CCA216345EDA0015E69D /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B995CC9C16345EDA0015E69D /* FMDatabaseQueue.m */; };
+		B995CCA316345EDA0015E69D /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B995CC9E16345EDA0015E69D /* FMResultSet.m */; };
+		B995CCA516345F060015E69D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B995CCA416345F060015E69D /* libsqlite3.dylib */; };
+		B995CCA916345F770015E69D /* BNUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = B995CCA816345F770015E69D /* BNUtility.m */; };
+		B995CCAC16345F880015E69D /* BNGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = B995CCAB16345F880015E69D /* BNGlobal.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B995CC5516345C5C0015E69D /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B995CC5916345C5C0015E69D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B995CC5B16345C5C0015E69D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B995CC5D16345C5C0015E69D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B995CC7016345D360015E69D /* BNAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNAppDelegate.h; path = Calendar/BNAppDelegate.h; sourceTree = "<group>"; };
+		B995CC7116345D360015E69D /* BNAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNAppDelegate.m; path = Calendar/BNAppDelegate.m; sourceTree = "<group>"; };
+		B995CC7216345D360015E69D /* Calendar-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Calendar-Info.plist"; path = "../Calendar-Info.plist"; sourceTree = "<group>"; };
+		B995CC7316345D360015E69D /* Calendar-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Calendar-Prefix.pch"; path = "../Calendar-Prefix.pch"; sourceTree = "<group>"; };
+		B995CC7A16345D360015E69D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		B995CC7C16345D360015E69D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../main.m; sourceTree = "<group>"; };
+		B995CC8516345DA40015E69D /* BNCalendarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNCalendarController.h; sourceTree = "<group>"; };
+		B995CC8616345DA40015E69D /* BNCalendarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNCalendarController.m; sourceTree = "<group>"; };
+		B995CC8816345DBA0015E69D /* BNEventListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNEventListController.h; sourceTree = "<group>"; };
+		B995CC8916345DBA0015E69D /* BNEventListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNEventListController.m; sourceTree = "<group>"; };
+		B995CC8B16345DE00015E69D /* BNEventEditorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNEventEditorController.h; sourceTree = "<group>"; };
+		B995CC8C16345DE00015E69D /* BNEventEditorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNEventEditorController.m; sourceTree = "<group>"; };
+		B995CC8E16345E1A0015E69D /* BNEventEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNEventEntity.h; sourceTree = "<group>"; };
+		B995CC8F16345E1A0015E69D /* BNEventEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNEventEntity.m; sourceTree = "<group>"; };
+		B995CC9116345E680015E69D /* BNEventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNEventCell.h; sourceTree = "<group>"; };
+		B995CC9216345E680015E69D /* BNEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNEventCell.m; sourceTree = "<group>"; };
+		B995CC9516345EDA0015E69D /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		B995CC9616345EDA0015E69D /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		B995CC9716345EDA0015E69D /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		B995CC9816345EDA0015E69D /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		B995CC9916345EDA0015E69D /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		B995CC9A16345EDA0015E69D /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		B995CC9B16345EDA0015E69D /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		B995CC9C16345EDA0015E69D /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		B995CC9D16345EDA0015E69D /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		B995CC9E16345EDA0015E69D /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		B995CCA416345F060015E69D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		B995CCA716345F770015E69D /* BNUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNUtility.h; sourceTree = "<group>"; };
+		B995CCA816345F770015E69D /* BNUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNUtility.m; sourceTree = "<group>"; };
+		B995CCAA16345F880015E69D /* BNGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNGlobal.h; sourceTree = "<group>"; };
+		B995CCAB16345F880015E69D /* BNGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNGlobal.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B995CC5216345C5C0015E69D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B995CCA516345F060015E69D /* libsqlite3.dylib in Frameworks */,
+				B995CC5A16345C5C0015E69D /* UIKit.framework in Frameworks */,
+				B995CC5C16345C5C0015E69D /* Foundation.framework in Frameworks */,
+				B995CC5E16345C5C0015E69D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B995CC4A16345C5B0015E69D = {
+			isa = PBXGroup;
+			children = (
+				B995CCA416345F060015E69D /* libsqlite3.dylib */,
+				B995CC7016345D360015E69D /* BNAppDelegate.h */,
+				B995CC7116345D360015E69D /* BNAppDelegate.m */,
+				B995CC7416345D360015E69D /* Classes */,
+				B995CC7B16345D360015E69D /* Libraries */,
+				B995CC7D16345D360015E69D /* Resources */,
+				B995CC5816345C5C0015E69D /* Frameworks */,
+				B995CC5616345C5C0015E69D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B995CC5616345C5C0015E69D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B995CC5516345C5C0015E69D /* Calendar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B995CC5816345C5C0015E69D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B995CC5916345C5C0015E69D /* UIKit.framework */,
+				B995CC5B16345C5C0015E69D /* Foundation.framework */,
+				B995CC5D16345C5C0015E69D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B995CC7416345D360015E69D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B995CCA616345F5E0015E69D /* Common */,
+				B995CC7516345D360015E69D /* Controllers */,
+				B995CC7616345D360015E69D /* Entities */,
+				B995CC7716345D360015E69D /* Views */,
+			);
+			name = Classes;
+			path = Calendar/Classes;
+			sourceTree = "<group>";
+		};
+		B995CC7516345D360015E69D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B995CC8516345DA40015E69D /* BNCalendarController.h */,
+				B995CC8616345DA40015E69D /* BNCalendarController.m */,
+				B995CC8816345DBA0015E69D /* BNEventListController.h */,
+				B995CC8916345DBA0015E69D /* BNEventListController.m */,
+				B995CC8B16345DE00015E69D /* BNEventEditorController.h */,
+				B995CC8C16345DE00015E69D /* BNEventEditorController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B995CC7616345D360015E69D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				B995CC8E16345E1A0015E69D /* BNEventEntity.h */,
+				B995CC8F16345E1A0015E69D /* BNEventEntity.m */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		B995CC7716345D360015E69D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B995CC9116345E680015E69D /* BNEventCell.h */,
+				B995CC9216345E680015E69D /* BNEventCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B995CC7816345D360015E69D /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				B995CC7916345D360015E69D /* InfoPlist.strings */,
+			);
+			name = en.lproj;
+			path = ../en.lproj;
+			sourceTree = "<group>";
+		};
+		B995CC7B16345D360015E69D /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				B995CC9416345EDA0015E69D /* FMDB */,
+			);
+			name = Libraries;
+			path = Calendar/Libraries;
+			sourceTree = "<group>";
+		};
+		B995CC7D16345D360015E69D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B995CC8416345D680015E69D /* Others */,
+				B995CC8216345D640015E69D /* Images */,
+				B995CC8316345D640015E69D /* Nibs */,
+			);
+			name = Resources;
+			path = Calendar/Resources;
+			sourceTree = "<group>";
+		};
+		B995CC8216345D640015E69D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		B995CC8316345D640015E69D /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Nibs;
+			sourceTree = "<group>";
+		};
+		B995CC8416345D680015E69D /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				B995CC7816345D360015E69D /* en.lproj */,
+				B995CC7C16345D360015E69D /* main.m */,
+				B995CC7216345D360015E69D /* Calendar-Info.plist */,
+				B995CC7316345D360015E69D /* Calendar-Prefix.pch */,
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
+		B995CC9416345EDA0015E69D /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				B995CC9516345EDA0015E69D /* FMDatabase.h */,
+				B995CC9616345EDA0015E69D /* FMDatabase.m */,
+				B995CC9716345EDA0015E69D /* FMDatabaseAdditions.h */,
+				B995CC9816345EDA0015E69D /* FMDatabaseAdditions.m */,
+				B995CC9916345EDA0015E69D /* FMDatabasePool.h */,
+				B995CC9A16345EDA0015E69D /* FMDatabasePool.m */,
+				B995CC9B16345EDA0015E69D /* FMDatabaseQueue.h */,
+				B995CC9C16345EDA0015E69D /* FMDatabaseQueue.m */,
+				B995CC9D16345EDA0015E69D /* FMResultSet.h */,
+				B995CC9E16345EDA0015E69D /* FMResultSet.m */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		B995CCA616345F5E0015E69D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B995CCAA16345F880015E69D /* BNGlobal.h */,
+				B995CCAB16345F880015E69D /* BNGlobal.m */,
+				B995CCA716345F770015E69D /* BNUtility.h */,
+				B995CCA816345F770015E69D /* BNUtility.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B995CC5416345C5C0015E69D /* Calendar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B995CC6D16345C5C0015E69D /* Build configuration list for PBXNativeTarget "Calendar" */;
+			buildPhases = (
+				B995CC5116345C5C0015E69D /* Sources */,
+				B995CC5216345C5C0015E69D /* Frameworks */,
+				B995CC5316345C5C0015E69D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Calendar;
+			productName = Calendar;
+			productReference = B995CC5516345C5C0015E69D /* Calendar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B995CC4C16345C5C0015E69D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BN;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = WD;
+			};
+			buildConfigurationList = B995CC4F16345C5C0015E69D /* Build configuration list for PBXProject "Calendar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B995CC4A16345C5B0015E69D;
+			productRefGroup = B995CC5616345C5C0015E69D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B995CC5416345C5C0015E69D /* Calendar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B995CC5316345C5C0015E69D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B995CC7F16345D360015E69D /* Calendar-Info.plist in Resources */,
+				B995CC8016345D360015E69D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B995CC5116345C5C0015E69D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B995CC7E16345D360015E69D /* BNAppDelegate.m in Sources */,
+				B995CC8116345D360015E69D /* main.m in Sources */,
+				B995CC8716345DA40015E69D /* BNCalendarController.m in Sources */,
+				B995CC8A16345DBA0015E69D /* BNEventListController.m in Sources */,
+				B995CC8D16345DE00015E69D /* BNEventEditorController.m in Sources */,
+				B995CC9016345E1A0015E69D /* BNEventEntity.m in Sources */,
+				B995CC9316345E680015E69D /* BNEventCell.m in Sources */,
+				B995CC9F16345EDA0015E69D /* FMDatabase.m in Sources */,
+				B995CCA016345EDA0015E69D /* FMDatabaseAdditions.m in Sources */,
+				B995CCA116345EDA0015E69D /* FMDatabasePool.m in Sources */,
+				B995CCA216345EDA0015E69D /* FMDatabaseQueue.m in Sources */,
+				B995CCA316345EDA0015E69D /* FMResultSet.m in Sources */,
+				B995CCA916345F770015E69D /* BNUtility.m in Sources */,
+				B995CCAC16345F880015E69D /* BNGlobal.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B995CC7916345D360015E69D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B995CC7A16345D360015E69D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B995CC6B16345C5C0015E69D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B995CC6C16345C5C0015E69D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B995CC6E16345C5C0015E69D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Calendar/Calendar-Prefix.pch";
+				INFOPLIST_FILE = "Calendar/Calendar-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B995CC6F16345C5C0015E69D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Calendar/Calendar-Prefix.pch";
+				INFOPLIST_FILE = "Calendar/Calendar-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B995CC4F16345C5C0015E69D /* Build configuration list for PBXProject "Calendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B995CC6B16345C5C0015E69D /* Debug */,
+				B995CC6C16345C5C0015E69D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B995CC6D16345C5C0015E69D /* Build configuration list for PBXNativeTarget "Calendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B995CC6E16345C5C0015E69D /* Debug */,
+				B995CC6F16345C5C0015E69D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B995CC4C16345C5C0015E69D /* Project object */;
+}
