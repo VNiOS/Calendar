@@ -7,13 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7AAA74C1636998E00B3574D /* Kal.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A7AAA7331636998E00B3574D /* Kal.bundle */; };
+		A7AAA74D1636998E00B3574D /* KalDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AAA7361636998E00B3574D /* KalDataSource.m */; };
+		A7AAA74E1636998E00B3574D /* KalDate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AAA7381636998E00B3574D /* KalDate.m */; };
+		A7AAA74F1636998E00B3574D /* KalGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AAA73A1636998E00B3574D /* KalGridView.m */; };
+		A7AAA7501636998E00B3574D /* KalLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AAA73C1636998E00B3574D /* KalLogic.m */; };
+		A7AAA7511636998E00B3574D /* KalMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AAA73E1636998E00B3574D /* KalMonthView.m */; };
+		A7AAA7521636998E00B3574D /* KalTileView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AAA7411636998E00B3574D /* KalTileView.m */; };
+		A7AAA7531636998E00B3574D /* KalView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AAA7431636998E00B3574D /* KalView.m */; };
+		A7AAA7541636998E00B3574D /* KalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AAA7451636998E00B3574D /* KalViewController.m */; };
+		A7AAA7571636998E00B3574D /* NSDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AAA7491636998E00B3574D /* NSDateAdditions.m */; };
+		A7AAA7581636998E00B3574D /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AAA74B1636998E00B3574D /* UIViewAdditions.m */; };
+		A7AAA75B16369D1100B3574D /* EventDataSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AAA75A16369D1100B3574D /* EventDataSqlite.m */; };
+		A7AAA75F16369E4D00B3574D /* EventCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AAA75E16369E4D00B3574D /* EventCellView.m */; };
+		A7AAA7691636B0A100B3574D /* EventsList.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A7AAA7681636B0A100B3574D /* EventsList.sqlite */; };
+		A7EBD3BB163696AC002F7179 /* Calendar-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7EBD3B8163696AC002F7179 /* Calendar-Info.plist */; };
+		A7EBD3BC163696AC002F7179 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EBD3BA163696AC002F7179 /* main.m */; };
+		A7EBD3C3163696D9002F7179 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7EBD3C1163696D9002F7179 /* InfoPlist.strings */; };
 		B995CC5A16345C5C0015E69D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B995CC5916345C5C0015E69D /* UIKit.framework */; };
 		B995CC5C16345C5C0015E69D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B995CC5B16345C5C0015E69D /* Foundation.framework */; };
 		B995CC5E16345C5C0015E69D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B995CC5D16345C5C0015E69D /* CoreGraphics.framework */; };
 		B995CC7E16345D360015E69D /* BNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B995CC7116345D360015E69D /* BNAppDelegate.m */; };
-		B995CC7F16345D360015E69D /* Calendar-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B995CC7216345D360015E69D /* Calendar-Info.plist */; };
-		B995CC8016345D360015E69D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B995CC7916345D360015E69D /* InfoPlist.strings */; };
-		B995CC8116345D360015E69D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B995CC7C16345D360015E69D /* main.m */; };
 		B995CC8716345DA40015E69D /* BNCalendarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B995CC8616345DA40015E69D /* BNCalendarController.m */; };
 		B995CC8A16345DBA0015E69D /* BNEventListController.m in Sources */ = {isa = PBXBuildFile; fileRef = B995CC8916345DBA0015E69D /* BNEventListController.m */; };
 		B995CC8D16345DE00015E69D /* BNEventEditorController.m in Sources */ = {isa = PBXBuildFile; fileRef = B995CC8C16345DE00015E69D /* BNEventEditorController.m */; };
@@ -30,16 +44,44 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A7AAA7331636998E00B3574D /* Kal.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Kal.bundle; sourceTree = "<group>"; };
+		A7AAA7341636998E00B3574D /* Kal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Kal.h; sourceTree = "<group>"; };
+		A7AAA7351636998E00B3574D /* KalDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalDataSource.h; sourceTree = "<group>"; };
+		A7AAA7361636998E00B3574D /* KalDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalDataSource.m; sourceTree = "<group>"; };
+		A7AAA7371636998E00B3574D /* KalDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalDate.h; sourceTree = "<group>"; };
+		A7AAA7381636998E00B3574D /* KalDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalDate.m; sourceTree = "<group>"; };
+		A7AAA7391636998E00B3574D /* KalGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalGridView.h; sourceTree = "<group>"; };
+		A7AAA73A1636998E00B3574D /* KalGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalGridView.m; sourceTree = "<group>"; };
+		A7AAA73B1636998E00B3574D /* KalLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalLogic.h; sourceTree = "<group>"; };
+		A7AAA73C1636998E00B3574D /* KalLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalLogic.m; sourceTree = "<group>"; };
+		A7AAA73D1636998E00B3574D /* KalMonthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalMonthView.h; sourceTree = "<group>"; };
+		A7AAA73E1636998E00B3574D /* KalMonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalMonthView.m; sourceTree = "<group>"; };
+		A7AAA73F1636998E00B3574D /* KalPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalPrivate.h; sourceTree = "<group>"; };
+		A7AAA7401636998E00B3574D /* KalTileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalTileView.h; sourceTree = "<group>"; };
+		A7AAA7411636998E00B3574D /* KalTileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalTileView.m; sourceTree = "<group>"; };
+		A7AAA7421636998E00B3574D /* KalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalView.h; sourceTree = "<group>"; };
+		A7AAA7431636998E00B3574D /* KalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalView.m; sourceTree = "<group>"; };
+		A7AAA7441636998E00B3574D /* KalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalViewController.h; sourceTree = "<group>"; };
+		A7AAA7451636998E00B3574D /* KalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalViewController.m; sourceTree = "<group>"; };
+		A7AAA7481636998E00B3574D /* NSDateAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDateAdditions.h; sourceTree = "<group>"; };
+		A7AAA7491636998E00B3574D /* NSDateAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDateAdditions.m; sourceTree = "<group>"; };
+		A7AAA74A1636998E00B3574D /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
+		A7AAA74B1636998E00B3574D /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
+		A7AAA75916369D1100B3574D /* EventDataSqlite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDataSqlite.h; sourceTree = "<group>"; };
+		A7AAA75A16369D1100B3574D /* EventDataSqlite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDataSqlite.m; sourceTree = "<group>"; };
+		A7AAA75D16369E4D00B3574D /* EventCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventCellView.h; sourceTree = "<group>"; };
+		A7AAA75E16369E4D00B3574D /* EventCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventCellView.m; sourceTree = "<group>"; };
+		A7AAA7681636B0A100B3574D /* EventsList.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = EventsList.sqlite; path = Calendar/EventsList.sqlite; sourceTree = SOURCE_ROOT; };
+		A7EBD3B8163696AC002F7179 /* Calendar-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Calendar-Info.plist"; path = "Calendar/Calendar-Info.plist"; sourceTree = SOURCE_ROOT; };
+		A7EBD3B9163696AC002F7179 /* Calendar-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Calendar-Prefix.pch"; path = "Calendar/Calendar-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		A7EBD3BA163696AC002F7179 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Calendar/main.m; sourceTree = SOURCE_ROOT; };
+		A7EBD3C2163696D9002F7179 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		B995CC5516345C5C0015E69D /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B995CC5916345C5C0015E69D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B995CC5B16345C5C0015E69D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B995CC5D16345C5C0015E69D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B995CC7016345D360015E69D /* BNAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNAppDelegate.h; path = Calendar/BNAppDelegate.h; sourceTree = "<group>"; };
 		B995CC7116345D360015E69D /* BNAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNAppDelegate.m; path = Calendar/BNAppDelegate.m; sourceTree = "<group>"; };
-		B995CC7216345D360015E69D /* Calendar-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Calendar-Info.plist"; path = "../Calendar-Info.plist"; sourceTree = "<group>"; };
-		B995CC7316345D360015E69D /* Calendar-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Calendar-Prefix.pch"; path = "../Calendar-Prefix.pch"; sourceTree = "<group>"; };
-		B995CC7A16345D360015E69D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
-		B995CC7C16345D360015E69D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../main.m; sourceTree = "<group>"; };
 		B995CC8516345DA40015E69D /* BNCalendarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNCalendarController.h; sourceTree = "<group>"; };
 		B995CC8616345DA40015E69D /* BNCalendarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNCalendarController.m; sourceTree = "<group>"; };
 		B995CC8816345DBA0015E69D /* BNEventListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNEventListController.h; sourceTree = "<group>"; };
@@ -82,6 +124,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A7AAA7311636996100B3574D /* Kal */ = {
+			isa = PBXGroup;
+			children = (
+				A7AAA7331636998E00B3574D /* Kal.bundle */,
+				A7AAA7341636998E00B3574D /* Kal.h */,
+				A7AAA7351636998E00B3574D /* KalDataSource.h */,
+				A7AAA7361636998E00B3574D /* KalDataSource.m */,
+				A7AAA7371636998E00B3574D /* KalDate.h */,
+				A7AAA7381636998E00B3574D /* KalDate.m */,
+				A7AAA7391636998E00B3574D /* KalGridView.h */,
+				A7AAA73A1636998E00B3574D /* KalGridView.m */,
+				A7AAA73B1636998E00B3574D /* KalLogic.h */,
+				A7AAA73C1636998E00B3574D /* KalLogic.m */,
+				A7AAA73D1636998E00B3574D /* KalMonthView.h */,
+				A7AAA73E1636998E00B3574D /* KalMonthView.m */,
+				A7AAA73F1636998E00B3574D /* KalPrivate.h */,
+				A7AAA7401636998E00B3574D /* KalTileView.h */,
+				A7AAA7411636998E00B3574D /* KalTileView.m */,
+				A7AAA7421636998E00B3574D /* KalView.h */,
+				A7AAA7431636998E00B3574D /* KalView.m */,
+				A7AAA7441636998E00B3574D /* KalViewController.h */,
+				A7AAA7451636998E00B3574D /* KalViewController.m */,
+				A7AAA7481636998E00B3574D /* NSDateAdditions.h */,
+				A7AAA7491636998E00B3574D /* NSDateAdditions.m */,
+				A7AAA74A1636998E00B3574D /* UIViewAdditions.h */,
+				A7AAA74B1636998E00B3574D /* UIViewAdditions.m */,
+			);
+			name = Kal;
+			sourceTree = "<group>";
+		};
+		A7EBD3C0163696D9002F7179 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				A7EBD3C1163696D9002F7179 /* InfoPlist.strings */,
+			);
+			name = en.lproj;
+			path = Calendar/en.lproj;
+			sourceTree = SOURCE_ROOT;
+		};
 		B995CC4A16345C5B0015E69D = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +210,8 @@
 		B995CC7516345D360015E69D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A7AAA75916369D1100B3574D /* EventDataSqlite.h */,
+				A7AAA75A16369D1100B3574D /* EventDataSqlite.m */,
 				B995CC8516345DA40015E69D /* BNCalendarController.h */,
 				B995CC8616345DA40015E69D /* BNCalendarController.m */,
 				B995CC8816345DBA0015E69D /* BNEventListController.h */,
@@ -151,24 +234,18 @@
 		B995CC7716345D360015E69D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A7AAA75D16369E4D00B3574D /* EventCellView.h */,
+				A7AAA75E16369E4D00B3574D /* EventCellView.m */,
 				B995CC9116345E680015E69D /* BNEventCell.h */,
 				B995CC9216345E680015E69D /* BNEventCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		B995CC7816345D360015E69D /* en.lproj */ = {
-			isa = PBXGroup;
-			children = (
-				B995CC7916345D360015E69D /* InfoPlist.strings */,
-			);
-			name = en.lproj;
-			path = ../en.lproj;
-			sourceTree = "<group>";
-		};
 		B995CC7B16345D360015E69D /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				A7AAA7311636996100B3574D /* Kal */,
 				B995CC9416345EDA0015E69D /* FMDB */,
 			);
 			name = Libraries;
@@ -178,6 +255,7 @@
 		B995CC7D16345D360015E69D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A7AAA7681636B0A100B3574D /* EventsList.sqlite */,
 				B995CC8416345D680015E69D /* Others */,
 				B995CC8216345D640015E69D /* Images */,
 				B995CC8316345D640015E69D /* Nibs */,
@@ -203,10 +281,10 @@
 		B995CC8416345D680015E69D /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				B995CC7816345D360015E69D /* en.lproj */,
-				B995CC7C16345D360015E69D /* main.m */,
-				B995CC7216345D360015E69D /* Calendar-Info.plist */,
-				B995CC7316345D360015E69D /* Calendar-Prefix.pch */,
+				A7EBD3C0163696D9002F7179 /* en.lproj */,
+				A7EBD3B8163696AC002F7179 /* Calendar-Info.plist */,
+				A7EBD3B9163696AC002F7179 /* Calendar-Prefix.pch */,
+				A7EBD3BA163696AC002F7179 /* main.m */,
 			);
 			name = Others;
 			sourceTree = "<group>";
@@ -291,8 +369,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B995CC7F16345D360015E69D /* Calendar-Info.plist in Resources */,
-				B995CC8016345D360015E69D /* InfoPlist.strings in Resources */,
+				A7EBD3BB163696AC002F7179 /* Calendar-Info.plist in Resources */,
+				A7EBD3C3163696D9002F7179 /* InfoPlist.strings in Resources */,
+				A7AAA74C1636998E00B3574D /* Kal.bundle in Resources */,
+				A7AAA7691636B0A100B3574D /* EventsList.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +384,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B995CC7E16345D360015E69D /* BNAppDelegate.m in Sources */,
-				B995CC8116345D360015E69D /* main.m in Sources */,
 				B995CC8716345DA40015E69D /* BNCalendarController.m in Sources */,
 				B995CC8A16345DBA0015E69D /* BNEventListController.m in Sources */,
 				B995CC8D16345DE00015E69D /* BNEventEditorController.m in Sources */,
@@ -317,16 +396,29 @@
 				B995CCA316345EDA0015E69D /* FMResultSet.m in Sources */,
 				B995CCA916345F770015E69D /* BNUtility.m in Sources */,
 				B995CCAC16345F880015E69D /* BNGlobal.m in Sources */,
+				A7EBD3BC163696AC002F7179 /* main.m in Sources */,
+				A7AAA74D1636998E00B3574D /* KalDataSource.m in Sources */,
+				A7AAA74E1636998E00B3574D /* KalDate.m in Sources */,
+				A7AAA74F1636998E00B3574D /* KalGridView.m in Sources */,
+				A7AAA7501636998E00B3574D /* KalLogic.m in Sources */,
+				A7AAA7511636998E00B3574D /* KalMonthView.m in Sources */,
+				A7AAA7521636998E00B3574D /* KalTileView.m in Sources */,
+				A7AAA7531636998E00B3574D /* KalView.m in Sources */,
+				A7AAA7541636998E00B3574D /* KalViewController.m in Sources */,
+				A7AAA7571636998E00B3574D /* NSDateAdditions.m in Sources */,
+				A7AAA7581636998E00B3574D /* UIViewAdditions.m in Sources */,
+				A7AAA75B16369D1100B3574D /* EventDataSqlite.m in Sources */,
+				A7AAA75F16369E4D00B3574D /* EventCellView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B995CC7916345D360015E69D /* InfoPlist.strings */ = {
+		A7EBD3C1163696D9002F7179 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B995CC7A16345D360015E69D /* en */,
+				A7EBD3C2163696D9002F7179 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -383,6 +475,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Calendar/Calendar-Prefix.pch";
 				INFOPLIST_FILE = "Calendar/Calendar-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -394,6 +487,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Calendar/Calendar-Prefix.pch";
 				INFOPLIST_FILE = "Calendar/Calendar-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -418,6 +512,7 @@
 				B995CC6F16345C5C0015E69D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

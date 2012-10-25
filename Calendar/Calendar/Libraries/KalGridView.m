@@ -136,7 +136,7 @@ static NSString *kSlideAnimationId = @"KalSwitchMonths";
   
   if ([hitView isKindOfClass:[KalTileView class]]) {
     KalTileView *tile = (KalTileView*)hitView;
-    NSLog(@"touch end in day %d of month %d",[tile.date day],[tile.date month]);  
+    //NSLog(@"touch end in day %d of month %d",[tile.date day],[tile.date month]);  
       
     if (tile.belongsToAdjacentMonth) {
       if ([tile.date compare:[KalDate dateFromNSDate:logic.baseDate]] == NSOrderedDescending) {

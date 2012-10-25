@@ -8,12 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import "Kal.h"
-#import "Event.h"
+#import "BNEventEntity.h"
+#import "FMDatabase.h"
+
+
 @interface EventDataSqlite : NSObject<KalDataSource>{
     NSMutableArray *events;
     NSMutableArray *dayEvents;
+    FMDatabase *database;
 }
 -(id)init;
-- (Event *)eventAtIndexPath:(NSIndexPath *)indexPath;
+- (BNEventEntity *)eventAtIndexPath:(NSIndexPath *)indexPath;
 - (NSArray *)eventsFrom:(NSDate *)fromDate to:(NSDate *)toDate;
+- (NSArray *)getEventListFromDate:(NSDate *)fromdate toDate:(NSDate *)toDate;
 @end

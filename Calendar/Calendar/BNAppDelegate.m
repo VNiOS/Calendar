@@ -7,10 +7,11 @@
 //
 
 #import "BNAppDelegate.h"
+#import "EventDataSqlite.h"
 
 @implementation BNAppDelegate
 
-@synthesize window = _window;
+@synthesize window = _window,databasePath;
 
 - (void)dealloc
 {
@@ -24,7 +25,37 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    [self Checkdatabase];
+    
+    calendarController=[[BNCalendarController alloc]init];
+    calendarController.delegate=self;
+    
+    dataSource=[[EventDataSqlite alloc]init];
+    calendarController.dataSource=dataSource;
+    
+    
+    navController=[[UINavigationController alloc]initWithRootViewController:calendarController];
+    [navController.navigationBar setHidden:YES];
+    [navController.navigationBar setHidden:YES];
+    [self.window addSubview:navController.view];
+    
     return YES;
+}
+- (void)Checkdatabase 
+{
+    BOOL success;
+    NSString *databaseName = @"EventsList.sqlite";
+    
+    NSArray *documentPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDir = [documentPath objectAtIndex:0];
+    databasePath = [documentDir stringByAppendingPathComponent:databaseName];
+    NSLog(@"%@",databasePath);
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    success = [fileManager fileExistsAtPath:databasePath];
+    if (success) return;
+    NSString *databasePathFromApp = [[[NSBundle mainBundle]resourcePath]stringByAppendingPathComponent:databaseName];
+    [fileManager copyItemAtPath:databasePathFromApp toPath:databasePath error:nil];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

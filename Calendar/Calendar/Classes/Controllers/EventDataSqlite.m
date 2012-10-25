@@ -10,36 +10,32 @@
 #define KHourtime 60*60
 
 #import "EventDataSqlite.h"
-#import "Event.h"
+#import "BNEventEntity.h"
 #import "EventCellView.h"
+#import "FMDatabase.h"
+#import "FMResultSet.h"
+#import "BNAppDelegate.h"
 
+NSString *const BNEventProperiesEventId1 = @"event_id";
+NSString *const BNEventProperiesEventTitle1 = @"title";
+NSString *const BNEventProperiesEventTimeStart1 = @"timeStart";
+NSString *const BNEventProperiesEventTimeEnd1 = @"timeEnd";
+NSString *const BNEventProperiesEventRepeat1 = @"repeat";
+NSString *const BNEventProperiesEventTimeRepeat1 = @"timeRepeat";
+NSString *const BNEventProperiesEventLocal1 = @"local";
+NSString *const BNEventProperiesEventDetail1 = @"detail";
 
 @implementation EventDataSqlite
 -(id)init{
     if ((self = [super init])) {
         events=[[NSMutableArray alloc]init];
         dayEvents=[[NSMutableArray alloc]init];
-        
-        
-        
-        
-        //tao du lieu mau
-        NSDateFormatter *format=[[NSDateFormatter alloc]init];
-        [format setDateFormat:@"YYYY-MM-dd hh:mm:ss"];
-        for (int i=0; i<5; i++) {
-            NSString *title=[NSString stringWithFormat:@"Event test number %d",i];
-            NSDate *dateStart=[NSDate dateWithTimeIntervalSinceNow:KHourtime*(rand()%240)];
-            NSDate *dateEnd=[NSDate dateWithTimeInterval:rand()%7200 sinceDate:dateStart];
-            NSString *startTime=[format stringFromDate:dateStart];
-            NSString *EndTime=[format stringFromDate:dateEnd];
-            NSString *local=[NSString stringWithFormat:@"local %d",i];
-            NSString *detail=[NSString stringWithFormat:@"Day la event thu %d",i];
-            
-            Event *ev=[[Event alloc]initWithEvent_id:i Title:title TimeStart:startTime TimeEnd:EndTime Repeat:0 TimeRepeat:@"0" Local:local Detail:detail];
-            [events addObject:ev];
-            
-        }
-             
+          //tao du lieu mau
+         
+       BNAppDelegate  *appDelegate = (BNAppDelegate *)[[UIApplication sharedApplication] delegate];
+        NSString *databasePath = appDelegate.databasePath;
+        database = [[FMDatabase databaseWithPath:databasePath]retain];        
+        [database open];
      }
     return self;
     
@@ -64,7 +60,7 @@
         cell.imageView.contentMode = UIViewContentModeScaleAspectFill;
     }
     
-    Event *event=[self eventAtIndexPath:indexPath];
+    BNEventEntity *event=[self eventAtIndexPath:indexPath];
     cell.titlelb.text=event.title;
     cell.timelb.text=event.hourStart;
     return cell;
@@ -83,8 +79,8 @@
     NSDateComponents *components1 = [[NSCalendar currentCalendar] components:NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit fromDate:fromDate];
      NSDateComponents *components2 = [[NSCalendar currentCalendar] components:NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit fromDate:toDate];
     NSLog(@"get event data from database , from day %d month %d  to day %d of month %d",[components1 day],[components1 month],[components2 day],[components2 month]);
-    
-    
+    [events removeAllObjects];
+    [events addObjectsFromArray:[self getEventListFromDate:fromDate toDate:toDate]];
     //ham lay du lieu tu event tu database  cho month dang hien thi 
     
     [delegate loadedDataSource:self];//load datasource cho KalviewControl de cap nhat view
@@ -94,21 +90,75 @@
 - (NSArray *)markedDatesFrom:(NSDate *)fromDate to:(NSDate *)toDate
 {
     // tra ve mang gom nhung phan tu startDate cua Event tuong ung
-    
-    return [[self eventsFrom:fromDate to:toDate] valueForKeyPath:@"startDate"];
+    NSArray *result=(NSArray *)[[self eventsFrom:fromDate to:toDate] valueForKeyPath:@"startDate"];
+    NSLog(@"Data is maked : %d", result.count);
+    NSDateFormatter *format=[[NSDateFormatter alloc]init];
+    [format setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    for (NSDate *date in result) {
+        NSString *string=[format stringFromDate:date];
+        NSLog(@" %@ is marked",string);
+    }
+    return result;
 }
 
 - (void)loadItemsFromDate:(NSDate *)fromDate toDate:(NSDate *)toDate 
-   // ham load event from date , truyen vao 2 tham so fromDate va toDate de ham eventsFrom: su dung , tra ve 1 mang cac event luu vao 1 mang global
 {
-    
+       // ham load event from date , truyen vao 2 tham so fromDate va toDate de ham eventsFrom: su dung , tra ve 1 mang cac event luu vao 1 mang global
     
     NSDateFormatter *format=[[NSDateFormatter alloc]init];
     [format setDateFormat:@"dd/MM/YYYY"];
     NSString *string=[format stringFromDate:fromDate];
-    NSLog(@"load event from date : %@",string);
+    [dayEvents removeAllObjects];
     [dayEvents addObjectsFromArray:[self eventsFrom:fromDate to:toDate]];
+    NSLog(@"Date %@ have %d events  ",string,[dayEvents count]);
+}
+- (NSArray *)getEventListFromDate:(NSDate *)fromdate toDate:(NSDate *)toDate{
+    NSMutableArray *eventList = [[NSMutableArray alloc] init];
+    
+    NSLog(@"Get events list from database :");
+    
+    NSDateFormatter *df = [[[NSDateFormatter alloc] init]autorelease];
+    [df setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
+    NSString *from=[df stringFromDate:fromdate];
+    NSString *to=[df stringFromDate:toDate];
+    NSString *sql=[NSString stringWithFormat:@"select *from Events where timeStart > '%@' and timeStart < '%@'",from,to];
 
+    //NSLog(@"sql : %@",sql);
+    FMResultSet *results = [database executeQuery:sql];
+    while ([results next]) {
+        NSMutableDictionary *event = [[NSMutableDictionary alloc] init];
+        NSString *event_id=[[NSString stringWithFormat:@"%d",[results intForColumn:BNEventProperiesEventId1]]retain];
+        NSString *repeat = [[NSString stringWithFormat:@"%d",[results intForColumn:BNEventProperiesEventRepeat1]]retain];
+        NSString *title = [NSString stringWithFormat:@"%@",[results stringForColumn:BNEventProperiesEventTitle1]];
+        NSString *timeStart = [NSString stringWithFormat:@"%@",[results stringForColumn:BNEventProperiesEventTimeStart1]];
+        NSString *timeEnd = [NSString stringWithFormat:@"%@",[results stringForColumn:BNEventProperiesEventTimeEnd1]];
+        NSString *timeRepeat = [NSString stringWithFormat:@"%@",[results stringForColumn:BNEventProperiesEventTimeRepeat1]];
+        NSString *local = [NSString stringWithFormat:@"%@",[results stringForColumn:BNEventProperiesEventLocal1]];
+        NSString *detail = [NSString stringWithFormat:@"%@",[results stringForColumn:BNEventProperiesEventDetail1]];
+        
+        
+        [event setObject:event_id forKey:BNEventProperiesEventId1];
+        [event setObject:title forKey:BNEventProperiesEventTitle1];
+        [event setObject:timeStart forKey:BNEventProperiesEventTimeStart1];
+        [event setObject:timeEnd forKey:BNEventProperiesEventTimeEnd1];
+        [event setObject:repeat forKey:BNEventProperiesEventRepeat1];
+        [event setObject:timeRepeat forKey:BNEventProperiesEventTimeRepeat1];
+        [event setObject:local forKey:BNEventProperiesEventLocal1];
+        [event setObject:detail forKey:BNEventProperiesEventDetail1];
+        
+        // get information ...
+        
+        BNEventEntity *newEvent = [[BNEventEntity alloc] initWithDictionary:event];
+        [eventList addObject:newEvent];
+        [newEvent release];
+        
+        //NSLog(@"Event id %@ title = %@ timeStart = %@ ",[event objectForKey:BNEventProperiesEventId1],[event objectForKey:BNEventProperiesEventTitle1],[event objectForKey:BNEventProperiesEventTimeStart1]);
+       
+    }
+    
+    NSLog(@"Event list count %d",eventList.count);
+    return [NSArray arrayWithArray:eventList];
+    
 }
 
 - (void)removeAllItems
@@ -118,10 +168,16 @@
 - (NSArray *)eventsFrom:(NSDate *)fromDate to:(NSDate *)toDate
 {
     // ham nay lay event from date , tra ve 1 mang cac event , duoc ham loadItemsFromDate su dung;
+    NSDateFormatter *df = [[[NSDateFormatter alloc] init]autorelease];
+    [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSString *from=[df stringFromDate:fromDate];
+    NSString *to=[df stringFromDate:toDate];
+    
+    NSLog(@"Get event from %@ to %@",from,to);
     
     NSMutableArray *arr=[[NSMutableArray alloc]init];
-    for (Event *ev in events) {
-        if ([ev.startDate compare:fromDate] ==NSOrderedDescending && [ev.startDate compare:toDate]==NSOrderedAscending) {
+    for (BNEventEntity *ev in events) {
+        if (([ev.startDate compare:fromDate] ==NSOrderedDescending||[ev.startDate compare:fromDate] ==NSOrderedSame )&& ([ev.startDate compare:toDate] ==NSOrderedAscending||[ev.startDate compare:toDate] ==NSOrderedSame )) {
             [arr addObject:ev];
         }
     }
@@ -129,10 +185,11 @@
     return arr;
     
 }
-- (Event *)eventAtIndexPath:(NSIndexPath *)indexPath{
+- (BNEventEntity *)eventAtIndexPath:(NSIndexPath *)indexPath{
    return  [dayEvents objectAtIndex:indexPath.row];
 }
 -(void)dealloc{
+    [database close];
     [super dealloc];
     [events release];
     [dayEvents release];

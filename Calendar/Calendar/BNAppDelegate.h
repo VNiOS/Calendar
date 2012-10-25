@@ -7,9 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BNCalendarController.h"
 
-@interface BNAppDelegate : UIResponder <UIApplicationDelegate>
+
+@interface BNAppDelegate : UIResponder <UIApplicationDelegate,UITableViewDelegate>{
+    UINavigationController *navController;
+    id dataSource;
+    BNCalendarController *calendarController;
+    
+    NSString * databasePath;
+    
+}
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (nonatomic,retain) NSString *databasePath;
+- (void)Checkdatabase ;
 @end
