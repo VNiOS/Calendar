@@ -167,13 +167,14 @@ NSString *const BNEventProperiesEventDetail1 = @"detail";
 }
 - (NSArray *)eventsFrom:(NSDate *)fromDate to:(NSDate *)toDate
 {
-    // ham nay lay event from date , tra ve 1 mang cac event , duoc ham loadItemsFromDate su dung;
-    NSDateFormatter *df = [[[NSDateFormatter alloc] init]autorelease];
-    [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    NSString *from=[df stringFromDate:fromDate];
-    NSString *to=[df stringFromDate:toDate];
+
     
-    NSLog(@"Get event from %@ to %@",from,to);
+//    NSDateFormatter *df = [[[NSDateFormatter alloc] init]autorelease];
+//    [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+//    NSString *from=[df stringFromDate:fromDate];
+//    NSString *to=[df stringFromDate:toDate];
+//    
+//    NSLog(@"Get event from %@ to %@",from,to);
     
     NSMutableArray *arr=[[NSMutableArray alloc]init];
     for (BNEventEntity *ev in events) {
