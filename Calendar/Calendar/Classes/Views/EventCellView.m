@@ -15,13 +15,13 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-        self.titlelb=[[UILabel alloc]initWithFrame:CGRectMake(15, 10, 180, 30)];
+        self.titlelb=[[UILabel alloc]initWithFrame:CGRectMake(15, 5, 180, 30)];
         [self.titlelb setTextAlignment:UITextAlignmentLeft];
         [self.titlelb setFont:[UIFont fontWithName:@"Arial-BoldMT" size:18]];
         [self addSubview:self.titlelb];
         
         
-        self.timelb=[[UILabel alloc]initWithFrame:CGRectMake(210, 10, 100, 30)];
+        self.timelb=[[UILabel alloc]initWithFrame:CGRectMake(200, 5, 110, 30)];
         [titlelb setTextAlignment:UITextAlignmentLeft];
         [self addSubview:self.timelb];
     }

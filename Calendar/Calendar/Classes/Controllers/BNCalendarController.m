@@ -97,7 +97,7 @@
     NSDate *to = [[date NSDate] cc_dateByMovingToEndOfDay];
     [self clearTable];
     [dataSource loadItemsFromDate:from toDate:to];//load dulieu event cua selected day
-    [tableView reloadData];//load lai du lieu event cua selected day
+    [tableView reloadData];//load lai du lieu event tren tableview
     [tableView flashScrollIndicators];
 }
 

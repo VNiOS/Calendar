@@ -18,7 +18,7 @@
     NSString * databasePath;
     
 }
-
+@property (nonatomic,retain) UINavigationController *navController;
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic,retain) NSString *databasePath;
 - (void)Checkdatabase ;

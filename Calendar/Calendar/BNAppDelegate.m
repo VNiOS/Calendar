@@ -8,10 +8,12 @@
 
 #import "BNAppDelegate.h"
 #import "EventDataSqlite.h"
+#import "BNEventListController.h"
+
 
 @implementation BNAppDelegate
 
-@synthesize window = _window,databasePath;
+@synthesize window = _window,databasePath,navController;
 
 - (void)dealloc
 {
@@ -36,8 +38,7 @@
     
     
     navController=[[UINavigationController alloc]initWithRootViewController:calendarController];
-    [navController.navigationBar setHidden:YES];
-    [navController.navigationBar setHidden:YES];
+    //[navController.navigationBar setHidden:YES];
     [self.window addSubview:navController.view];
     
     return YES;
@@ -84,5 +85,9 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    BNEventListController *eventDay=[[BNEventListController alloc]initWithNibName:@"BNEventListController" bundle:nil];
+    
+    [navController pushViewController:eventDay animated:YES];
+}
 @end

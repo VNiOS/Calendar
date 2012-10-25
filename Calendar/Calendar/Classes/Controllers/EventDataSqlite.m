@@ -92,12 +92,12 @@ NSString *const BNEventProperiesEventDetail1 = @"detail";
     // tra ve mang gom nhung phan tu startDate cua Event tuong ung
     NSArray *result=(NSArray *)[[self eventsFrom:fromDate to:toDate] valueForKeyPath:@"startDate"];
     NSLog(@"Data is maked : %d", result.count);
-    NSDateFormatter *format=[[NSDateFormatter alloc]init];
-    [format setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    for (NSDate *date in result) {
-        NSString *string=[format stringFromDate:date];
-        NSLog(@" %@ is marked",string);
-    }
+//    NSDateFormatter *format=[[NSDateFormatter alloc]init];
+//    [format setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+//    for (NSDate *date in result) {
+//        NSString *string=[format stringFromDate:date];
+//        NSLog(@" %@ is marked",string);
+//    }
     return result;
 }
 
@@ -146,16 +146,12 @@ NSString *const BNEventProperiesEventDetail1 = @"detail";
         [event setObject:local forKey:BNEventProperiesEventLocal1];
         [event setObject:detail forKey:BNEventProperiesEventDetail1];
         
-        // get information ...
-        
-        BNEventEntity *newEvent = [[BNEventEntity alloc] initWithDictionary:event];
+         BNEventEntity *newEvent = [[BNEventEntity alloc] initWithDictionary:event];
         [eventList addObject:newEvent];
         [newEvent release];
         
         //NSLog(@"Event id %@ title = %@ timeStart = %@ ",[event objectForKey:BNEventProperiesEventId1],[event objectForKey:BNEventProperiesEventTitle1],[event objectForKey:BNEventProperiesEventTimeStart1]);
-       
-    }
-    
+     }
     NSLog(@"Event list count %d",eventList.count);
     return [NSArray arrayWithArray:eventList];
     

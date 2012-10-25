@@ -21,6 +21,10 @@
 		A7AAA75B16369D1100B3574D /* EventDataSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AAA75A16369D1100B3574D /* EventDataSqlite.m */; };
 		A7AAA75F16369E4D00B3574D /* EventCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AAA75E16369E4D00B3574D /* EventCellView.m */; };
 		A7AAA7691636B0A100B3574D /* EventsList.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A7AAA7681636B0A100B3574D /* EventsList.sqlite */; };
+		A7E6C1061639273300A27AE4 /* BNEventListController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6C1041639273300A27AE4 /* BNEventListController.m */; };
+		A7E6C1071639273300A27AE4 /* BNEventListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7E6C1051639273300A27AE4 /* BNEventListController.xib */; };
+		A7E6C10F16392AAD00A27AE4 /* BNEventEditorController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6C10D16392AAD00A27AE4 /* BNEventEditorController.m */; };
+		A7E6C11216392ADA00A27AE4 /* BNEventEditorController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7E6C11116392ADA00A27AE4 /* BNEventEditorController.xib */; };
 		A7EBD3BB163696AC002F7179 /* Calendar-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7EBD3B8163696AC002F7179 /* Calendar-Info.plist */; };
 		A7EBD3BC163696AC002F7179 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EBD3BA163696AC002F7179 /* main.m */; };
 		A7EBD3C3163696D9002F7179 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7EBD3C1163696D9002F7179 /* InfoPlist.strings */; };
@@ -29,8 +33,6 @@
 		B995CC5E16345C5C0015E69D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B995CC5D16345C5C0015E69D /* CoreGraphics.framework */; };
 		B995CC7E16345D360015E69D /* BNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B995CC7116345D360015E69D /* BNAppDelegate.m */; };
 		B995CC8716345DA40015E69D /* BNCalendarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B995CC8616345DA40015E69D /* BNCalendarController.m */; };
-		B995CC8A16345DBA0015E69D /* BNEventListController.m in Sources */ = {isa = PBXBuildFile; fileRef = B995CC8916345DBA0015E69D /* BNEventListController.m */; };
-		B995CC8D16345DE00015E69D /* BNEventEditorController.m in Sources */ = {isa = PBXBuildFile; fileRef = B995CC8C16345DE00015E69D /* BNEventEditorController.m */; };
 		B995CC9016345E1A0015E69D /* BNEventEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = B995CC8F16345E1A0015E69D /* BNEventEntity.m */; };
 		B995CC9316345E680015E69D /* BNEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B995CC9216345E680015E69D /* BNEventCell.m */; };
 		B995CC9F16345EDA0015E69D /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = B995CC9616345EDA0015E69D /* FMDatabase.m */; };
@@ -72,6 +74,12 @@
 		A7AAA75D16369E4D00B3574D /* EventCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventCellView.h; sourceTree = "<group>"; };
 		A7AAA75E16369E4D00B3574D /* EventCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventCellView.m; sourceTree = "<group>"; };
 		A7AAA7681636B0A100B3574D /* EventsList.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = EventsList.sqlite; path = Calendar/EventsList.sqlite; sourceTree = SOURCE_ROOT; };
+		A7E6C1031639273300A27AE4 /* BNEventListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNEventListController.h; path = ../../../BNEventListController.h; sourceTree = "<group>"; };
+		A7E6C1041639273300A27AE4 /* BNEventListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNEventListController.m; path = ../../../BNEventListController.m; sourceTree = "<group>"; };
+		A7E6C1051639273300A27AE4 /* BNEventListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BNEventListController.xib; path = ../../../BNEventListController.xib; sourceTree = "<group>"; };
+		A7E6C10C16392AAD00A27AE4 /* BNEventEditorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNEventEditorController.h; sourceTree = "<group>"; };
+		A7E6C10D16392AAD00A27AE4 /* BNEventEditorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNEventEditorController.m; sourceTree = "<group>"; };
+		A7E6C11116392ADA00A27AE4 /* BNEventEditorController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BNEventEditorController.xib; path = Calendar/Classes/Controllers/BNEventEditorController.xib; sourceTree = SOURCE_ROOT; };
 		A7EBD3B8163696AC002F7179 /* Calendar-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Calendar-Info.plist"; path = "Calendar/Calendar-Info.plist"; sourceTree = SOURCE_ROOT; };
 		A7EBD3B9163696AC002F7179 /* Calendar-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Calendar-Prefix.pch"; path = "Calendar/Calendar-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		A7EBD3BA163696AC002F7179 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Calendar/main.m; sourceTree = SOURCE_ROOT; };
@@ -84,10 +92,6 @@
 		B995CC7116345D360015E69D /* BNAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNAppDelegate.m; path = Calendar/BNAppDelegate.m; sourceTree = "<group>"; };
 		B995CC8516345DA40015E69D /* BNCalendarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNCalendarController.h; sourceTree = "<group>"; };
 		B995CC8616345DA40015E69D /* BNCalendarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNCalendarController.m; sourceTree = "<group>"; };
-		B995CC8816345DBA0015E69D /* BNEventListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNEventListController.h; sourceTree = "<group>"; };
-		B995CC8916345DBA0015E69D /* BNEventListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNEventListController.m; sourceTree = "<group>"; };
-		B995CC8B16345DE00015E69D /* BNEventEditorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNEventEditorController.h; sourceTree = "<group>"; };
-		B995CC8C16345DE00015E69D /* BNEventEditorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNEventEditorController.m; sourceTree = "<group>"; };
 		B995CC8E16345E1A0015E69D /* BNEventEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNEventEntity.h; sourceTree = "<group>"; };
 		B995CC8F16345E1A0015E69D /* BNEventEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNEventEntity.m; sourceTree = "<group>"; };
 		B995CC9116345E680015E69D /* BNEventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNEventCell.h; sourceTree = "<group>"; };
@@ -214,10 +218,12 @@
 				A7AAA75A16369D1100B3574D /* EventDataSqlite.m */,
 				B995CC8516345DA40015E69D /* BNCalendarController.h */,
 				B995CC8616345DA40015E69D /* BNCalendarController.m */,
-				B995CC8816345DBA0015E69D /* BNEventListController.h */,
-				B995CC8916345DBA0015E69D /* BNEventListController.m */,
-				B995CC8B16345DE00015E69D /* BNEventEditorController.h */,
-				B995CC8C16345DE00015E69D /* BNEventEditorController.m */,
+				A7E6C1031639273300A27AE4 /* BNEventListController.h */,
+				A7E6C1041639273300A27AE4 /* BNEventListController.m */,
+				A7E6C10C16392AAD00A27AE4 /* BNEventEditorController.h */,
+				A7E6C10D16392AAD00A27AE4 /* BNEventEditorController.m */,
+				A7E6C1051639273300A27AE4 /* BNEventListController.xib */,
+				A7E6C11116392ADA00A27AE4 /* BNEventEditorController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -373,6 +379,8 @@
 				A7EBD3C3163696D9002F7179 /* InfoPlist.strings in Resources */,
 				A7AAA74C1636998E00B3574D /* Kal.bundle in Resources */,
 				A7AAA7691636B0A100B3574D /* EventsList.sqlite in Resources */,
+				A7E6C1071639273300A27AE4 /* BNEventListController.xib in Resources */,
+				A7E6C11216392ADA00A27AE4 /* BNEventEditorController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,8 +393,6 @@
 			files = (
 				B995CC7E16345D360015E69D /* BNAppDelegate.m in Sources */,
 				B995CC8716345DA40015E69D /* BNCalendarController.m in Sources */,
-				B995CC8A16345DBA0015E69D /* BNEventListController.m in Sources */,
-				B995CC8D16345DE00015E69D /* BNEventEditorController.m in Sources */,
 				B995CC9016345E1A0015E69D /* BNEventEntity.m in Sources */,
 				B995CC9316345E680015E69D /* BNEventCell.m in Sources */,
 				B995CC9F16345EDA0015E69D /* FMDatabase.m in Sources */,
@@ -409,6 +415,8 @@
 				A7AAA7581636998E00B3574D /* UIViewAdditions.m in Sources */,
 				A7AAA75B16369D1100B3574D /* EventDataSqlite.m in Sources */,
 				A7AAA75F16369E4D00B3574D /* EventCellView.m in Sources */,
+				A7E6C1061639273300A27AE4 /* BNEventListController.m in Sources */,
+				A7E6C10F16392AAD00A27AE4 /* BNEventEditorController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -55,7 +55,7 @@ NSString *const BNEventProperiesEventDetail = @"detail";
 }
 -(NSString *)getHour:(NSDate *)date{
     NSDateFormatter *df = [[[NSDateFormatter alloc] init]autorelease];
-    [df setDateFormat:@"HH:mm a"];
+    [df setDateFormat:@"HH:mm dd/MM"];
     NSString *string=[df stringFromDate:date];
     
     return string;
