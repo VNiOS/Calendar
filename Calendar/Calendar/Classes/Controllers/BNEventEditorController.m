@@ -7,7 +7,7 @@
 //
 
 #import "BNEventEditorController.h"
-
+#import "DatePickerView.h"
 @implementation BNEventEditorController
 @synthesize delegate;
 - (id)initWithStyle:(UITableViewStyle)style
@@ -32,7 +32,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title=@"Edit Event";
+    self.title=@" Event";
+    UIBarButtonItem *doneBt=[[UIBarButtonItem alloc]initWithTitle:@"Done" style:UIBarButtonItemStylePlain target:self action:@selector(done:)];
+    [doneBt setTintColor:[UIColor colorWithRed:0.3 green:0.7 blue:0 alpha:1.0]];
+    self.navigationItem.leftBarButtonItem=doneBt;
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -92,7 +96,8 @@
             return 40;
             break;
         case 2:
-            return 100;
+            return 40;
+
             break;
         case 3:
             return 40;
@@ -103,9 +108,7 @@
         case 5:
             return 200;
             break;
-            
-      
-    }
+     }
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -116,8 +119,13 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-
-    return 1;
+    if (section==2) {
+        return 2;
+    }
+    else{
+        return 1;
+    }
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -132,15 +140,10 @@
         switch ([indexPath indexAtPosition:0]) {
             case 0:
             {
-                UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake(22, 10, 50, 20)];
-                label.text=@"Title";
-                label.font=[UIFont fontWithName:@"Arial-BoldMT" size:18];
-                label.backgroundColor=[UIColor clearColor];
-                [cell addSubview:label];
-                
-                title=[[UITextField alloc]initWithFrame:CGRectMake(80, 10, 180, 20)];
+                title=[[UITextField alloc]initWithFrame:CGRectMake(25, 10, 180, 20)];
                 title.backgroundColor=[UIColor clearColor];
                 title.textAlignment=UITextAlignmentLeft;
+                title.placeholder=@"Title";
                 UIFont *font=[UIFont fontWithName:@"Arial" size:16];
                 title.font=font;
                 [title addTarget:self action:@selector(closeTextField:) forControlEvents:UIControlEventEditingDidEndOnExit];
@@ -150,15 +153,13 @@
                 break;
             case 1:
             {
-                UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake(22, 10, 100, 20)];
-                label.text=@"Location";
-                label.font=[UIFont fontWithName:@"Arial-BoldMT" size:18];
-                label.backgroundColor=[UIColor clearColor];
+                
 
-                [cell addSubview:label];
-                location=[[UITextField alloc]initWithFrame:CGRectMake(95, 10, 180, 20)];
+              
+                location=[[UITextField alloc]initWithFrame:CGRectMake(25, 10, 180, 20)];
                 location.backgroundColor=[UIColor clearColor];
                 location.textAlignment=UITextAlignmentLeft;
+                location.placeholder=@"Location";
                 UIFont *font=[UIFont fontWithName:@"Arial" size:16];
                 location.font=font;
                 [location addTarget:self action:@selector(closeTextField:) forControlEvents:UIControlEventEditingDidEndOnExit];
@@ -167,19 +168,54 @@
                 break;
             case 2:
             {
-                UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake(22, 10, 80, 20)];
-                label.text=@"Time";
-                label.font=[UIFont fontWithName:@"Arial-BoldMT" size:18];
-                label.backgroundColor=[UIColor clearColor];
-
-                [cell addSubview:label];
+                switch ([indexPath indexAtPosition:1]) {
+                    case 0:
+                    {
+                        UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake(25, 10, 80, 20)];
+                        label.text=@"Time Start";
+                        label.font=[UIFont fontWithName:@"Arial-BoldMT" size:16];
+                        label.backgroundColor=[UIColor clearColor];
+                        
+                        [cell addSubview:label];
+                        
+                        startDatelb=[[UILabel alloc]initWithFrame:CGRectMake(110, 10, 120, 20)];
+                        startDatelb.text=@"";
+                        startDatelb.font=[UIFont fontWithName:@"Arial-BoldMT" size:16];
+                        startDatelb.backgroundColor=[UIColor clearColor];
+                        
+                        [cell addSubview:startDatelb];
+                    }
+                        break;
+                    case 1:
+                    {
+                        UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake(25, 10, 80, 20)];
+                        label.text=@"Time End";
+                        label.font=[UIFont fontWithName:@"Arial-BoldMT" size:16];
+                        label.backgroundColor=[UIColor clearColor];
+                        
+                        [cell addSubview:label];
+                        
+                        
+                        endDatelb=[[UILabel alloc]initWithFrame:CGRectMake(110, 10, 120, 20)];
+                        endDatelb.text=@"";
+                        endDatelb.font=[UIFont fontWithName:@"Arial-BoldMT" size:16];
+                        endDatelb.backgroundColor=[UIColor clearColor];
+                        
+                        [cell addSubview:endDatelb];
+                    }
+                        break;
+                   
+                    default:
+                        break;
+                }
+               
             }
                 break;
             case 3:
             {
                 UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake(22, 10, 80, 20)];
                 label.text=@"Repeat";
-                label.font=[UIFont fontWithName:@"Arial-BoldMT" size:18];
+                label.font=[UIFont fontWithName:@"Arial-BoldMT" size:16];
                 label.backgroundColor=[UIColor clearColor];
 
                 [cell addSubview:label];
@@ -189,7 +225,7 @@
             {
                 UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake(22, 10, 120, 20)];
                 label.text=@"Time Repeat";
-                label.font=[UIFont fontWithName:@"Arial-BoldMT" size:18];
+                label.font=[UIFont fontWithName:@"Arial-BoldMT" size:16];
                 label.backgroundColor=[UIColor clearColor];
 
                 [cell addSubview:label];
@@ -199,12 +235,12 @@
             {
                 
                 UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake(22, 10, 120, 20)];
-                label.text=@"Description :";
-                label.font=[UIFont fontWithName:@"Arial-BoldMT" size:18];
+                label.text=@"Description";
+                label.font=[UIFont fontWithName:@"Arial-BoldMT" size:16];
                 label.backgroundColor=[UIColor clearColor];
                 
                 [cell addSubview:label];
-                description=[[UITextView alloc]initWithFrame:CGRectMake(22, 35, 280, 180)];
+                description=[[UITextView alloc]initWithFrame:CGRectMake(22, 25, 280, 180)];
                 description.backgroundColor=[UIColor clearColor];
                 description.textAlignment=UITextAlignmentLeft;
                 
@@ -272,14 +308,25 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
+    if (indexPath.section==2) {
+        bool type;
+        if (indexPath.row==0) {
+            type=1;
+        }
+        else{
+            type=0;
+        }
+        DatePickerView *pickerView=[[DatePickerView alloc]initWithNibName:@"DatePickerView" bundle:nil];
+        [pickerView setDateType:type];
+        [self.navigationController pushViewController:pickerView animated:YES];
+        
+    }
+    else if(indexPath.section==3){
+        
+    }
+    else if(indexPath.section==4){
+        
+    }
 }
 
 @end

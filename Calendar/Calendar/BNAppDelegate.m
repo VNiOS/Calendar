@@ -33,8 +33,8 @@
     calendarController=[[BNCalendarController alloc]init];
     calendarController.delegate=self;
     
-    dataSource=[[EventDataSqlite alloc]init];
-    calendarController.dataSource=dataSource;
+    //dataSource=[[EventDataSqlite alloc]init];
+    //calendarController.dataSource=dataSource;
     
     
     navController=[[UINavigationController alloc]initWithRootViewController:calendarController];
@@ -85,9 +85,9 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    BNEventListController *eventDay=[[BNEventListController alloc]initWithNibName:@"BNEventListController" bundle:nil];
-    
-    [navController pushViewController:eventDay animated:YES];
-}
+//-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    BNEventListController *eventDay=[[BNEventListController alloc]initWithNibName:@"BNEventListController" bundle:nil];
+//    
+//    [navController pushViewController:eventDay animated:YES];
+//}
 @end

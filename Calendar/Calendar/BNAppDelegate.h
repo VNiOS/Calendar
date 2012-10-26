@@ -12,7 +12,7 @@
 
 @interface BNAppDelegate : UIResponder <UIApplicationDelegate,UITableViewDelegate>{
     UINavigationController *navController;
-    id dataSource;
+    //id dataSource;
     BNCalendarController *calendarController;
     
     NSString * databasePath;

@@ -71,7 +71,7 @@ NSString *const KalDataSourceChangedNotification = @"KalDataSourceChangedNotific
 {
   if (delegate != aDelegate) {
     delegate = aDelegate;
-    tableView.delegate = delegate;
+    tableView.delegate = self;
   }
 }
 

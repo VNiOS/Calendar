@@ -12,6 +12,10 @@
 #import "KalDataSource.h"
 #import "KalDate.h"
 #import "KalPrivate.h"
+#import "EventDataSqlite.h"
+#import "BNEventListController.h"
+
+
 
 //NSString *const KalDataSourceChangedNotification = @"KalDataSourceChangedNotification";
 @interface BNCalendarController ()
@@ -28,6 +32,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        dataSource=[[EventDataSqlite alloc]init];
+
         // Custom initialization
     }
     return self;
@@ -66,7 +72,7 @@
 {
     if (delegate != aDelegate) {
         delegate = aDelegate;
-        tableView.delegate = delegate;
+        tableView.delegate = self;
     }
 }
 
@@ -146,6 +152,15 @@
 {
     return [self.calendarView.selectedDate NSDate];
 }
+#pragma mark - tableView delegate
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"tableView click");
+    BNEventListController *eventDay=[[BNEventListController alloc]initWithNibName:@"BNEventListController" bundle:nil];
+    
+    [self.navigationController pushViewController:eventDay animated:YES];
+}
+
 
 #pragma mark - life circle
 
@@ -157,7 +172,7 @@
     self.view = kalView;
     tableView = kalView.tableView;
     tableView.dataSource = dataSource;
-    tableView.delegate = delegate;
+    tableView.delegate = self;
     [tableView retain];
     [kalView selectDate:[KalDate dateFromNSDate:self.initialDate]];
     [self reloadData];

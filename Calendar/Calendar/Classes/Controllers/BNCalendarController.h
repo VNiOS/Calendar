@@ -11,7 +11,7 @@
 #import "KalDataSource.h" // for the KalDataSourceCallbacks protocol
 
 @class KalLogic, KalDate;
-@interface BNCalendarController : UIViewController<KalViewDelegate, KalDataSourceCallbacks>{
+@interface BNCalendarController : UIViewController<KalViewDelegate, KalDataSourceCallbacks,UITableViewDelegate>{
     KalLogic *logic;
     UITableView *tableView;
     id <UITableViewDelegate> delegate;

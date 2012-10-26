@@ -22,6 +22,10 @@
     UITextField *title;
     UITextField *location;
     UITextView *description;
+    UILabel *startDatelb;
+    UILabel *endDatelb;
+    UILabel *repeat;
+    UILabel *repeatTime;
     
 }
 @property(nonatomic,strong) id<EditEventDelegate> delegate;
