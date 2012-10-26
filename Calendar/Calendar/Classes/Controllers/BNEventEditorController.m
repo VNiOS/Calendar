@@ -207,6 +207,7 @@
                 description=[[UITextView alloc]initWithFrame:CGRectMake(22, 35, 280, 180)];
                 description.backgroundColor=[UIColor clearColor];
                 description.textAlignment=UITextAlignmentLeft;
+                
                 UIFont *font=[UIFont fontWithName:@"Arial" size:16];
                 description.font=font;
                 [cell addSubview:description];
