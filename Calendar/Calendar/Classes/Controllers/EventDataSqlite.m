@@ -183,6 +183,34 @@ NSString *const BNEventProperiesEventDetail1 = @"detail";
     return arr;
     
 }
+
+- (BOOL)updateDatabase:(BNEventEntity *)event
+{
+    
+    [database open];
+    BOOL success = [database executeUpdate:[NSString stringWithFormat:@"update Events set title = '%@',timeStart ='%@',timeEnd = '%@',repeat = '%d',timeRepeat = '%@',local ='%@',detail ='%@'  where event_id = %d",event.title,event.timeStart,event.timeEnd,event.repeat,event.timeRepeat,event.local,event.detail,event.event_id]];
+    return success;
+    [database close];
+}
+
+- (BOOL)insertDatabase:(BNEventEntity *)event
+{
+    
+    [database open];
+    bool success = [database executeUpdate:@"insert into Events (title,timeStart,timeEnd,repeat,timeRepeat,local,detail) values(?,?,?,?,?,?,?)",event.title,event.timeStart,event.timeEnd,[NSNumber numberWithInt:event.repeat],event.timeRepeat,event.local,event.detail,nil];
+    return success;
+    [database close];
+    
+}
+- (BOOL)deleteDatabase:(BNEventEntity *)event
+{
+    
+    [database open];
+    bool success = [database executeUpdate:[NSString stringWithFormat:@"delete from Events where event_id ='%d'",event.event_id]];
+    [database close];
+    return success;
+}
+
 - (BNEventEntity *)eventAtIndexPath:(NSIndexPath *)indexPath{
    return  [dayEvents objectAtIndex:indexPath.row];
 }
