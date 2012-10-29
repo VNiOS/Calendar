@@ -9,16 +9,18 @@
 #import "BNEventEditorController.h"
 #import "DatePickerView.h"
 #import "BNAppDelegate.h"
+#import "BNEventEntity.h"
+#import "EventDataSqlite.h"
+
+
 @implementation BNEventEditorController
 @synthesize delegate,startDatelb,endDatelb;
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
-        
-        BNAppDelegate  *appDelegate = (BNAppDelegate *)[[UIApplication sharedApplication] delegate];
-        NSString *databasePath = appDelegate.databasePath;
-        database = [[FMDatabase databaseWithPath:databasePath]retain];  
+        dataSqlite=[[EventDataSqlite alloc]init];
+       
               // Custom initialization
     }
     return self;
@@ -86,7 +88,7 @@
     [view addSubview:titlelb];
     
     UIButton *BackButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 5, 46, 30)];
-    [BackButton setAccessibilityLabel:NSLocalizedString(@"Previous month", nil)];
+    [BackButton setAccessibilityLabel:NSLocalizedString(@"", nil)];
     [BackButton setImage:[UIImage imageNamed:@"Kal.bundle/kal_left_arrow.png"] forState:UIControlStateNormal];
     BackButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
     BackButton.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
@@ -186,14 +188,23 @@
     
 }
 -(void)saveData:(int)type{
-    
+    NSDictionary *data=[[NSDictionary alloc]initWithObjectsAndKeys:
+                        @"24",                    @"event_id",
+                        @"abdcde",                @"title",
+                        @"2012-10-29 14:00:00",   @"timeStart",
+                        @"2012-10-29 17:00:00",   @"timeEnd",
+                        @"1",                     @"repeat",
+                        @"2012-10-29 18:00:00",   @"timeRepeat",
+                        @"abecdfdsaf",            @"local",
+                        @"fafafafafa",            @"detail",
+                        
+                        nil];
 
-    [database open];
-    bool succes;
+    eventEdited=[[BNEventEntity alloc]initWithDictionary:data];
+    BOOL succes;
     
     if (type==1) {
-    succes = [database executeUpdate:@"insert into Events (title,timeStart,timeEnd,repeat,timeRepeat,local,detail) values(?,?,?,?,?,?,?)",titletf.text,startDatelb.text,endDatelb.text,[NSNumber numberWithInt:repeatInt],[NSNumber numberWithInt:repeatTimeInt],location.text,description.text,nil];
-        
+        succes=[dataSqlite insertDatabase:eventEdited]; 
         
     }
     else if(type==2){
@@ -213,7 +224,7 @@
         [self showAlerView:@"Insert"];
     }
     
-    [database close];
+   
 }
 #pragma mark - Table view data source
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -237,6 +248,9 @@
         case 5:
             return 200;
             break;
+            
+        default:
+            return 40;
      }
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -515,7 +529,7 @@
         [alert show];
     }
     else{
-        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Error" message:[NSString stringWithFormat:@"%@ is not OK",title] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Error" message:[NSString stringWithFormat:@"%@ error",title] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         [alert show];
     }
  

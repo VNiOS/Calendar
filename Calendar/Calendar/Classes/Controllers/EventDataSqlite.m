@@ -183,7 +183,7 @@ NSString *const BNEventProperiesEventDetail1 = @"detail";
     return arr;
     
 }
-
+#pragma mark database
 - (BOOL)updateDatabase:(BNEventEntity *)event
 {
     
@@ -197,7 +197,7 @@ NSString *const BNEventProperiesEventDetail1 = @"detail";
 {
     
     [database open];
-    bool success = [database executeUpdate:@"insert into Events (title,timeStart,timeEnd,repeat,timeRepeat,local,detail) values(?,?,?,?,?,?,?)",event.title,event.timeStart,event.timeEnd,[NSNumber numberWithInt:event.repeat],event.timeRepeat,event.local,event.detail,nil];
+    bool success = [database executeUpdate:@"insert into Events(title,timeStart,timeEnd,repeat,timeRepeat,local,detail) values(?,?,?,?,?,?,?)",event.title,event.timeStart,event.timeEnd,[NSNumber numberWithInt:event.repeat],event.timeRepeat,event.local,event.detail,nil];
     return success;
     [database close];
     

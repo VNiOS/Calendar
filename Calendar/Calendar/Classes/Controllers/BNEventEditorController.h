@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BNEventEntity.h"
 #import "FMDatabase.h"
-
+#import "EventDataSqlite.h"
 
 @class BNEventEditorController;
 
@@ -22,7 +22,7 @@
 
 @interface BNEventEditorController : UITableViewController<UIActionSheetDelegate>{
     BNEventEntity *eventEdited;
-    FMDatabase *database;
+    EventDataSqlite *dataSqlite;
     int EditType;
     
     

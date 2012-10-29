@@ -20,7 +20,7 @@
  *  date is selected (just like in Apple's calendar app).
  *
  */
-@interface KalViewController : UIViewController <KalViewDelegate, KalDataSourceCallbacks>
+@interface KalViewController : UIViewController <KalViewDelegate, KalDataSourceCallbacks,UITableViewDelegate>
 {
   KalLogic *logic;
   UITableView *tableView;

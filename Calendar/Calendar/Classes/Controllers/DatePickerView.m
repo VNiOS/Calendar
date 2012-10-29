@@ -68,7 +68,7 @@
     [view addSubview:titlelb];
     
     UIButton *BackButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 5, 46, 30)];
-    [BackButton setAccessibilityLabel:NSLocalizedString(@"Previous month", nil)];
+    [BackButton setAccessibilityLabel:NSLocalizedString(@"", nil)];
     [BackButton setImage:[UIImage imageNamed:@"Kal.bundle/kal_left_arrow.png"] forState:UIControlStateNormal];
     BackButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
     BackButton.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
