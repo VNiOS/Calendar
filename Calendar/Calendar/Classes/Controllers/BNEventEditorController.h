@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "BNEventEntity.h"
+#import "FMDatabase.h"
+
+
 @class BNEventEditorController;
 
 @protocol EditEventDelegate <NSObject>
@@ -17,20 +20,41 @@
 @end
 
 
-@interface BNEventEditorController : UITableViewController{
+@interface BNEventEditorController : UITableViewController<UIActionSheetDelegate>{
     BNEventEntity *eventEdited;
-    UITextField *title;
+    FMDatabase *database;
+    int EditType;
+    
+    
+    UITextField *titletf;
     UITextField *location;
     UITextView *description;
     UILabel *startDatelb;
     UILabel *endDatelb;
+    
     UILabel *repeat;
     UILabel *repeatTime;
+    int repeatInt;
+    int repeatTimeInt;
+    
+    UIView *headView;
     
 }
 @property(nonatomic,strong) id<EditEventDelegate> delegate;
--(IBAction)done:(id)sender;
--(IBAction)closeTextField:(id)sender;
-    
+@property(nonatomic,retain) UILabel *startDatelb;     
+@property(nonatomic,retain) UILabel *endDatelb;
 
+
+-(IBAction)closeTextField:(id)sender;
+-(IBAction)done:(id)sender;
+
+-(void)checkDataInput;
+-(void)saveData:(int)type;
+    
+    
+ -(void)showAlerView:(NSString *)title;
+-(void)showOption:(int)type;
+
+-(void)addContentToHeadView:(UIView *)view;
+-(void)addContentToFooterView:(UIView *)view;
 @end

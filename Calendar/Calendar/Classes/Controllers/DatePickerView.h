@@ -9,19 +9,25 @@
 #import <UIKit/UIKit.h>
 #import "BNEventEditorController.h"
 
-@interface DatePickerView : UIViewController{
+@interface DatePickerView : UIViewController<UITableViewDataSource,UITableViewDelegate>{
+    
+    UITableView *tableView1;
     UIDatePicker *datePicker;
-    NSString *dateSelected;
-    UILabel *dateTypelb;
-    UILabel *datelb;
+    UILabel *dateStartlb;
+    UILabel *dateEndlb;
     BNEventEditorController *delegate;
+    NSString *dateInput;
+    bool dateType;
 }
--(void)setDateType:(bool)datetype;
+-(void)addContentToHeadView:(UIView *)view;
 -(IBAction)setDate:(id)sender;
+-(IBAction)done:(id)sender;
+@property(nonatomic,retain) IBOutlet UITableView *tableView1;
 @property(nonatomic,strong) BNEventEditorController *delegate;
 
 @property(nonatomic,retain) IBOutlet UIDatePicker *datePicker;
-@property(nonatomic,retain) IBOutlet NSString *dateSelected;
-@property(nonatomic,retain) IBOutlet UILabel *datelb;
-@property(nonatomic,retain) IBOutlet UILabel *dateTypelb;
+
+@property(nonatomic,retain) IBOutlet UILabel *dateStartlb;
+@property(nonatomic,retain) IBOutlet UILabel *dateEndlb;
+
 @end

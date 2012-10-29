@@ -59,8 +59,8 @@
     BNEventEditorController *editView=[[BNEventEditorController alloc]initWithNibName:@"BNEventEditorController" bundle:nil];
     editView.delegate=self;
     UINavigationController *navirControl=[[UINavigationController alloc]initWithRootViewController:editView];
-    
-   navirControl.modalTransitionStyle=UIModalTransitionStyleCoverVertical;
+    [navirControl.navigationBar setHidden:YES];
+    navirControl.modalTransitionStyle=UIModalTransitionStyleCoverVertical;
     [self presentModalViewController:navirControl animated:YES];
 }
 @end

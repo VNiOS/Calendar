@@ -35,7 +35,7 @@ NSString *const BNEventProperiesEventDetail1 = @"detail";
        BNAppDelegate  *appDelegate = (BNAppDelegate *)[[UIApplication sharedApplication] delegate];
         NSString *databasePath = appDelegate.databasePath;
         database = [[FMDatabase databaseWithPath:databasePath]retain];        
-        [database open];
+        
      }
     return self;
     
@@ -113,12 +113,13 @@ NSString *const BNEventProperiesEventDetail1 = @"detail";
     NSLog(@"Date %@ have %d events  ",string,[dayEvents count]);
 }
 - (NSArray *)getEventListFromDate:(NSDate *)fromdate toDate:(NSDate *)toDate{
+    [database open];
     NSMutableArray *eventList = [[NSMutableArray alloc] init];
     
     NSLog(@"Get events list from database :");
     
     NSDateFormatter *df = [[[NSDateFormatter alloc] init]autorelease];
-    [df setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
+    [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     NSString *from=[df stringFromDate:fromdate];
     NSString *to=[df stringFromDate:toDate];
     NSString *sql=[NSString stringWithFormat:@"select *from Events where timeStart > '%@' and timeStart < '%@'",from,to];
@@ -154,7 +155,7 @@ NSString *const BNEventProperiesEventDetail1 = @"detail";
      }
     NSLog(@"Event list count %d",eventList.count);
     return [NSArray arrayWithArray:eventList];
-    
+    [database close];
 }
 
 - (void)removeAllItems
@@ -186,7 +187,7 @@ NSString *const BNEventProperiesEventDetail1 = @"detail";
    return  [dayEvents objectAtIndex:indexPath.row];
 }
 -(void)dealloc{
-    [database close];
+    
     [super dealloc];
     [events release];
     [dayEvents release];
