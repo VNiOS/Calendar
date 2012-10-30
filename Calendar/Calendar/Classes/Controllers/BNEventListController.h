@@ -20,6 +20,8 @@
 -(CGFloat)heightofCell:(BNEventEntity *)event2;
 -(IBAction)done:(id)sender;
 -(void)addContentToHeadView:(UIView *)view;
+- (void)bnEventCellDidClickedAtCell:(BNEventCell *)cell;
+
 //- (void)initWithDate:(NSDate *)date1;
 //- (IBAction)EventNextDay:(id)sender;
 //- (IBAction)EventPrevDay:(id)sender;

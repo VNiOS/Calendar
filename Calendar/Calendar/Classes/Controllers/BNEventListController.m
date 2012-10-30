@@ -138,8 +138,9 @@
 - (void)bnEventCellDidClickedAtCell:(BNEventCell *)cell
 {
         NSIndexPath *indexPathCell = [self.tableView indexPathForCell:cell];
+        NSLog(@"indexPath = %@",indexPathCell);
         BNEventEntity *event1 = [eventDay objectAtIndex:indexPathCell.row];
-        NSLog(@"%@",event1);
+        NSLog(@"%@",event1.title);
     
     
     BNEventEditorController *editView=[[BNEventEditorController alloc]initWithNibName:@"BNEventEditorController" bundle:nil];
