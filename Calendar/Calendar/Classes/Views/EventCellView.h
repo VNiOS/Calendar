@@ -16,3 +16,5 @@
 @property(nonatomic,retain) UILabel *titlelb;
 @property(nonatomic,retain) UILabel *timelb;
 @end
+
+

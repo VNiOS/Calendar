@@ -21,9 +21,12 @@
 - (BNEventEntity *)eventAtIndexPath:(NSIndexPath *)indexPath;
 - (NSArray *)eventsFrom:(NSDate *)fromDate to:(NSDate *)toDate;
 - (NSArray *)getEventListFromDate:(NSDate *)fromdate toDate:(NSDate *)toDate;
+- (NSArray *)EventListIntoDate:(NSDate *)intoDate;
 - (BOOL)updateDatabase:(BNEventEntity *)event;
 - (BOOL)insertDatabase:(BNEventEntity *)event;
 - (BOOL)deleteDatabase:(BNEventEntity *)event;
+-(NSString *)convertDatetoString:(NSDate *)date;
+-(NSDate *)convertStringtoDate:(NSString *)string;
 
 
 @end
