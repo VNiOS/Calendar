@@ -23,7 +23,7 @@
     if (self) {
         
         self.titleLabel =[[UILabel alloc]init];
-        [self.titleLabel setTextAlignment:UITextAlignmentCenter];
+//        [self.titleLabel setTextAlignment:UITextAlignmentCenter];
         [self.titleLabel setFont:[UIFont boldSystemFontOfSize:20]];
         [self addSubview:self.titleLabel];
         
@@ -87,31 +87,31 @@
     self.LocalLabel.text = event.local;
     self.DetailLabel.text = event.detail;
     
-    CGSize titleSize = [event.title sizeWithFont:[UIFont boldSystemFontOfSize:20] constrainedToSize:CGSizeMake(300, max) lineBreakMode:UILineBreakModeCharacterWrap];
-    self.titleLabel.frame = CGRectMake(10,0 , 300, titleSize.height);
+    CGSize titleSize = [event.title sizeWithFont:[UIFont boldSystemFontOfSize:20] constrainedToSize:CGSizeMake(270, max) lineBreakMode:UILineBreakModeCharacterWrap];
+    self.titleLabel.frame = CGRectMake(40,10 , 270, titleSize.height);
     self.titleLabel.numberOfLines = 0;
     
     
-    startLabel.frame = CGRectMake(15, titleSize.height, 60, 20);
-    self.timeStartLabel.frame = CGRectMake(75,titleSize.height, 240, 20);
+    startLabel.frame = CGRectMake(15, titleSize.height + 20, 60, 20);
+    self.timeStartLabel.frame = CGRectMake(75,titleSize.height + 20, 240, 20);
     
     
-    endLabel.frame = CGRectMake(15, titleSize.height + 20, 60, 20);
-    self.timeEndLabel.frame = CGRectMake(75,titleSize.height + 20, 240, 20);
+    endLabel.frame = CGRectMake(15, titleSize.height + 40, 60, 20);
+    self.timeEndLabel.frame = CGRectMake(75,titleSize.height + 40, 240, 20);
     
     
     CGSize localLabelSize = [event.local sizeWithFont:[UIFont systemFontOfSize:textSize] constrainedToSize:CGSizeMake(240, max) lineBreakMode:UILineBreakModeCharacterWrap];
-    localLabel.frame = CGRectMake(15, titleSize.height + 40, 60, 20);
-    self.LocalLabel.frame = CGRectMake(75,40 + titleSize.height , 240, localLabelSize.height);
+    localLabel.frame = CGRectMake(15, titleSize.height + 60, 60, 20);
+    self.LocalLabel.frame = CGRectMake(75,60 + titleSize.height , 240, localLabelSize.height);
     self.LocalLabel.numberOfLines = 0;
     
     CGSize detailLabelSize = [event.detail sizeWithFont:[UIFont systemFontOfSize:textSize] constrainedToSize:CGSizeMake(240, max) lineBreakMode:UILineBreakModeCharacterWrap];
-    detailLabel.frame = CGRectMake(15, 40 + titleSize.height + localLabelSize.height, 60, 20);
-    self.DetailLabel.frame = CGRectMake(75,40 + titleSize.height + localLabelSize.height, 240, detailLabelSize.height);
+    detailLabel.frame = CGRectMake(15, 60 + titleSize.height + localLabelSize.height, 60, 20);
+    self.DetailLabel.frame = CGRectMake(75,60 + titleSize.height + localLabelSize.height, 240, detailLabelSize.height);
     self.DetailLabel.numberOfLines = 0;
     
     
-    editButton.frame = CGRectMake(250, 45 + titleSize.height + localLabelSize.height + detailLabelSize.height, 60, 20);
+    editButton.frame = CGRectMake(250, 65 + titleSize.height + localLabelSize.height + detailLabelSize.height, 60, 20);
     
 }
 

@@ -13,7 +13,9 @@
     NSArray *eventDay;
     BNEventCell *cell;
     NSInteger test;
-    NSDate *date;
+    UILabel *titlelb;
+    NSDate *dateEvent ;
+    UILabel *dayLabel;
 }
 -(IBAction)addEvent:(id)sender;
 - (BNEventEntity *)eventAtIndexPath:(NSIndexPath *)indexPath;
@@ -21,7 +23,11 @@
 -(IBAction)done:(id)sender;
 -(void)addContentToHeadView:(UIView *)view;
 - (void)bnEventCellDidClickedAtCell:(BNEventCell *)cell;
-
+- (void)updateContentDate:(NSDate *)withdate;
+- (IBAction)eventNextDay:(id)sender;
+- (IBAction)eventPrevDay:(id)sender;
+-(NSString *)conVertDateToStringDay:(NSDate *)date2;
+-(NSString *)conVertDateToStringDate:(NSDate *)date1;
 //- (void)initWithDate:(NSDate *)date1;
 //- (IBAction)EventNextDay:(id)sender;
 //- (IBAction)EventPrevDay:(id)sender;
