@@ -20,12 +20,12 @@
 @end
 
 
-@interface BNEventEditorController : UITableViewController<UIActionSheetDelegate>{
+@interface BNEventEditorController : UIViewController<UIActionSheetDelegate>{
+    UITableView *tableView;
+    
     BNEventEntity *eventEdited;
     EventDataSqlite *dataSqlite;
     int EditType;
-    
-    
     UITextField *titletf;
     UITextField *location;
     UITextView *description;
@@ -40,6 +40,10 @@
     UIView *headView;
     
 }
+@property(nonatomic,retain) BNEventEntity *eventEdited;
+
+
+@property(nonatomic,retain)IBOutlet UITableView *tableView;
 @property(nonatomic,strong) id<EditEventDelegate> delegate;
 @property(nonatomic,retain) UILabel *startDatelb;     
 @property(nonatomic,retain) UILabel *endDatelb;
@@ -47,12 +51,15 @@
 
 -(IBAction)closeTextField:(id)sender;
 -(IBAction)done:(id)sender;
+-(IBAction)back:(id)sender;
+-(IBAction)deleteEvent:(id)sender;
+
 
 -(void)checkDataInput;
 -(void)saveData:(int)type;
+-(void)getEventInput:(BNEventEntity *)event;    
     
-    
- -(void)showAlerView:(NSString *)title;
+-(void)showAlerView:(NSString *)title andSucces :(BOOL)succes;
 -(void)showOption:(int)type;
 
 -(void)addContentToHeadView:(UIView *)view;

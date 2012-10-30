@@ -35,17 +35,14 @@ static const CGFloat kMonthLabelHeight = 17.f;
     self.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     
       
-    CGRect logoFrame=CGRectMake(0, 0, 80, 60);  
-    self.logoView=[[UIImageView alloc]initWithFrame:logoFrame];
-    self.logoView.image=[UIImage imageNamed:@"logo2.jpg"];
-    [self addSubview:logoView];
+    
       
-    UIView *headerView = [[[UIView alloc] initWithFrame:CGRectMake(0.f, HeightForLOGO, frame.size.width, kHeaderHeight)] autorelease];
+    UIView *headerView = [[[UIView alloc] initWithFrame:CGRectMake(0.f, 0, frame.size.width, kHeaderHeight)] autorelease];
     headerView.backgroundColor = [UIColor grayColor];
     [self addSubviewsToHeaderView:headerView];
     [self addSubview:headerView];
     
-    UIView *contentView = [[[UIView alloc] initWithFrame:CGRectMake(0.f,HeightForLOGO+ kHeaderHeight, frame.size.width, frame.size.height - kHeaderHeight)] autorelease];
+    UIView *contentView = [[[UIView alloc] initWithFrame:CGRectMake(0.f,kHeaderHeight, frame.size.width, frame.size.height - kHeaderHeight)] autorelease];
     contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     [self addSubviewsToContentView:contentView];
     [self addSubview:contentView];

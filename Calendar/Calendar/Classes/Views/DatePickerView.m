@@ -38,9 +38,14 @@
 {
     [super viewDidLoad];
     dateType=YES;
-    UIView *headerView = [[[UIView alloc] initWithFrame:CGRectMake(0.f, 60, 320, 44)] autorelease];
+    UIView *headerView = [[[UIView alloc] initWithFrame:CGRectMake(0.f, 0, 320, 44)] autorelease];
     headerView.backgroundColor = [UIColor grayColor];
     [self.tableView1 setBackgroundColor:[UIColor clearColor]];
+    self.tableView1 =[[UITableView alloc]initWithFrame:CGRectMake(0, 44, self.view.bounds.size.width, 200) style:UITableViewStyleGrouped];
+    [self.tableView1 setDelegate:self];
+    [self.tableView1 setDataSource:self];
+    [self.tableView1 setBackgroundColor:[UIColor clearColor]];
+    [self.view addSubview:tableView1];
     [self addContentToHeadView:headerView];
     [self.view addSubview:headerView];
 
@@ -76,6 +81,9 @@
     [view addSubview:BackButton];
 }
 -(IBAction)done:(id)sender{
+    delegate.eventEdited.timeStart=dateStartlb.text;
+    delegate.eventEdited.timeEnd=dateEndlb.text;
+    
     delegate.startDatelb.text=dateStartlb.text;
     delegate.endDatelb.text=dateEndlb.text;
     
@@ -91,6 +99,7 @@
     NSString *dateString=[df stringFromDate:pickerDate];
     NSLog(@"select : %@",dateString);
     if (dateType) {
+        
         self.dateStartlb.text=dateString;
     }
     else{
