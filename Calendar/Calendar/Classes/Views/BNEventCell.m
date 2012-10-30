@@ -67,7 +67,7 @@
         
         self.editButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [editButton setBackgroundColor:[UIColor greenColor]];
-        //[editButton setBackgroundImage:[UIImage imageNamed:@"edit.png"] forState:UIControlStateNormal];
+        [editButton setBackgroundImage:[UIImage imageNamed:@"Kal.bundle/kal_grid_background.png"] forState:UIControlStateNormal];
         [editButton setTitle:@"Edit" forState:UIControlStateNormal];
         [editButton addTarget:self action:@selector(DidClickToEditButton:) forControlEvents:UIControlEventTouchUpInside];
         [editButton.titleLabel setTextAlignment:UITextAlignmentCenter];

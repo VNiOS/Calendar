@@ -16,14 +16,17 @@
 #define max 100000
 #define textSize 14
 
-
-
 @implementation BNEventListController
+@synthesize tableView = _tableView;
+
+#pragma mark - init
 
 - (id)init{
     self = [super init];
     if(self){
-        
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 104, 320, 336) style:UITableViewStylePlain];
+        [_tableView setDelegate:self];
+        [_tableView setDataSource:self];
         dateEvent = [[NSDate dateWithTimeIntervalSinceNow:-9*24*60*60]retain];
         [self updateContentDate:dateEvent];
     }  
@@ -41,8 +44,6 @@
 {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
 }
 
 #pragma mark - View lifecycle
@@ -51,26 +52,27 @@
 {
     [super viewDidLoad];
     
-    UIBarButtonItem *addEventButton=[[UIBarButtonItem alloc]initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(addEvent:)];
-    [self.navigationItem setRightBarButtonItem:addEventButton];
-    [self.tableView reloadData];
+    [self.view addSubview:_tableView];
     
     // add Header View
     UIView *headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320,104)];
     [headerView setBackgroundColor:[UIColor clearColor]];
     
-
     UIView *barView=[[UIView alloc]initWithFrame:CGRectMake(0, 60, 320, 44)];
     [self addContentToHeadView:barView];
     [headerView addSubview:barView];
-    self.tableView.tableHeaderView = headerView;
+    [self.view addSubview:headerView];
     [headerView release];
     [self.navigationController setNavigationBarHidden:YES];
     
     //add Toolbar 
-    
-    UIToolbar *toolBar = [[UIToolbar alloc]initWithFrame:CGRectMake(0,300, 320, 40)];
-    self.tableView.tableFooterView =  toolBar;
+    UIToolbar *toolBar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 416, 320, 44)];
+    [self.view addSubview:toolBar];
+    UIButton *addEventButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    addEventButton.frame = CGRectMake(0, 416, 320, 44);
+    [addEventButton addTarget:self action:@selector(addEvent:) forControlEvents:UIControlEventTouchUpInside];
+    [addEventButton setTitle:@"Add new event" forState:UIControlStateNormal];
+    [self.view addSubview:addEventButton];
     
 }
 
@@ -88,15 +90,13 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-# pragma mark - code
+
+# pragma mark - Set Content for table View
 
 - (NSInteger )tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [eventDay count];
-    
 }
-
-
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -111,7 +111,6 @@
     
     BNEventEntity *event = [self eventAtIndexPath:indexPath];
     [cell UpdateContentCell:event];
-    
     return cell;
 }
 
@@ -122,7 +121,7 @@
 }
 
 
-
+// get heigt of Cell
 -(CGFloat)heightofCell:(BNEventEntity *)event2
 {
     CGSize titleSize = [event2.title sizeWithFont:[UIFont boldSystemFontOfSize:20] constrainedToSize:CGSizeMake(270, max) lineBreakMode:UILineBreakModeCharacterWrap];
@@ -135,24 +134,22 @@
     
 }
 
+// jump to view Edit when click edit Button
+
 - (void)bnEventCellDidClickedAtCell:(BNEventCell *)cell1
 {
-        NSIndexPath *indexPathCell = [self.tableView indexPathForCell:cell1];
-
-        BNEventEntity *event1 = [eventDay objectAtIndex:indexPathCell.row];
-       
-    
+    NSIndexPath *indexPathCell = [self.tableView indexPathForCell:cell1];
+    BNEventEntity *event1 = [eventDay objectAtIndex:indexPathCell.row];
     
     BNEventEditorController *editView=[[BNEventEditorController alloc]initWithNibName:@"BNEventEditorController" bundle:nil];
     editView.delegate = self;
     UINavigationController *navirControl=[[UINavigationController alloc]initWithRootViewController:editView];
-    
     navirControl.modalTransitionStyle=UIModalTransitionStyleCoverVertical;
     [self presentModalViewController:navirControl animated:YES];
 }
 
 
-
+// get event from indexPath
 - (BNEventEntity *)eventAtIndexPath:(NSIndexPath *)indexPath{
     return  [eventDay objectAtIndex:indexPath.row];
     
@@ -167,6 +164,8 @@
     
 }
 
+//add Event when click addButton
+
 -(IBAction)addEvent:(id)sender{
     BNEventEditorController *editView=[[BNEventEditorController alloc]initWithNibName:@"BNEventEditorController" bundle:nil];
     editView.delegate=self;
@@ -176,12 +175,8 @@
     [self presentModalViewController:navirControl animated:YES];
 }
 
-- (IBAction)BackToCalendar:(id)sender
-{
-    BNCalendarController *calendar = [[BNCalendarController alloc]initWithNibName:@"BNCalendarController" bundle:nil];
-    [self.navigationController popToViewController:calendar animated:YES];
-}
-
+#pragma mark - set content for Header
+// add headerView
 
 -(void)addContentToHeadView:(UIView *)view{
     UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Kal.bundle/kal_grid_background.png"]];
@@ -190,7 +185,6 @@
     backgroundView.frame = imageFrame;
     [view addSubview:backgroundView];
     [backgroundView release];
-    
     
     titlelb = [[UILabel alloc]initWithFrame:CGRectMake(45, 10,120, 20)];
     titlelb.textColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Kal.bundle/kal_header_text_fill.png"]];
@@ -215,8 +209,9 @@
     [BackButton setImage:[UIImage imageNamed:@"Kal.bundle/kal_left_arrow.png"] forState:UIControlStateNormal];
     BackButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
     BackButton.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
-    [BackButton addTarget:self action:@selector(done:)  forControlEvents:UIControlEventTouchUpInside];
+    [BackButton addTarget:self action:@selector(backToCalendar:)  forControlEvents:UIControlEventTouchUpInside];
     [view addSubview:BackButton];
+    
     
     UIButton *PrevButton = [[UIButton alloc] initWithFrame:CGRectMake(200, 5, 46, 30)];
     [PrevButton setImage:[UIImage imageNamed:@"Kal.bundle/kal_left_arrow.png"] forState:UIControlStateNormal];
@@ -224,6 +219,7 @@
     PrevButton.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     [PrevButton addTarget:self action:@selector(eventPrevDay:)  forControlEvents:UIControlEventTouchUpInside];
     [view addSubview:PrevButton];
+    
     
     UIButton *NextButton = [[UIButton alloc] initWithFrame:CGRectMake(260, 5, 46, 30)];
     [NextButton setImage:[UIImage imageNamed:@"Kal.bundle/kal_right_arrow.png"] forState:UIControlStateNormal];
@@ -234,7 +230,8 @@
     
 }
 
--(IBAction)done:(id)sender{
+
+-(IBAction)backToCalendar:(id)sender{
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -251,6 +248,7 @@
     
 }
 
+
 -(IBAction)eventPrevDay:(id)sender
 {
     [eventDay release];
@@ -264,6 +262,8 @@
     
 }
 
+
+// function Convert Date to string format @"yyyy-MM-dd"
 -(NSString *)conVertDateToStringDate:(NSDate *)date1
 {
     NSDateFormatter *df = [[[NSDateFormatter alloc]init]autorelease];
@@ -272,6 +272,7 @@
     return dateString;
 }
 
+// function Convert Date to string format @"dd"
 -(NSString *)conVertDateToStringDay:(NSDate *)date2
 {
     NSDateFormatter *dfDay = [[[NSDateFormatter alloc]init]autorelease];
@@ -280,14 +281,11 @@
     return dayString;
 }
 
-
-
-
 - (void) dealloc{
+    [_tableView release];
     [dateEvent release];
     [eventDay release];
     [super dealloc];
-    
 }
 
 
