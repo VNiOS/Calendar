@@ -35,7 +35,7 @@ PullCodeFromSever
 CreatFolder()
 {
 #Tạo thư mục có tên là ngày tháng hiện tại
-mkdir $Now
+mkdir Release/$Now
 }
 CreatFolder
 
