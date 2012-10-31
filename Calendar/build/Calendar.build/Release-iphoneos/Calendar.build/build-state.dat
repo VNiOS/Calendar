@@ -5,25 +5,25 @@ cCheck dependencies
 cCpResource /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/ResourceRules.plist build/Release-iphoneos/Calendar.app/ResourceRules.plist
 cProcessInfoPlistFile /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/Info.plist Calendar/Resource/Others/Calendar-Info.plist
 cProcessPCH /var/folders/aM/aMAHB3dpEsKj24iesBHwBU+++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/Calendar-Prefix-fduutezklzwsnhcjykbjbaipaxsj/Calendar-Prefix.pch.pth Calendar/Resource/Others/Calendar-Prefix.pch normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalGridView.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalGridView.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabasePool.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabasePool.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/NSDateAdditions.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/NSDateAdditions.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/EventDataSqlite.o /Users/lifetime/Calendar/Calendar/Calendar/Classes/Common/EventDataSqlite.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNGlobal.o /Users/lifetime/Calendar/Calendar/Calendar/Classes/Common/BNGlobal.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNAppDelegate.o /Users/lifetime/Calendar/Calendar/Calendar/BNAppDelegate.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabase.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabase.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabaseAdditions.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabaseAdditions.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabasePool.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabasePool.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabaseQueue.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabaseQueue.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMResultSet.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMResultSet.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalDataSource.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalDataSource.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalDate.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalDate.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalGridView.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalGridView.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalLogic.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalLogic.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalMonthView.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalMonthView.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalTileView.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalTileView.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalView.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalView.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalViewController.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalViewController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/UIViewAdditions.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/UIViewAdditions.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNGlobal.o /Users/lifetime/Calendar/Calendar/Calendar/Classes/Common/BNGlobal.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNUtility.o /Users/lifetime/Calendar/Calendar/Calendar/Classes/Common/BNUtility.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/EventDataSqlite.o /Users/lifetime/Calendar/Calendar/Calendar/Classes/Common/EventDataSqlite.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNCalendarController.o /Users/lifetime/Calendar/Calendar/Calendar/Classes/Controllers/BNCalendarController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNEventEditorController.o /Users/lifetime/Calendar/Calendar/Calendar/Classes/Controllers/BNEventEditorController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNEventListController.o /Users/lifetime/Calendar/Calendar/Calendar/Classes/Controllers/BNEventListController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
@@ -514,7 +514,7 @@ t2
 s0
 
 N/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app
-t1351669068
+t1351669270
 s510
 
 N/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app.dSYM
@@ -581,16 +581,16 @@ s1164
 
 CCheck dependencies
 r0
-lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesbe4e5a950d41b641^b8741c960d41b641^---0#1#0#--18"Check dependencies36"326C2645-50C7-4EFD-AF0B-6EC9DE21B7D4-
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies2d2351af0e41b641^6cecfeaf0e41b641^---0#1#0#--18"Check dependencies36"564D4D55-B9EF-41CB-87BE-D9EAB3782B7C-
 
 CCodeSign /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app
-s373362070.187175
-e373362070.483463
+s373362352.078905
+e373362352.429159
 r1
 xCodeSign
 x/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app
 o/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app: replacing existing signature
-lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"CodeSign build/Release-iphoneos/Calendar.app611c30960d41b641^38d87b960d41b641^-100"/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app: replacing existing signature-0#0#0#-19%DVTDocumentLocation2@86"file://localhost/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/0000000000000000^721"CodeSign build/Release-iphoneos/Calendar.app    cd /Users/lifetime/Calendar/Calendar    setenv CODESIGN_ALLOCATE /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /usr/bin/codesign --force --sign "iPhone Developer: Phan Dinh Quan (DY54954BNY)" --resource-rules=/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/ResourceRules.plist --entitlements /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar.xcent /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app36"6AD57E10-A775-4132-96A8-553667743B73-
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"CodeSign build/Release-iphoneos/Calendar.app2f6d14b00e41b641^38f96db00e41b641^-100"/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app: replacing existing signature-0#0#0#-19%DVTDocumentLocation2@86"file://localhost/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/0000000000000000^721"CodeSign build/Release-iphoneos/Calendar.app    cd /Users/lifetime/Calendar/Calendar    setenv CODESIGN_ALLOCATE /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /usr/bin/codesign --force --sign "iPhone Developer: Phan Dinh Quan (DY54954BNY)" --resource-rules=/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/ResourceRules.plist --entitlements /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar.xcent /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app36"AF31E434-E5AA-4823-86C5-5DF9D5E69983-
 
 CCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNAppDelegate.o /Users/lifetime/Calendar/Calendar/Calendar/BNAppDelegate.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s373361860.123042
@@ -1069,13 +1069,13 @@ x/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app
 lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Touch /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app99b81dcc0c41b641^8e0521cc0c41b641^---0#0#0#--327"Touch build/Release-iphoneos/Calendar.app    cd /Users/lifetime/Calendar/Calendar    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /usr/bin/touch -c /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app36"409A1A5D-CA90-4BE1-805F-68FDE0E607F9-
 
 CValidate /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app
-s373362070.487622
-e373362070.748111
+s373362352.432845
+e373362352.754404
 r1
 xValidate
 x/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app
 owarning: iPhone/iPod Touch: Info.plist: Unable to verify icon dimensions, no icon found.  You must define CFBundleIcons, CFBundleIconFiles, CFBundleIconFile, or provide a default Icon.png that is 57x57 (-19013)
 oUnable to validate your application. - (null)
 o
-lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Validate build/Release-iphoneos/Calendar.app34f37c960d41b641^8a8fbf960d41b641^-258"warning: iPhone/iPod Touch: Info.plist: Unable to verify icon dimensions, no icon found.  You must define CFBundleIcons, CFBundleIconFiles, CFBundleIconFile, or provide a default Icon.png that is 57x57 (-19013)Unable to validate your application. - (null)1(21%IDEActivityLogMessage2@202" iPhone/iPod Touch: Info.plist: Unable to verify icon dimensions, no icon found.  You must define CFBundleIcons, CFBundleIconFiles, CFBundleIconFile, or provide a default Icon.png that is 57x57 (-19013)192"IPhone/iPod Touch: Info.plist: Unable to verify icon dimensions, no icon found.  You must define CFBundleIcons, CFBundleIconFiles, CFBundleIconFile, or provide a default Icon.png that is 57x57373362070#18446744073709551615#0#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#---0#0#0#-19%DVTDocumentLocation4@86"file://localhost/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/0000000000000000^439"Validate build/Release-iphoneos/Calendar.app    cd /Users/lifetime/Calendar/Calendar    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    setenv PRODUCT_TYPE com.apple.product-type.application    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/Validation /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app36"B4DA6F3A-1B46-4051-A253-FB6AEE2A3AD7-
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Validate build/Release-iphoneos/Calendar.app78ed6eb00e41b641^ae2cc1b00e41b641^-258"warning: iPhone/iPod Touch: Info.plist: Unable to verify icon dimensions, no icon found.  You must define CFBundleIcons, CFBundleIconFiles, CFBundleIconFile, or provide a default Icon.png that is 57x57 (-19013)Unable to validate your application. - (null)1(21%IDEActivityLogMessage2@202" iPhone/iPod Touch: Info.plist: Unable to verify icon dimensions, no icon found.  You must define CFBundleIcons, CFBundleIconFiles, CFBundleIconFile, or provide a default Icon.png that is 57x57 (-19013)192"IPhone/iPod Touch: Info.plist: Unable to verify icon dimensions, no icon found.  You must define CFBundleIcons, CFBundleIconFiles, CFBundleIconFile, or provide a default Icon.png that is 57x57373362352#18446744073709551615#0#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#---0#0#0#-19%DVTDocumentLocation4@86"file://localhost/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/0000000000000000^439"Validate build/Release-iphoneos/Calendar.app    cd /Users/lifetime/Calendar/Calendar    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    setenv PRODUCT_TYPE com.apple.product-type.application    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/Validation /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app36"4C29EC09-BBE1-49A3-92AF-9F02ECCB7697-
 
