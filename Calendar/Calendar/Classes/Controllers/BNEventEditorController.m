@@ -21,7 +21,7 @@
 #define defaultEventID 999999999
 
 @implementation BNEventEditorController
-@synthesize delegate,startDatelb,endDatelb,tableView1,eventEdited;
+@synthesize delegate,startDatelb,endDatelb,tableView1,eventEdited,dateStart;
 
 
 - (void)didReceiveMemoryWarning
@@ -206,6 +206,9 @@
 
 
 #pragma mark - Data IO
+-(void)getDateStart:(NSDate *)date{
+    dateStart=date;
+}
 -(void)getEventInput:(BNEventEntity *)event{
     if (!event) {
         EditType=EventNew;

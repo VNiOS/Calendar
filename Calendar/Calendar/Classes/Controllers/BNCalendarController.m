@@ -166,24 +166,10 @@
 #pragma mark - BNEventEditor delegate and action
 -(IBAction)addNewEvent:(id)sender{
     
-//    NSDictionary *data2=[[NSDictionary alloc]initWithObjectsAndKeys:
-//                         @"5",@"event_id",
-//                         @"test update event 3",         @"title",
-//                         @"2012-10-31 11:00:00",         @"timeStart",
-//                         @"2012-10-31 11:30:00",         @"timeEnd",
-//                         @"No repeat",        @"repeat",
-//                         @"10 min",        @"timeRepeat",
-//                         @"Ngoc khanh",         @"local",
-//                         @"Day la event test",         @"detail",
-//                         
-//                         nil];
-//    BNEventEntity *testUpdate=[[BNEventEntity alloc ]initWithDictionary:data2];    
-    
-    
-    
     BNEventEditorController *editView=[[BNEventEditorController alloc]initWithNibName:@"BNEventEditorController" bundle:nil];
     editView.delegate=self;
     [editView getEventInput:nil];
+    [editView getDateStart:selectedDate];
     [self.navigationController pushViewController:editView animated:YES];
 }
 -(void)reloadDatainView{

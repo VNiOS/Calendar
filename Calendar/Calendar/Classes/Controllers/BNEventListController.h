@@ -21,8 +21,10 @@
     BNEventCell *cell;
     UILabel *titlelb;
     NSDate *dateEvent ;
-    UILabel *dayLabel;    
+    UILabel *dayLabel; 
+    NSDate *dateStart;
 }
+@property(nonatomic,retain) NSDate *dateStart;
 @property(nonatomic,retain) id<BNEventListDelegate> delegate;
 @property (nonatomic, retain) UITableView *tableView;
 - (IBAction)addEvent:(id)sender;

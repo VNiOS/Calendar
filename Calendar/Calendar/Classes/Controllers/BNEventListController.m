@@ -17,7 +17,7 @@
 #define textSize 14
 
 @implementation BNEventListController
-@synthesize tableView = _tableView,delegate;
+@synthesize tableView = _tableView,delegate,dateStart;
 
 #pragma mark - init
 
@@ -37,7 +37,7 @@
     [format setDateFormat:@"dd/MM/YYYY"];
     NSString *stringdate=[format stringFromDate:withdate];
     NSLog(@"String with date is = %@",stringdate);
-   
+    
     
     dateEvent=[withdate retain];
     EventDataSqlite *eventDataSqlite = [[EventDataSqlite alloc] init];
@@ -172,6 +172,9 @@
     
     BNEventEditorController *editView=[[BNEventEditorController alloc]initWithNibName:@"BNEventEditorController" bundle:nil];
     editView.delegate = self;
+    dateStart=[[NSDate alloc]init];
+    dateStart=selectedEvent.startDate;
+    [editView getDateStart:dateStart];
     [editView getEventInput:selectedEvent];
     
     [self.navigationController pushViewController:editView animated:YES];

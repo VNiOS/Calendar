@@ -16,15 +16,16 @@
     if (self) {
         NSDateFormatter *df = [[[NSDateFormatter alloc] init]autorelease];
         [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-        NSDate *today1=[NSDate date];
-        
-        dateInput=[[df stringFromDate:today1]retain];
+        NSDate *day1=delegate.dateStart;
+        dateInput=[[df stringFromDate:day1]retain];
+        NSLog(@"Date input %@",dateInput);
         if (delegate.startDatelb.text.length==0 && delegate.endDatelb.text.length==0 ) {
             NSLog(@"Date input is nil");
             NewEvent=1;
             
         }
         else{
+            
             NSLog(@"date is edited");
             NewEvent=0;
             
@@ -51,9 +52,12 @@
     [super viewDidLoad];
     dateType=YES;
     succes=YES;
+    if (NewEvent) {
+        [datePicker setDate:self.delegate.dateStart animated:YES];
+    }
     
     
-    NSLog(@"date start input %@",delegate.startDatelb.text);
+     NSLog(@"date start input %@",delegate.startDatelb.text);
      NSLog(@"end start input %@",delegate.endDatelb.text);
 
 
@@ -210,12 +214,9 @@
                 [cell addSubview:label];
                 
                 self.dateStartlb=[[UILabel alloc]initWithFrame:CGRectMake(120, 15, 180, 20)];
-                if (NewEvent) {
-                    self.dateStartlb.text=dateInput;
-                }
-                else{
-                  self.dateStartlb.text=delegate.startDatelb.text;  
-                }
+                
+                self.dateStartlb.text=self.delegate.startDatelb.text;
+              
                 
                 
                 [self.dateStartlb setBackgroundColor:[UIColor clearColor]];
@@ -235,13 +236,9 @@
                 
                 self.dateEndlb=[[UILabel alloc]initWithFrame:CGRectMake(120, 15, 180, 20)];
                 
-                if (NewEvent) {
-                    self.dateEndlb.text=dateInput;
-                }
-                else{
-                    self.dateEndlb.text=delegate.endDatelb.text;  
-                }
                 
+                    self.dateEndlb.text=delegate.endDatelb.text;
+                                
                 
                 
                 
@@ -314,5 +311,6 @@
     }
 
 }
+
 
 @end

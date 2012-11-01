@@ -42,18 +42,18 @@
     int repeatInt;
     int repeatTimeInt;
     
-    
+    NSDate *dateStart;
     
 }
 @property(nonatomic,retain) BNEventEntity *eventEdited;
-
+@property(nonatomic,retain) NSDate *dateStart;
 
 @property(nonatomic,retain)IBOutlet UITableView *tableView1;
 @property(nonatomic,strong) id<EditEventDelegate> delegate;
 @property(nonatomic,retain) UILabel *startDatelb;     
 @property(nonatomic,retain) UILabel *endDatelb;
 
-
+-(void)getDateStart:(NSDate *)date;
 -(IBAction)closeTextField:(id)sender;
 -(IBAction)done:(id)sender;
 -(IBAction)back:(id)sender;

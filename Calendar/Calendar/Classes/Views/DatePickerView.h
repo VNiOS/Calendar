@@ -25,6 +25,8 @@
 -(IBAction)setDate:(id)sender;
 -(IBAction)done:(id)sender;
 -(void)checkDate;
+
+
 @property(nonatomic,retain) IBOutlet UITableView *tableView1;
 @property(nonatomic,strong) BNEventEditorController *delegate;
 
