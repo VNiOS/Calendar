@@ -1,0 +1,940 @@
+TCalendar
+v4
+r1
+cCheck dependencies
+cCpResource /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/ResourceRules.plist build/Release-iphoneos/Calendar.app/ResourceRules.plist
+cProcessInfoPlistFile /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/Info.plist Calendar/Resource/Others/Calendar-Info.plist
+cProcessPCH /var/folders/aM/aMAHB3dpEsKj24iesBHwBU+++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/Calendar-Prefix-fduutezklzwsnhcjykbjbaipaxsj/Calendar-Prefix.pch.pth Calendar/Resource/Others/Calendar-Prefix.pch normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalDate.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalDate.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalTileView.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalTileView.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNAppDelegate.o /Users/lifetime/Calendar/Calendar/Calendar/BNAppDelegate.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabase.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabase.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabaseAdditions.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabaseAdditions.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabasePool.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabasePool.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabaseQueue.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabaseQueue.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMResultSet.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMResultSet.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalDataSource.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalDataSource.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalGridView.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalGridView.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalLogic.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalLogic.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalMonthView.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalMonthView.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalView.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalView.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalViewController.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalViewController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/NSDateAdditions.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/NSDateAdditions.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/UIViewAdditions.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/UIViewAdditions.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNGlobal.o /Users/lifetime/Calendar/Calendar/Calendar/Classes/Common/BNGlobal.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNUtility.o /Users/lifetime/Calendar/Calendar/Calendar/Classes/Common/BNUtility.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/EventDataSqlite.o /Users/lifetime/Calendar/Calendar/Calendar/Classes/Common/EventDataSqlite.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNCalendarController.o /Users/lifetime/Calendar/Calendar/Calendar/Classes/Controllers/BNCalendarController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNEventEditorController.o /Users/lifetime/Calendar/Calendar/Calendar/Classes/Controllers/BNEventEditorController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNEventListController.o /Users/lifetime/Calendar/Calendar/Calendar/Classes/Controllers/BNEventListController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNEventEntity.o /Users/lifetime/Calendar/Calendar/Calendar/Classes/Entities/BNEventEntity.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNEventCell.o /Users/lifetime/Calendar/Calendar/Calendar/Classes/Views/BNEventCell.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/DatePickerView.o /Users/lifetime/Calendar/Calendar/Calendar/Classes/Views/DatePickerView.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/EventCellView.o /Users/lifetime/Calendar/Calendar/Calendar/Classes/Views/EventCellView.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/main.o /Users/lifetime/Calendar/Calendar/Calendar/Resource/Others/main.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/Calendar normal armv7
+cGenerateDSYMFile /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app.dSYM /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/Calendar
+cCpResource Calendar/Libraries/Kal.bundle build/Release-iphoneos/Calendar.app/Kal.bundle
+cCpResource Calendar/Resource/Database/EventsList.sqlite build/Release-iphoneos/Calendar.app/EventsList.sqlite
+cCopyStringsFile /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/en.lproj/InfoPlist.strings Calendar/Resource/Mulitlanguage/en.lproj/InfoPlist.strings
+cCompileXIB /Users/lifetime/Calendar/Calendar/Calendar/Resource/Nibs/BNEventEditorController.xib
+cCompileXIB /Users/lifetime/Calendar/Calendar/Calendar/Resource/Nibs/BNEventListController.xib
+cCompileXIB /Users/lifetime/Calendar/Calendar/Calendar/Resource/Nibs/DatePickerView.xib
+cProcessProductPackaging "/Users/lifetime/Library/MobileDevice/Provisioning Profiles/8AAC0DE6-2FBF-4317-8DEF-13E9AC548C55.mobileprovision" /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/embedded.mobileprovision
+cProcessProductPackaging "/Users/lifetime/Library/MobileDevice/Provisioning Profiles/8AAC0DE6-2FBF-4317-8DEF-13E9AC548C55.mobileprovision" /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/embedded.mobileprovision
+cTouch /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app
+cProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/Entitlements.plist /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar.xcent
+cCodeSign /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app
+cValidate /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk
+c000000004E7840290000000000000110
+t1316503593
+s272
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/Entitlements.plist
+c000000004E5C595800000000000001A7
+t1314675032
+s423
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/ResourceRules.plist
+c000000004E5C595800000000000001E5
+t1314675032
+s485
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004E72F28700000000003AB0A0
+t1316156039
+s3846304
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004E72F3440000000000529540
+t1316156228
+s5412160
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004E7808C7000000000078BE50
+t1316489415
+s7913040
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/lib/libsqlite3.dylib
+c000000004E72EE930000000000153B60
+t1316155027
+s1391456
+
+N/Users/lifetime/Calendar/Calendar/Calendar/BNAppDelegate.m
+c000000005090CEC60000000000000F0B
+t1351667398
+s3851
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Classes/Common/BNGlobal.m
+c000000005090CEC600000000000000BD
+t1351667398
+s189
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Classes/Common/BNUtility.m
+c000000005090CEC600000000000000C0
+t1351667398
+s192
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Classes/Common/EventDataSqlite.m
+c000000005090CEC600000000000031A7
+t1351667398
+s12711
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Classes/Controllers/BNCalendarController.m
+c000000005090CEC60000000000001656
+t1351667398
+s5718
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Classes/Controllers/BNEventEditorController.m
+c000000005090CEC60000000000004773
+t1351667398
+s18291
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Classes/Controllers/BNEventListController.m
+c000000005090CEC6000000000000288B
+t1351667398
+s10379
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Classes/Entities/BNEventEntity.m
+c000000005090CEC600000000000008F4
+t1351667398
+s2292
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Classes/Views/BNEventCell.m
+c000000005090CEC60000000000001413
+t1351667398
+s5139
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Classes/Views/DatePickerView.m
+c000000005090CEC60000000000001E36
+t1351667398
+s7734
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Classes/Views/EventCellView.m
+c000000005090CEC6000000000000044C
+t1351667398
+s1100
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabase.m
+c000000005090CEC600000000000085A8
+t1351667398
+s34216
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabaseAdditions.m
+c000000005090CEC6000000000000151B
+t1351667398
+s5403
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabasePool.m
+c000000005090CEC600000000000016EF
+t1351667398
+s5871
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabaseQueue.m
+c000000005090CEC60000000000000FD2
+t1351667398
+s4050
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMResultSet.m
+c000000005090CEC60000000000002F9A
+t1351667398
+s12186
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Libraries/Kal.bundle
+c000000005090CEC6000000000000030E
+t1351667398
+s782
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalDataSource.m
+c000000005090CEC60000000000000569
+t1351667398
+s1385
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalDate.m
+c000000005090CEC60000000000000919
+t1351667398
+s2329
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalGridView.m
+c000000005090CEC60000000000001CD6
+t1351667398
+s7382
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalLogic.m
+c000000005090CEC600000000000011E0
+t1351667398
+s4576
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalMonthView.m
+c000000005090CEC60000000000000CB2
+t1351667398
+s3250
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalTileView.m
+c000000005090CEC60000000000001627
+t1351667398
+s5671
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalView.m
+c000000005090CEC60000000000002962
+t1351667398
+s10594
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalViewController.m
+c000000005090CEC600000000000016F5
+t1351667398
+s5877
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Libraries/NSDateAdditions.m
+c000000005090CEC6000000000000092B
+t1351667398
+s2347
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Libraries/UIViewAdditions.m
+c000000005090CEC600000000000004ED
+t1351667398
+s1261
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Resource/Database/EventsList.sqlite
+c000000005090CEC60000000000020000
+t1351667398
+s131072
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Resource/Mulitlanguage/en.lproj/InfoPlist.strings
+c000000005090CEC6000000000000002D
+t1351667398
+s45
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Resource/Nibs/BNEventEditorController.xib
+c000000005090CEC6000000000000291E
+t1351667398
+s10526
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Resource/Nibs/BNEventListController.xib
+c000000005090CEC600000000000018D7
+t1351667398
+s6359
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Resource/Nibs/DatePickerView.xib
+c000000005090CEC60000000000004089
+t1351667398
+s16521
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Resource/Others/Calendar-Prefix.pch
+c000000005090CEC6000000000000013F
+t1351667398
+s319
+
+N/Users/lifetime/Calendar/Calendar/Calendar/Resource/Others/main.m
+c000000005090CEC60000000000000157
+t1351667398
+s343
+
+N/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar.xcent
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNAppDelegate.o
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNCalendarController.o
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNEventCell.o
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNEventEditorController.o
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNEventEntity.o
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNEventListController.o
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNGlobal.o
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNUtility.o
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/Calendar.LinkFileList
+c000000005090E3820000000000000D12
+t1351672706
+s3346
+
+N/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/DatePickerView.o
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/EventCellView.o
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/EventDataSqlite.o
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabase.o
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabaseAdditions.o
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabasePool.o
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabaseQueue.o
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMResultSet.o
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalDataSource.o
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalDate.o
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalGridView.o
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalLogic.o
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalMonthView.o
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalTileView.o
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalView.o
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalViewController.o
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/NSDateAdditions.o
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/UIViewAdditions.o
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/main.o
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/com.apple.build-tools.platform.validate
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app.dSYM
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/BNEventEditorController.nib
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/BNEventListController.nib
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/Calendar
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/DatePickerView.nib
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/EventsList.sqlite
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/Info.plist
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/Kal.bundle
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/PkgInfo
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/ResourceRules.plist
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/embedded.mobileprovision
+t2
+s0
+
+N/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/en.lproj/InfoPlist.strings
+t2
+s0
+
+N/Users/lifetime/Library/MobileDevice/Provisioning Profiles/8AAC0DE6-2FBF-4317-8DEF-13E9AC548C55.mobileprovision
+c00000000503C76020000000000001CC1
+t1346139650
+s7361
+
+N/var/folders/aM/aMAHB3dpEsKj24iesBHwBU+++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/Calendar-Prefix-fduutezklzwsnhcjykbjbaipaxsj/Calendar-Prefix.pch.pth
+t1351668376
+s3847056
+
+NCalendar/Resource/Others/Calendar-Info.plist
+c000000005090CEC6000000000000048C
+t1351667398
+s1164
+
+CCheck dependencies
+r0
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies00578a021b41b641^8fa8fc021b41b641^---0#1#0#--18"Check dependencies36"DA7C2771-2A0A-494B-899C-D6D2815718D9-
+
+CCodeSign /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app
+s373365513.635886
+e373365513.878287
+r1
+xCodeSign
+x/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"CodeSign build/Release-iphoneos/Calendar.app9fe8a2091b41b641^0bf1e0091b41b641^---0#0#0#-19%DVTDocumentLocation2@86"file://localhost/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/0000000000000000^721"CodeSign build/Release-iphoneos/Calendar.app    cd /Users/lifetime/Calendar/Calendar    setenv CODESIGN_ALLOCATE /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /usr/bin/codesign --force --sign "iPhone Developer: Phan Dinh Quan (DY54954BNY)" --resource-rules=/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/ResourceRules.plist --entitlements /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar.xcent /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app36"8F478C33-A598-4587-A137-22CD1E19E1EE-
+
+CCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNAppDelegate.o /Users/lifetime/Calendar/Calendar/Calendar/BNAppDelegate.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s373365507.205860
+e373365507.386859
+r1
+xCompileC
+xbuild/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNAppDelegate.o
+x/Users/lifetime/Calendar/Calendar/Calendar/BNAppDelegate.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection66"Compile /Users/lifetime/Calendar/Calendar/Calendar/BNAppDelegate.mf0df34031b41b641^7e1a63031b41b641^---0#0#0#-19%DVTDocumentLocation2@74"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/BNAppDelegate.m0000000000000000^2505"CompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNAppDelegate.o Calendar/BNAppDelegate.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/lifetime/Calendar/Calendar    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -mthumb "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-generated-files.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-own-target-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-all-target-headers.hmap -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-project-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/include -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources/armv7 -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources -F/Users/lifetime/Calendar/Calendar/build/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/aM/aMAHB3dpEsKj24iesBHwBU+++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/Calendar-Prefix-fduutezklzwsnhcjykbjbaipaxsj/Calendar-Prefix.pch -MMD -MT dependencies -MF /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNAppDelegate.d -c /Users/lifetime/Calendar/Calendar/Calendar/BNAppDelegate.m -o /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNAppDelegate.o36"0099AF0E-050B-4F75-A5E2-8D6C8A74C8B0-
+
+CCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNCalendarController.o /Users/lifetime/Calendar/Calendar/Calendar/Classes/Controllers/BNCalendarController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s373365508.937561
+e373365509.149903
+r1
+xCompileC
+xbuild/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNCalendarController.o
+x/Users/lifetime/Calendar/Calendar/Calendar/Classes/Controllers/BNCalendarController.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compile /Users/lifetime/Calendar/Calendar/Calendar/Classes/Controllers/BNCalendarController.me42cf0041b41b641^826f26051b41b641^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Classes/Controllers/BNCalendarController.m0000000000000000^2580"CompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNCalendarController.o Calendar/Classes/Controllers/BNCalendarController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/lifetime/Calendar/Calendar    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -mthumb "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-generated-files.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-own-target-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-all-target-headers.hmap -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-project-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/include -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources/armv7 -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources -F/Users/lifetime/Calendar/Calendar/build/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/aM/aMAHB3dpEsKj24iesBHwBU+++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/Calendar-Prefix-fduutezklzwsnhcjykbjbaipaxsj/Calendar-Prefix.pch -MMD -MT dependencies -MF /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNCalendarController.d -c /Users/lifetime/Calendar/Calendar/Calendar/Classes/Controllers/BNCalendarController.m -o /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNCalendarController.o36"19809809-6D77-4A0D-B945-62186C15468A-
+
+CCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNEventCell.o /Users/lifetime/Calendar/Calendar/Calendar/Classes/Views/BNEventCell.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s373365509.495874
+e373365509.729541
+r1
+xCompileC
+xbuild/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNEventCell.o
+x/Users/lifetime/Calendar/Calendar/Calendar/Classes/Views/BNEventCell.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Compile /Users/lifetime/Calendar/Calendar/Calendar/Classes/Views/BNEventCell.ma8187f051b41b641^9ad2ba051b41b641^---0#0#0#-19%DVTDocumentLocation2@86"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Classes/Views/BNEventCell.m0000000000000000^2523"CompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNEventCell.o Calendar/Classes/Views/BNEventCell.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/lifetime/Calendar/Calendar    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -mthumb "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-generated-files.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-own-target-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-all-target-headers.hmap -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-project-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/include -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources/armv7 -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources -F/Users/lifetime/Calendar/Calendar/build/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/aM/aMAHB3dpEsKj24iesBHwBU+++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/Calendar-Prefix-fduutezklzwsnhcjykbjbaipaxsj/Calendar-Prefix.pch -MMD -MT dependencies -MF /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNEventCell.d -c /Users/lifetime/Calendar/Calendar/Calendar/Classes/Views/BNEventCell.m -o /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNEventCell.o36"6BB41E1D-F5BC-4A64-A63D-290489384C99-
+
+CCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNEventEditorController.o /Users/lifetime/Calendar/Calendar/Calendar/Classes/Controllers/BNEventEditorController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s373365509.151398
+e373365509.492765
+r1
+xCompileC
+xbuild/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNEventEditorController.o
+x/Users/lifetime/Calendar/Calendar/Calendar/Classes/Controllers/BNEventEditorController.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Compile /Users/lifetime/Calendar/Calendar/Calendar/Classes/Controllers/BNEventEditorController.m96ea26051b41b641^f6457e051b41b641^---0#0#0#-19%DVTDocumentLocation2@104"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Classes/Controllers/BNEventEditorController.m0000000000000000^2595"CompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNEventEditorController.o Calendar/Classes/Controllers/BNEventEditorController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/lifetime/Calendar/Calendar    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -mthumb "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-generated-files.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-own-target-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-all-target-headers.hmap -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-project-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/include -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources/armv7 -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources -F/Users/lifetime/Calendar/Calendar/build/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/aM/aMAHB3dpEsKj24iesBHwBU+++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/Calendar-Prefix-fduutezklzwsnhcjykbjbaipaxsj/Calendar-Prefix.pch -MMD -MT dependencies -MF /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNEventEditorController.d -c /Users/lifetime/Calendar/Calendar/Calendar/Classes/Controllers/BNEventEditorController.m -o /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNEventEditorController.o36"F72D361D-4A53-4E82-AEC0-C0248C43B821-
+
+CCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNEventEntity.o /Users/lifetime/Calendar/Calendar/Calendar/Classes/Entities/BNEventEntity.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s373365509.450557
+e373365509.559498
+r1
+xCompileC
+xbuild/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNEventEntity.o
+x/Users/lifetime/Calendar/Calendar/Calendar/Classes/Entities/BNEventEntity.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Compile /Users/lifetime/Calendar/Calendar/Calendar/Classes/Entities/BNEventEntity.mdc8073051b41b641^1f478f051b41b641^---0#0#0#-19%DVTDocumentLocation2@91"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Classes/Entities/BNEventEntity.m0000000000000000^2539"CompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNEventEntity.o Calendar/Classes/Entities/BNEventEntity.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/lifetime/Calendar/Calendar    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -mthumb "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-generated-files.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-own-target-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-all-target-headers.hmap -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-project-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/include -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources/armv7 -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources -F/Users/lifetime/Calendar/Calendar/build/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/aM/aMAHB3dpEsKj24iesBHwBU+++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/Calendar-Prefix-fduutezklzwsnhcjykbjbaipaxsj/Calendar-Prefix.pch -MMD -MT dependencies -MF /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNEventEntity.d -c /Users/lifetime/Calendar/Calendar/Calendar/Classes/Entities/BNEventEntity.m -o /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNEventEntity.o36"0860EA5D-18CB-4BE1-8F49-5E15CDDB55CA-
+
+CCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNEventListController.o /Users/lifetime/Calendar/Calendar/Calendar/Classes/Controllers/BNEventListController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s373365509.192093
+e373365509.449273
+r1
+xCompileC
+xbuild/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNEventListController.o
+x/Users/lifetime/Calendar/Calendar/Calendar/Classes/Controllers/BNEventListController.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/lifetime/Calendar/Calendar/Calendar/Classes/Controllers/BNEventListController.m:142:20: warning: unused variable 'event1' [-Wunused-variable,12]
+o     BNEventEntity *event1 = [eventDay objectAtIndex:indexPathCell.row];
+o                    ^
+o1 warning generated.
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Compile /Users/lifetime/Calendar/Calendar/Calendar/Classes/Controllers/BNEventListController.m695731051b41b641^a51173051b41b641^-268"/Users/lifetime/Calendar/Calendar/Calendar/Classes/Controllers/BNEventListController.m:142:20: warning: unused variable 'event1' [-Wunused-variable,12]     BNEventEntity *event1 = [eventDay objectAtIndex:indexPathCell.row];                    ^1 warning generated.1(21%IDEActivityLogMessage2@24"Unused variable 'event1'-373365509#0#152#-1#-23%DVTTextDocumentLocation3@102"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Classes/Controllers/BNEventListController.m0000000000000000^141#19#141#19#18446744073709551615#0#19"Unused Entity Issue--0#0#0#-19%DVTDocumentLocation4@102"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Classes/Controllers/BNEventListController.m0000000000000000^2585"CompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNEventListController.o Calendar/Classes/Controllers/BNEventListController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/lifetime/Calendar/Calendar    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -mthumb "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-generated-files.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-own-target-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-all-target-headers.hmap -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-project-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/include -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources/armv7 -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources -F/Users/lifetime/Calendar/Calendar/build/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/aM/aMAHB3dpEsKj24iesBHwBU+++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/Calendar-Prefix-fduutezklzwsnhcjykbjbaipaxsj/Calendar-Prefix.pch -MMD -MT dependencies -MF /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNEventListController.d -c /Users/lifetime/Calendar/Calendar/Calendar/Classes/Controllers/BNEventListController.m -o /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNEventListController.o36"31D00E5F-9B9E-45F8-82F6-C0F17BFB7507-
+
+CCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNGlobal.o /Users/lifetime/Calendar/Calendar/Calendar/Classes/Common/BNGlobal.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s373365508.840108
+e373365508.888104
+r1
+xCompileC
+xbuild/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNGlobal.o
+x/Users/lifetime/Calendar/Calendar/Calendar/Classes/Common/BNGlobal.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Compile /Users/lifetime/Calendar/Calendar/Calendar/Classes/Common/BNGlobal.m693ad7041b41b641^b5dee3041b41b641^---0#0#0#-19%DVTDocumentLocation2@84"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Classes/Common/BNGlobal.m0000000000000000^2510"CompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNGlobal.o Calendar/Classes/Common/BNGlobal.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/lifetime/Calendar/Calendar    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -mthumb "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-generated-files.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-own-target-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-all-target-headers.hmap -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-project-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/include -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources/armv7 -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources -F/Users/lifetime/Calendar/Calendar/build/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/aM/aMAHB3dpEsKj24iesBHwBU+++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/Calendar-Prefix-fduutezklzwsnhcjykbjbaipaxsj/Calendar-Prefix.pch -MMD -MT dependencies -MF /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNGlobal.d -c /Users/lifetime/Calendar/Calendar/Calendar/Classes/Common/BNGlobal.m -o /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNGlobal.o36"9EB7025E-CD75-4B1C-9CED-92CDD7D998F2-
+
+CCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNUtility.o /Users/lifetime/Calendar/Calendar/Calendar/Classes/Common/BNUtility.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s373365508.889625
+e373365508.935856
+r1
+xCompileC
+xbuild/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNUtility.o
+x/Users/lifetime/Calendar/Calendar/Calendar/Classes/Common/BNUtility.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Users/lifetime/Calendar/Calendar/Calendar/Classes/Common/BNUtility.m26e4e3041b41b641^d7a4ef041b41b641^---0#0#0#-19%DVTDocumentLocation2@85"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Classes/Common/BNUtility.m0000000000000000^2515"CompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNUtility.o Calendar/Classes/Common/BNUtility.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/lifetime/Calendar/Calendar    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -mthumb "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-generated-files.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-own-target-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-all-target-headers.hmap -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-project-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/include -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources/armv7 -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources -F/Users/lifetime/Calendar/Calendar/build/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/aM/aMAHB3dpEsKj24iesBHwBU+++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/Calendar-Prefix-fduutezklzwsnhcjykbjbaipaxsj/Calendar-Prefix.pch -MMD -MT dependencies -MF /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNUtility.d -c /Users/lifetime/Calendar/Calendar/Calendar/Classes/Common/BNUtility.m -o /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/BNUtility.o36"CDF6957C-2E89-4585-82C1-4C418A5BCFE5-
+
+CCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/DatePickerView.o /Users/lifetime/Calendar/Calendar/Calendar/Classes/Views/DatePickerView.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s373365509.561564
+e373365509.782288
+r1
+xCompileC
+xbuild/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/DatePickerView.o
+x/Users/lifetime/Calendar/Calendar/Calendar/Classes/Views/DatePickerView.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Users/lifetime/Calendar/Calendar/Calendar/Classes/Views/DatePickerView.mc8ed8f051b41b641^8e57c8051b41b641^---0#0#0#-19%DVTDocumentLocation2@89"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Classes/Views/DatePickerView.m0000000000000000^2538"CompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/DatePickerView.o Calendar/Classes/Views/DatePickerView.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/lifetime/Calendar/Calendar    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -mthumb "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-generated-files.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-own-target-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-all-target-headers.hmap -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-project-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/include -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources/armv7 -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources -F/Users/lifetime/Calendar/Calendar/build/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/aM/aMAHB3dpEsKj24iesBHwBU+++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/Calendar-Prefix-fduutezklzwsnhcjykbjbaipaxsj/Calendar-Prefix.pch -MMD -MT dependencies -MF /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/DatePickerView.d -c /Users/lifetime/Calendar/Calendar/Calendar/Classes/Views/DatePickerView.m -o /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/DatePickerView.o36"4886075A-3622-4CBA-82C5-896948124536-
+
+CCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/EventCellView.o /Users/lifetime/Calendar/Calendar/Calendar/Classes/Views/EventCellView.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s373365509.730852
+e373365509.855854
+r1
+xCompileC
+xbuild/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/EventCellView.o
+x/Users/lifetime/Calendar/Calendar/Calendar/Classes/Views/EventCellView.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/lifetime/Calendar/Calendar/Calendar/Classes/Views/EventCellView.m4e44bb051b41b641^3527db051b41b641^---0#0#0#-19%DVTDocumentLocation2@88"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Classes/Views/EventCellView.m0000000000000000^2533"CompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/EventCellView.o Calendar/Classes/Views/EventCellView.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/lifetime/Calendar/Calendar    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -mthumb "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-generated-files.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-own-target-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-all-target-headers.hmap -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-project-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/include -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources/armv7 -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources -F/Users/lifetime/Calendar/Calendar/build/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/aM/aMAHB3dpEsKj24iesBHwBU+++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/Calendar-Prefix-fduutezklzwsnhcjykbjbaipaxsj/Calendar-Prefix.pch -MMD -MT dependencies -MF /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/EventCellView.d -c /Users/lifetime/Calendar/Calendar/Calendar/Classes/Views/EventCellView.m -o /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/EventCellView.o36"21A02C51-C588-49EE-8451-DC1ED17DE984-
+
+CCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/EventDataSqlite.o /Users/lifetime/Calendar/Calendar/Calendar/Classes/Common/EventDataSqlite.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s373365508.914435
+e373365509.189408
+r1
+xCompileC
+xbuild/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/EventDataSqlite.o
+x/Users/lifetime/Calendar/Calendar/Calendar/Classes/Common/EventDataSqlite.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Compile /Users/lifetime/Calendar/Calendar/Calendar/Classes/Common/EventDataSqlite.mc53dea041b41b641^978f30051b41b641^---0#0#0#-19%DVTDocumentLocation2@91"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Classes/Common/EventDataSqlite.m0000000000000000^2545"CompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/EventDataSqlite.o Calendar/Classes/Common/EventDataSqlite.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/lifetime/Calendar/Calendar    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -mthumb "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-generated-files.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-own-target-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-all-target-headers.hmap -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-project-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/include -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources/armv7 -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources -F/Users/lifetime/Calendar/Calendar/build/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/aM/aMAHB3dpEsKj24iesBHwBU+++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/Calendar-Prefix-fduutezklzwsnhcjykbjbaipaxsj/Calendar-Prefix.pch -MMD -MT dependencies -MF /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/EventDataSqlite.d -c /Users/lifetime/Calendar/Calendar/Calendar/Classes/Common/EventDataSqlite.m -o /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/EventDataSqlite.o36"AF918DB5-89C9-4B4C-8039-88D4E9C36C30-
+
+CCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabase.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabase.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s373365507.325009
+e373365507.880111
+r1
+xCompileC
+xbuild/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabase.o
+x/Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabase.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Compile /Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabase.m9f5853031b41b641^dd5be1031b41b641^---0#0#0#-19%DVTDocumentLocation2@86"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabase.m0000000000000000^2520"CompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabase.o Calendar/Libraries/FMDB/FMDatabase.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/lifetime/Calendar/Calendar    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -mthumb "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-generated-files.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-own-target-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-all-target-headers.hmap -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-project-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/include -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources/armv7 -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources -F/Users/lifetime/Calendar/Calendar/build/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/aM/aMAHB3dpEsKj24iesBHwBU+++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/Calendar-Prefix-fduutezklzwsnhcjykbjbaipaxsj/Calendar-Prefix.pch -MMD -MT dependencies -MF /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabase.d -c /Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabase.m -o /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabase.o36"4E44EA48-CD5C-456B-A611-2EC0B6C09FB7-
+
+CCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabaseAdditions.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabaseAdditions.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s373365507.388205
+e373365507.526699
+r1
+xCompileC
+xbuild/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabaseAdditions.o
+x/Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabaseAdditions.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compile /Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabaseAdditions.mfd8863031b41b641^a2eb86031b41b641^---0#0#0#-19%DVTDocumentLocation2@95"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabaseAdditions.m0000000000000000^2565"CompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabaseAdditions.o Calendar/Libraries/FMDB/FMDatabaseAdditions.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/lifetime/Calendar/Calendar    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -mthumb "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-generated-files.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-own-target-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-all-target-headers.hmap -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-project-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/include -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources/armv7 -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources -F/Users/lifetime/Calendar/Calendar/build/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/aM/aMAHB3dpEsKj24iesBHwBU+++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/Calendar-Prefix-fduutezklzwsnhcjykbjbaipaxsj/Calendar-Prefix.pch -MMD -MT dependencies -MF /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabaseAdditions.d -c /Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabaseAdditions.m -o /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabaseAdditions.o36"A047B4B8-519B-43DD-9360-AD76DD2118F7-
+
+CCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabasePool.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabasePool.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s373365507.528058
+e373365507.746392
+r1
+xCompileC
+xbuild/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabasePool.o
+x/Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabasePool.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabasePool.m215687031b41b641^6b2abf031b41b641^---0#0#0#-19%DVTDocumentLocation2@90"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabasePool.m0000000000000000^2540"CompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabasePool.o Calendar/Libraries/FMDB/FMDatabasePool.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/lifetime/Calendar/Calendar    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -mthumb "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-generated-files.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-own-target-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-all-target-headers.hmap -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-project-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/include -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources/armv7 -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources -F/Users/lifetime/Calendar/Calendar/build/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/aM/aMAHB3dpEsKj24iesBHwBU+++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/Calendar-Prefix-fduutezklzwsnhcjykbjbaipaxsj/Calendar-Prefix.pch -MMD -MT dependencies -MF /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabasePool.d -c /Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabasePool.m -o /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabasePool.o36"1BAF5BCC-5F2A-4952-A93B-AD4D6AD5751A-
+
+CCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabaseQueue.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabaseQueue.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s373365507.747693
+e373365507.906663
+r1
+xCompileC
+xbuild/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabaseQueue.o
+x/Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabaseQueue.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Compile /Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabaseQueue.m3f91bf031b41b641^b328e8031b41b641^---0#0#0#-19%DVTDocumentLocation2@91"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabaseQueue.m0000000000000000^2545"CompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabaseQueue.o Calendar/Libraries/FMDB/FMDatabaseQueue.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/lifetime/Calendar/Calendar    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -mthumb "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-generated-files.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-own-target-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-all-target-headers.hmap -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-project-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/include -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources/armv7 -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources -F/Users/lifetime/Calendar/Calendar/build/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/aM/aMAHB3dpEsKj24iesBHwBU+++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/Calendar-Prefix-fduutezklzwsnhcjykbjbaipaxsj/Calendar-Prefix.pch -MMD -MT dependencies -MF /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabaseQueue.d -c /Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMDatabaseQueue.m -o /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMDatabaseQueue.o36"D59AE908-B60D-4FD6-9411-878CA103DF15-
+
+CCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMResultSet.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMResultSet.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s373365507.882089
+e373365508.222014
+r1
+xCompileC
+xbuild/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMResultSet.o
+x/Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMResultSet.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Compile /Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMResultSet.m34f6e1031b41b641^bde338041b41b641^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMResultSet.m0000000000000000^2525"CompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMResultSet.o Calendar/Libraries/FMDB/FMResultSet.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/lifetime/Calendar/Calendar    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -mthumb "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-generated-files.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-own-target-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-all-target-headers.hmap -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-project-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/include -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources/armv7 -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources -F/Users/lifetime/Calendar/Calendar/build/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/aM/aMAHB3dpEsKj24iesBHwBU+++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/Calendar-Prefix-fduutezklzwsnhcjykbjbaipaxsj/Calendar-Prefix.pch -MMD -MT dependencies -MF /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMResultSet.d -c /Users/lifetime/Calendar/Calendar/Calendar/Libraries/FMDB/FMResultSet.m -o /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/FMResultSet.o36"5D4705E4-E56A-44D6-8DE2-ACC5086E810C-
+
+CCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalDataSource.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalDataSource.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s373365507.909302
+e373365508.083909
+r1
+xCompileC
+xbuild/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalDataSource.o
+x/Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalDataSource.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Compile /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalDataSource.mb9fbe8031b41b641^cdac15041b41b641^---0#0#0#-19%DVTDocumentLocation2@84"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalDataSource.m0000000000000000^2525"CompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalDataSource.o Calendar/Libraries/KalDataSource.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/lifetime/Calendar/Calendar    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -mthumb "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-generated-files.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-own-target-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-all-target-headers.hmap -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-project-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/include -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources/armv7 -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources -F/Users/lifetime/Calendar/Calendar/build/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/aM/aMAHB3dpEsKj24iesBHwBU+++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/Calendar-Prefix-fduutezklzwsnhcjykbjbaipaxsj/Calendar-Prefix.pch -MMD -MT dependencies -MF /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalDataSource.d -c /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalDataSource.m -o /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalDataSource.o36"0F591682-B6A6-44F0-9E3A-B8BAC28624A9-
+
+CCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalDate.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalDate.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s373365507.019662
+e373365507.204565
+r1
+xCompileC
+xbuild/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalDate.o
+x/Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalDate.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Compile /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalDate.m6e6d05031b41b641^406d34031b41b641^---0#0#0#-19%DVTDocumentLocation2@78"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalDate.m0000000000000000^2495"CompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalDate.o Calendar/Libraries/KalDate.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/lifetime/Calendar/Calendar    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -mthumb "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-generated-files.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-own-target-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-all-target-headers.hmap -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-project-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/include -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources/armv7 -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources -F/Users/lifetime/Calendar/Calendar/build/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/aM/aMAHB3dpEsKj24iesBHwBU+++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/Calendar-Prefix-fduutezklzwsnhcjykbjbaipaxsj/Calendar-Prefix.pch -MMD -MT dependencies -MF /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalDate.d -c /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalDate.m -o /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalDate.o36"EF8E232F-AEBA-4108-B804-62D7689E603F-
+
+CCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalGridView.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalGridView.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s373365508.085202
+e373365508.341877
+r1
+xCompileC
+xbuild/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalGridView.o
+x/Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalGridView.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Compile /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalGridView.m94fb15041b41b641^579357041b41b641^---0#0#0#-19%DVTDocumentLocation2@82"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalGridView.m0000000000000000^2515"CompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalGridView.o Calendar/Libraries/KalGridView.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/lifetime/Calendar/Calendar    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -mthumb "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-generated-files.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-own-target-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-all-target-headers.hmap -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-project-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/include -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources/armv7 -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources -F/Users/lifetime/Calendar/Calendar/build/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/aM/aMAHB3dpEsKj24iesBHwBU+++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/Calendar-Prefix-fduutezklzwsnhcjykbjbaipaxsj/Calendar-Prefix.pch -MMD -MT dependencies -MF /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalGridView.d -c /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalGridView.m -o /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalGridView.o36"EB645B7C-79A0-45F2-8FB9-3F2337BD72DE-
+
+CCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalLogic.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalLogic.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s373365508.224430
+e373365508.401995
+r1
+xCompileC
+xbuild/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalLogic.o
+x/Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalLogic.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"Compile /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalLogic.m4a9839041b41b641^7ff766041b41b641^---0#0#0#-19%DVTDocumentLocation2@79"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalLogic.m0000000000000000^2500"CompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalLogic.o Calendar/Libraries/KalLogic.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/lifetime/Calendar/Calendar    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -mthumb "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-generated-files.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-own-target-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-all-target-headers.hmap -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-project-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/include -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources/armv7 -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources -F/Users/lifetime/Calendar/Calendar/build/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/aM/aMAHB3dpEsKj24iesBHwBU+++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/Calendar-Prefix-fduutezklzwsnhcjykbjbaipaxsj/Calendar-Prefix.pch -MMD -MT dependencies -MF /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalLogic.d -c /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalLogic.m -o /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalLogic.o36"27314B93-059B-407E-B664-AEBD31BBE4A6-
+
+CCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalMonthView.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalMonthView.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s373365508.343157
+e373365508.533355
+r1
+xCompileC
+xbuild/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalMonthView.o
+x/Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalMonthView.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compile /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalMonthView.m430058041b41b641^7a8a88041b41b641^---0#0#0#-19%DVTDocumentLocation2@83"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalMonthView.m0000000000000000^2520"CompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalMonthView.o Calendar/Libraries/KalMonthView.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/lifetime/Calendar/Calendar    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -mthumb "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-generated-files.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-own-target-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-all-target-headers.hmap -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-project-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/include -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources/armv7 -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources -F/Users/lifetime/Calendar/Calendar/build/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/aM/aMAHB3dpEsKj24iesBHwBU+++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/Calendar-Prefix-fduutezklzwsnhcjykbjbaipaxsj/Calendar-Prefix.pch -MMD -MT dependencies -MF /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalMonthView.d -c /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalMonthView.m -o /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalMonthView.o36"D613BB62-F0A3-4E33-B5A5-6A1F87F12157-
+
+CCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalTileView.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalTileView.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s373365507.020116
+e373365507.323615
+r1
+xCompileC
+xbuild/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalTileView.o
+x/Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalTileView.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Compile /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalTileView.m6d5605031b41b641^25e952031b41b641^---0#0#0#-19%DVTDocumentLocation2@82"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalTileView.m0000000000000000^2515"CompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalTileView.o Calendar/Libraries/KalTileView.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/lifetime/Calendar/Calendar    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -mthumb "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-generated-files.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-own-target-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-all-target-headers.hmap -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-project-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/include -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources/armv7 -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources -F/Users/lifetime/Calendar/Calendar/build/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/aM/aMAHB3dpEsKj24iesBHwBU+++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/Calendar-Prefix-fduutezklzwsnhcjykbjbaipaxsj/Calendar-Prefix.pch -MMD -MT dependencies -MF /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalTileView.d -c /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalTileView.m -o /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalTileView.o36"D9A34203-DAFB-4BDE-AAB8-F27FA7A87832-
+
+CCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalView.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalView.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s373365508.404053
+e373365508.667928
+r1
+xCompileC
+xbuild/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalView.o
+x/Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalView.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Compile /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalView.m5f9967041b41b641^c40aab041b41b641^---0#0#0#-19%DVTDocumentLocation2@78"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalView.m0000000000000000^2495"CompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalView.o Calendar/Libraries/KalView.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/lifetime/Calendar/Calendar    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -mthumb "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-generated-files.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-own-target-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-all-target-headers.hmap -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-project-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/include -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources/armv7 -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources -F/Users/lifetime/Calendar/Calendar/build/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/aM/aMAHB3dpEsKj24iesBHwBU+++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/Calendar-Prefix-fduutezklzwsnhcjykbjbaipaxsj/Calendar-Prefix.pch -MMD -MT dependencies -MF /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalView.d -c /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalView.m -o /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalView.o36"8D3909C1-4E62-4810-9F74-48520E484A7A-
+
+CCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalViewController.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalViewController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s373365508.534877
+e373365508.737835
+r1
+xCompileC
+xbuild/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalViewController.o
+x/Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalViewController.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalViewController.mc71389041b41b641^60e9bc041b41b641^---0#0#0#-19%DVTDocumentLocation2@88"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalViewController.m0000000000000000^2545"CompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalViewController.o Calendar/Libraries/KalViewController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/lifetime/Calendar/Calendar    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -mthumb "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-generated-files.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-own-target-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-all-target-headers.hmap -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-project-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/include -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources/armv7 -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources -F/Users/lifetime/Calendar/Calendar/build/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/aM/aMAHB3dpEsKj24iesBHwBU+++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/Calendar-Prefix-fduutezklzwsnhcjykbjbaipaxsj/Calendar-Prefix.pch -MMD -MT dependencies -MF /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalViewController.d -c /Users/lifetime/Calendar/Calendar/Calendar/Libraries/KalViewController.m -o /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/KalViewController.o36"82521478-A367-4AF7-BA0C-7706C33DB971-
+
+CCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/NSDateAdditions.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/NSDateAdditions.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s373365508.673934
+e373365508.838746
+r1
+xCompileC
+xbuild/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/NSDateAdditions.o
+x/Users/lifetime/Calendar/Calendar/Calendar/Libraries/NSDateAdditions.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/lifetime/Calendar/Calendar/Calendar/Libraries/NSDateAdditions.m:33:8: warning: unused variable 'ok' [-Wunused-variable,12]
+o   BOOL ok = [[NSCalendar currentCalendar] rangeOfUnit:NSMonthCalendarUnit startDate:&d interval:NULL forDate:self];
+o        ^
+o1 warning generated.
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Compile /Users/lifetime/Calendar/Calendar/Calendar/Libraries/NSDateAdditions.m03b5ac041b41b641^7ac6d6041b41b641^-278"/Users/lifetime/Calendar/Calendar/Calendar/Libraries/NSDateAdditions.m:33:8: warning: unused variable 'ok' [-Wunused-variable,12]   BOOL ok = [[NSCalendar currentCalendar] rangeOfUnit:NSMonthCalendarUnit startDate:&d interval:NULL forDate:self];        ^1 warning generated.1(21%IDEActivityLogMessage2@20"Unused variable 'ok'-373365508#0#130#-1#-23%DVTTextDocumentLocation3@86"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Libraries/NSDateAdditions.m0000000000000000^32#7#32#7#18446744073709551615#0#19"Unused Entity Issue--0#0#0#-19%DVTDocumentLocation4@86"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Libraries/NSDateAdditions.m0000000000000000^2535"CompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/NSDateAdditions.o Calendar/Libraries/NSDateAdditions.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/lifetime/Calendar/Calendar    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -mthumb "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-generated-files.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-own-target-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-all-target-headers.hmap -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-project-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/include -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources/armv7 -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources -F/Users/lifetime/Calendar/Calendar/build/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/aM/aMAHB3dpEsKj24iesBHwBU+++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/Calendar-Prefix-fduutezklzwsnhcjykbjbaipaxsj/Calendar-Prefix.pch -MMD -MT dependencies -MF /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/NSDateAdditions.d -c /Users/lifetime/Calendar/Calendar/Calendar/Libraries/NSDateAdditions.m -o /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/NSDateAdditions.o36"492144FF-1708-4280-9DA2-7150990D54FD-
+
+CCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/UIViewAdditions.o /Users/lifetime/Calendar/Calendar/Calendar/Libraries/UIViewAdditions.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s373365508.739376
+e373365508.910774
+r1
+xCompileC
+xbuild/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/UIViewAdditions.o
+x/Users/lifetime/Calendar/Calendar/Calendar/Libraries/UIViewAdditions.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Compile /Users/lifetime/Calendar/Calendar/Calendar/Libraries/UIViewAdditions.m3f70bd041b41b641^2239e9041b41b641^---0#0#0#-19%DVTDocumentLocation2@86"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Libraries/UIViewAdditions.m0000000000000000^2535"CompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/UIViewAdditions.o Calendar/Libraries/UIViewAdditions.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/lifetime/Calendar/Calendar    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -mthumb "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-generated-files.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-own-target-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-all-target-headers.hmap -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-project-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/include -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources/armv7 -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources -F/Users/lifetime/Calendar/Calendar/build/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/aM/aMAHB3dpEsKj24iesBHwBU+++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/Calendar-Prefix-fduutezklzwsnhcjykbjbaipaxsj/Calendar-Prefix.pch -MMD -MT dependencies -MF /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/UIViewAdditions.d -c /Users/lifetime/Calendar/Calendar/Calendar/Libraries/UIViewAdditions.m -o /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/UIViewAdditions.o36"64F9B757-929F-4A8B-83A4-20D074ADEB68-
+
+CCompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/main.o /Users/lifetime/Calendar/Calendar/Calendar/Resource/Others/main.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s373365509.783686
+e373365509.859649
+r1
+xCompileC
+xbuild/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/main.o
+x/Users/lifetime/Calendar/Calendar/Calendar/Resource/Others/main.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Compile /Users/lifetime/Calendar/Calendar/Calendar/Resource/Others/main.mb0cbc8051b41b641^f511dc051b41b641^---0#0#0#-19%DVTDocumentLocation2@81"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Resource/Others/main.m0000000000000000^2492"CompileC build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/main.o Calendar/Resource/Others/main.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/lifetime/Calendar/Calendar    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -mthumb "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-generated-files.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-own-target-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-all-target-headers.hmap -iquote /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar-project-headers.hmap -I/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/include -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources/armv7 -I/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/DerivedSources -F/Users/lifetime/Calendar/Calendar/build/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/aM/aMAHB3dpEsKj24iesBHwBU+++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/Calendar-Prefix-fduutezklzwsnhcjykbjbaipaxsj/Calendar-Prefix.pch -MMD -MT dependencies -MF /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/main.d -c /Users/lifetime/Calendar/Calendar/Calendar/Resource/Others/main.m -o /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/main.o36"51FA230B-5E74-480C-94A5-D51BE6FF0840-
+
+CCompileXIB /Users/lifetime/Calendar/Calendar/Calendar/Resource/Nibs/BNEventEditorController.xib
+s373365510.083566
+e373365513.260318
+r1
+xCompileXIB
+x/Users/lifetime/Calendar/Calendar/Calendar/Resource/Nibs/BNEventEditorController.xib
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Compiling /Users/lifetime/Calendar/Calendar/Calendar/Resource/Nibs/BNEventEditorController.xibdf5216061b41b641^6bb642091b41b641^---0#0#0#-19%DVTDocumentLocation2@100"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Resource/Nibs/BNEventEditorController.xib0000000000000000^727"CompileXIB Calendar/Resource/Nibs/BNEventEditorController.xib    cd /Users/lifetime/Calendar/Calendar    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 5.0    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    setenv XCODE_DEVELOPER_USR_PATH /Developer/usr/bin/..    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/BNEventEditorController.nib /Users/lifetime/Calendar/Calendar/Calendar/Resource/Nibs/BNEventEditorController.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk36"A86523BA-E764-43BF-B3D5-EDD4D462909F-
+
+CCompileXIB /Users/lifetime/Calendar/Calendar/Calendar/Resource/Nibs/BNEventListController.xib
+s373365510.092018
+e373365513.382537
+r1
+xCompileXIB
+x/Users/lifetime/Calendar/Calendar/Calendar/Resource/Nibs/BNEventListController.xib
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Compiling /Users/lifetime/Calendar/Calendar/Calendar/Resource/Nibs/BNEventListController.xib7aaa17061b41b641^a4fb61091b41b641^---0#0#0#-19%DVTDocumentLocation2@98"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Resource/Nibs/BNEventListController.xib0000000000000000^721"CompileXIB Calendar/Resource/Nibs/BNEventListController.xib    cd /Users/lifetime/Calendar/Calendar    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 5.0    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    setenv XCODE_DEVELOPER_USR_PATH /Developer/usr/bin/..    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/BNEventListController.nib /Users/lifetime/Calendar/Calendar/Calendar/Resource/Nibs/BNEventListController.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk36"A241852A-3CD0-4285-BEB8-D70F0B7C4CC2-
+
+CCompileXIB /Users/lifetime/Calendar/Calendar/Calendar/Resource/Nibs/DatePickerView.xib
+s373365513.268533
+e373365513.538260
+r1
+xCompileXIB
+x/Users/lifetime/Calendar/Calendar/Calendar/Resource/Nibs/DatePickerView.xib
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Compiling /Users/lifetime/Calendar/Calendar/Calendar/Resource/Nibs/DatePickerView.xib649245091b41b641^7fdd89091b41b641^---0#0#0#-19%DVTDocumentLocation2@91"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Resource/Nibs/DatePickerView.xib0000000000000000^700"CompileXIB Calendar/Resource/Nibs/DatePickerView.xib    cd /Users/lifetime/Calendar/Calendar    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 5.0    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    setenv XCODE_DEVELOPER_USR_PATH /Developer/usr/bin/..    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/DatePickerView.nib /Users/lifetime/Calendar/Calendar/Calendar/Resource/Nibs/DatePickerView.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk36"FE978905-DB85-46A6-ACE0-340F146E8E7E-
+
+CCopyStringsFile /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/en.lproj/InfoPlist.strings Calendar/Resource/Mulitlanguage/en.lproj/InfoPlist.strings
+s373365510.083157
+e373365510.090804
+r1
+xCopyStringsFile
+x/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/en.lproj/InfoPlist.strings
+xCalendar/Resource/Mulitlanguage/en.lproj/InfoPlist.strings
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection63"Copy Calendar/Resource/Mulitlanguage/en.lproj/InfoPlist.stringscd3b16061b41b641^bf4917061b41b641^---0#0#0#-19%DVTDocumentLocation2@108"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Resource/Mulitlanguage/en.lproj/InfoPlist.strings0000000000000000^562"CopyStringsFile build/Release-iphoneos/Calendar.app/en.lproj/InfoPlist.strings Calendar/Resource/Mulitlanguage/en.lproj/InfoPlist.strings    cd /Users/lifetime/Calendar/Calendar    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/en.lproj -- Calendar/Resource/Mulitlanguage/en.lproj/InfoPlist.strings36"4125847F-03BB-4CFC-A109-ACA52AB8C352-
+
+CCpResource /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/ResourceRules.plist build/Release-iphoneos/Calendar.app/ResourceRules.plist
+s373365507.007820
+e373365507.014321
+r1
+xCpResource
+x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/ResourceRules.plist
+xbuild/Release-iphoneos/Calendar.app/ResourceRules.plist
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection60"Copy build/Release-iphoneos/Calendar.app/ResourceRules.plistac3702031b41b641^66be03031b41b641^---0#0#0#-19%DVTDocumentLocation2@105"file://localhost/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/ResourceRules.plist00f8f844dcffdf42^643"CpResource /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/ResourceRules.plist build/Release-iphoneos/Calendar.app/ResourceRules.plist    cd /Users/lifetime/Calendar/Calendar    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/ResourceRules.plist /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app36"4FEEA68F-BA38-4CB5-B65B-5E2534BF4F8D-
+
+CCpResource Calendar/Libraries/Kal.bundle build/Release-iphoneos/Calendar.app/Kal.bundle
+s373365510.074572
+e373365510.082836
+r1
+xCpResource
+xCalendar/Libraries/Kal.bundle
+xbuild/Release-iphoneos/Calendar.app/Kal.bundle
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Copy build/Release-iphoneos/Calendar.app/Kal.bundle753b13061b41b641^a47015061b41b641^---0#0#0#-19%DVTDocumentLocation2@96"file://localhost/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/Kal.bundle00f8f844dcffdf42^548"CpResource Calendar/Libraries/Kal.bundle build/Release-iphoneos/Calendar.app/Kal.bundle    cd /Users/lifetime/Calendar/Calendar    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks /Users/lifetime/Calendar/Calendar/Calendar/Libraries/Kal.bundle /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app36"5B3E1420-79B5-43A9-B6EA-DAAA5449814A-
+
+CCpResource Calendar/Resource/Database/EventsList.sqlite build/Release-iphoneos/Calendar.app/EventsList.sqlite
+s373365510.074743
+e373365510.081799
+r1
+xCpResource
+xCalendar/Resource/Database/EventsList.sqlite
+xbuild/Release-iphoneos/Calendar.app/EventsList.sqlite
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"Copy build/Release-iphoneos/Calendar.app/EventsList.sqlite6c3d13061b41b641^cd0615061b41b641^---0#0#0#-19%DVTDocumentLocation2@103"file://localhost/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/EventsList.sqlite00f8f844dcffdf42^585"CpResource Calendar/Resource/Database/EventsList.sqlite build/Release-iphoneos/Calendar.app/EventsList.sqlite    cd /Users/lifetime/Calendar/Calendar    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks /Users/lifetime/Calendar/Calendar/Calendar/Resource/Database/EventsList.sqlite /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app36"F13BA3C7-A2B2-4A4C-B7FE-0DD7D834B7D3-
+
+CGenerateDSYMFile /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app.dSYM /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/Calendar
+s373365509.984606
+e373365510.071190
+r1
+xGenerateDSYMFile
+x/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app.dSYM
+x/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/Calendar
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Generating /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app.dSYMe02dfc051b41b641^6a4e12061b41b641^---0#0#0#-19%DVTDocumentLocation2@90"file://localhost/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app.dSYM00f8f844dcffdf42^485"GenerateDSYMFile build/Release-iphoneos/Calendar.app.dSYM build/Release-iphoneos/Calendar.app/Calendar    cd /Users/lifetime/Calendar/Calendar    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/usr/bin/dsymutil /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/Calendar -o /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app.dSYM36"35BBA711-653D-45AF-B5B0-273277D4C0CF-
+
+CLd /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/Calendar normal armv7
+s373365509.861176
+e373365509.982638
+r1
+xLd
+x/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/Calendar
+xnormal
+xarmv7
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Link /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/Calendar1093dc051b41b641^268ffb051b41b641^---0#0#0#--907"Ld build/Release-iphoneos/Calendar.app/Calendar normal armv7    cd /Users/lifetime/Calendar/Calendar    setenv IPHONEOS_DEPLOYMENT_TARGET 5.0    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -arch armv7 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -L/Users/lifetime/Calendar/Calendar/build/Release-iphoneos -F/Users/lifetime/Calendar/Calendar/build/Release-iphoneos -filelist /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Objects-normal/armv7/Calendar.LinkFileList -dead_strip -miphoneos-version-min=5.0 -lsqlite3 -framework UIKit -framework Foundation -framework CoreGraphics -o /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/Calendar36"82931A38-F1F7-4E39-95E7-245B9F5456F4-
+
+CProcessInfoPlistFile /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/Info.plist Calendar/Resource/Others/Calendar-Info.plist
+s373365507.007887
+e373365507.013773
+r1
+xProcessInfoPlistFile
+x/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/Info.plist
+xCalendar/Resource/Others/Calendar-Info.plist
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection52"Process Calendar/Resource/Others/Calendar-Info.plist0d3502031b41b641^6da903031b41b641^---0#0#0#-19%DVTDocumentLocation2@94"file://localhost/Users/lifetime/Calendar/Calendar/Calendar/Resource/Others/Calendar-Info.plist0000000000000000^718"ProcessInfoPlistFile build/Release-iphoneos/Calendar.app/Info.plist Calendar/Resource/Others/Calendar-Info.plist    cd /Users/lifetime/Calendar/Calendar    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-infoPlistUtility Calendar/Resource/Others/Calendar-Info.plist -genpkginfo /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -resourcerulesfile /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/ResourceRules.plist -o /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/Info.plist36"FBB1BB20-87B4-46DF-A183-F94D3C38193A-
+
+CProcessPCH /var/folders/aM/aMAHB3dpEsKj24iesBHwBU+++TQ/-Caches-/com.apple.Xcode.503/SharedPrecompiledHeaders/Calendar-Prefix-fduutezklzwsnhcjykbjbaipaxsj/Calendar-Prefix.pch.pth Calendar/Resource/Others/Calendar-Prefix.pch normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CProcessProductPackaging "/Users/lifetime/Library/MobileDevice/Provisioning Profiles/8AAC0DE6-2FBF-4317-8DEF-13E9AC548C55.mobileprovision" /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/embedded.mobileprovision
+s373365513.568845
+e373365513.582473
+r1
+xProcessProductPackaging
+x/Users/lifetime/Library/MobileDevice/Provisioning Profiles/8AAC0DE6-2FBF-4317-8DEF-13E9AC548C55.mobileprovision
+x/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/embedded.mobileprovision
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection198"ProcessProductPackaging "/Users/lifetime/Library/MobileDevice/Provisioning Profiles/8AAC0DE6-2FBF-4317-8DEF-13E9AC548C55.mobileprovision" build/Release-iphoneos/Calendar.app/embedded.mobileprovision38bb91091b41b641^d61b95091b41b641^---0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/embedded.mobileprovision0000000000000000^640"ProcessProductPackaging "/Users/lifetime/Library/MobileDevice/Provisioning Profiles/8AAC0DE6-2FBF-4317-8DEF-13E9AC548C55.mobileprovision" build/Release-iphoneos/Calendar.app/embedded.mobileprovision    cd /Users/lifetime/Calendar/Calendar    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-productPackagingUtility "/Users/lifetime/Library/MobileDevice/Provisioning Profiles/8AAC0DE6-2FBF-4317-8DEF-13E9AC548C55.mobileprovision" -o /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/embedded.mobileprovision36"C5482FDF-AAE9-49F8-ADC9-1D0853FE6267-
+
+CProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/Entitlements.plist /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar.xcent
+s373365513.598968
+e373365513.632557
+r1
+xProcessProductPackaging
+x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/Entitlements.plist
+x/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar.xcent
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection180"ProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/Entitlements.plist build/Calendar.build/Release-iphoneos/Calendar.build/Calendar.xcent477299091b41b641^eeeea1091b41b641^---0#0#0#-19%DVTDocumentLocation2@117"file://localhost/Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar.xcent00f8f844dcffdf42^630"ProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/Entitlements.plist build/Calendar.build/Release-iphoneos/Calendar.build/Calendar.xcent    cd /Users/lifetime/Calendar/Calendar    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-productPackagingUtility /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/Entitlements.plist -entitlements -format xml -o /Users/lifetime/Calendar/Calendar/build/Calendar.build/Release-iphoneos/Calendar.build/Calendar.xcent36"94E072E8-B0D9-4B0C-A3E1-F1FC8FAD0C21-
+
+CTouch /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app
+s373365513.585649
+e373365513.596335
+r1
+xTouch
+x/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Touch /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.appb30796091b41b641^1fba98091b41b641^---0#0#0#--327"Touch build/Release-iphoneos/Calendar.app    cd /Users/lifetime/Calendar/Calendar    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /usr/bin/touch -c /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app36"DACBE56B-C19D-4302-A11D-F5A0C3A56ECB-
+
+CValidate /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app
+s373365513.881293
+e373365514.107130
+r1
+xValidate
+x/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app
+owarning: iPhone/iPod Touch: Info.plist: Unable to verify icon dimensions, no icon found.  You must define CFBundleIcons, CFBundleIconFiles, CFBundleIconFile, or provide a default Icon.png that is 57x57 (-19013)
+oUnable to validate your application. - (null)
+o
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Validate build/Release-iphoneos/Calendar.app0fb5e1091b41b641^6c771b0a1b41b641^-258"warning: iPhone/iPod Touch: Info.plist: Unable to verify icon dimensions, no icon found.  You must define CFBundleIcons, CFBundleIconFiles, CFBundleIconFile, or provide a default Icon.png that is 57x57 (-19013)Unable to validate your application. - (null)1(21%IDEActivityLogMessage2@202" iPhone/iPod Touch: Info.plist: Unable to verify icon dimensions, no icon found.  You must define CFBundleIcons, CFBundleIconFiles, CFBundleIconFile, or provide a default Icon.png that is 57x57 (-19013)192"IPhone/iPod Touch: Info.plist: Unable to verify icon dimensions, no icon found.  You must define CFBundleIcons, CFBundleIconFiles, CFBundleIconFile, or provide a default Icon.png that is 57x57373365514#18446744073709551615#0#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#---0#0#0#-19%DVTDocumentLocation4@86"file://localhost/Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app/0000000000000000^439"Validate build/Release-iphoneos/Calendar.app    cd /Users/lifetime/Calendar/Calendar    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    setenv PRODUCT_TYPE com.apple.product-type.application    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/Validation /Users/lifetime/Calendar/Calendar/build/Release-iphoneos/Calendar.app36"A27BC69C-A6B8-454F-8C28-24876FBB4450-
+

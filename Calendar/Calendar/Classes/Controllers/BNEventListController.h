@@ -8,8 +8,30 @@
 
 #import <UIKit/UIKit.h>
 #import "BNEventEditorController.h"
+#import "BNEventCell.h"
+@interface BNEventListController : UIViewController<EditEventDelegate,UITableViewDelegate,UITableViewDataSource,BNEventCellDelegate>{
+    NSArray *eventDay;
+    BNEventCell *cell;
+    UILabel *titlelb;
+    NSDate *dateEvent ;
+    UILabel *dayLabel;
 @interface BNEventListController : UIViewController<EditEventDelegate>{
     
 }
--(void)addOrUpdateEvent:(BNEventEntity *)event;
+
+@property (nonatomic, retain) UITableView *tableView;
+- (IBAction)addEvent:(id)sender;
+- (BNEventEntity *)eventAtIndexPath:(NSIndexPath *)indexPath;
+- (CGFloat)heightofCell:(BNEventEntity *)event2;
+- (IBAction)backToCalendar:(id)sender;
+- (void)addContentToHeadView:(UIView *)view;
+- (void)bnEventCellDidClickedAtCell:(BNEventCell *)cell;
+- (void)updateContentDate:(NSDate *)withdate;
+- (IBAction)eventNextDay:(id)sender;
+- (IBAction)eventPrevDay:(id)sender;
+- (NSString *)conVertDateToStringDay:(NSDate *)date2;
+- (NSString *)conVertDateToStringDate:(NSDate *)date1;
+
+
+@end-(void)addOrUpdateEvent:(BNEventEntity *)event;
 @end

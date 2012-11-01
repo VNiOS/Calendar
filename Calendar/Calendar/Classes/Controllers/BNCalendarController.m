@@ -158,7 +158,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"tableView click");
-    BNEventListController *eventDay=[[BNEventListController alloc]initWithNibName:@"BNEventListController" bundle:nil];
+    BNEventListController *eventDay=[[BNEventListController alloc]init];
     
     [self.navigationController pushViewController:eventDay animated:YES];
 }

@@ -161,6 +161,58 @@ NSString *const BNEventProperiesEventDetail1 = @"detail";
     [database close];
 }
 
+- (NSArray *)EventListIntoDate:(NSDate *)intoDate
+{
+    NSDateFormatter *dateFomater = [[[NSDateFormatter alloc]init]autorelease];
+    [dateFomater setDateFormat:@"yyyy-MM-dd"];
+    NSString *dateString = [dateFomater stringFromDate:intoDate];
+    NSString *dayStart = [NSString stringWithFormat:@"%@ 00:00:00",dateString];
+    NSString *dayEnd = [NSString stringWithFormat:@"%@ 23:59:59",dateString];
+    
+    [database open];
+    NSMutableArray *eventListInDate = [[NSMutableArray alloc]init];
+    FMResultSet *results  = [database executeQuery:[NSString stringWithFormat:@"select *from Events where timeStart >= '%@' and timeStart <= '%@'",dayStart,dayEnd]];
+    while ([results next]) {
+        NSMutableDictionary *event = [[NSMutableDictionary alloc] init];
+        NSNumber *event_id = [[NSNumber alloc] initWithInt:[results intForColumn:BNEventProperiesEventId1]];
+        NSNumber *repeat = [[NSNumber alloc]initWithInt:[results intForColumn:BNEventProperiesEventRepeat1]];
+        NSString *title = [NSString stringWithFormat:@"%@",[results stringForColumn:BNEventProperiesEventTitle1]];
+        NSString *timeStart = [NSString stringWithFormat:@"%@",[results stringForColumn:BNEventProperiesEventTimeStart1]];
+        NSDate *dateStart = [self convertStringtoDate:timeStart];
+        timeStart = [self convertDatetoString:dateStart];
+        
+        NSString *timeEnd = [NSString stringWithFormat:@"%@",[results stringForColumn:BNEventProperiesEventTimeEnd1]];
+        NSDate *dateEnd = [self convertStringtoDate:timeEnd];
+        timeEnd = [self convertDatetoString:dateEnd];
+        
+        NSString *timeRepeat = [NSString stringWithFormat:@"%@",[results stringForColumn:BNEventProperiesEventTimeRepeat1]];
+        NSString *local = [NSString stringWithFormat:@"%@",[results stringForColumn:BNEventProperiesEventLocal1]];
+        NSString *detail = [NSString stringWithFormat:@"%@",[results stringForColumn:BNEventProperiesEventDetail1]];
+        
+        // get information 
+        
+        [event setObject:event_id forKey:BNEventProperiesEventId1];
+        [event setObject:title forKey:BNEventProperiesEventTitle1];
+        [event setObject:timeStart forKey:BNEventProperiesEventTimeStart1];
+        [event setObject:timeEnd forKey:BNEventProperiesEventTimeEnd1];
+        [event setObject:repeat forKey:BNEventProperiesEventRepeat1];
+        [event setObject:timeRepeat forKey:BNEventProperiesEventTimeRepeat1];
+        [event setObject:local forKey:BNEventProperiesEventLocal1];
+        [event setObject:detail forKey:BNEventProperiesEventDetail1];
+        
+        NSLog(@"event_id = %@",event_id);
+        NSLog(@"title = %@",[event objectForKey:BNEventProperiesEventTitle1]);
+        
+        BNEventEntity *newEvent = [[BNEventEntity alloc]initWithDictionary:event];
+        [eventListInDate addObject:newEvent];
+        [newEvent release];
+    }
+    
+    return [NSArray arrayWithArray:eventListInDate];
+    [database close];
+}
+
+
 - (void)removeAllItems
 {
     [dayEvents removeAllObjects];
@@ -225,6 +277,23 @@ NSString *const BNEventProperiesEventDetail1 = @"detail";
 - (BNEventEntity *)eventAtIndexPath:(NSIndexPath *)indexPath{
    return  [dayEvents objectAtIndex:indexPath.row];
 }
+
+-(NSDate *)convertStringtoDate:(NSString *)string{
+    NSDate *result;
+    NSDateFormatter *df = [[[NSDateFormatter alloc] init]autorelease];
+    [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    result=[df dateFromString:string];
+    return result;
+}
+
+-(NSString *)convertDatetoString:(NSDate *)date{
+    NSDateFormatter *df = [[[NSDateFormatter alloc] init]autorelease];
+    [df setDateFormat:@"yyyy-MM-dd     HH:mm"];
+    NSString *results = [df stringFromDate:date];
+    return results;
+}
+
+
 -(void)dealloc{
     
     [super dealloc];
