@@ -21,7 +21,7 @@
 #define defaultEventID 999999999
 
 @implementation BNEventEditorController
-@synthesize delegate,startDatelb,endDatelb,tableView,eventEdited;
+@synthesize delegate,startDatelb,endDatelb,tableView1,eventEdited;
 
 
 - (void)didReceiveMemoryWarning
@@ -45,43 +45,29 @@
     
     
     
-    headView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 104)];
-    headView.backgroundColor=[UIColor clearColor];
-    
-    self.tableView.tableHeaderView=headView;
-    
-    UIBarButtonItem *doneBt=[[UIBarButtonItem alloc]initWithTitle:@"Done" style:UIBarButtonItemStylePlain target:self action:@selector(done:)];
-    [doneBt setTintColor:[UIColor colorWithRed:0.3 green:0.7 blue:0 alpha:1.0]];
-    self.navigationItem.leftBarButtonItem=doneBt;
-    
-    
+
+     
     
     UIView *headerView = [[[UIView alloc] initWithFrame:CGRectMake(0.f, 0, 320, 44)] autorelease];
     headerView.backgroundColor = [UIColor grayColor];
-    [self.tableView setBackgroundColor:[UIColor clearColor]];
+    [self.tableView1 setBackgroundColor:[UIColor clearColor]];
     [self addContentToHeadView:headerView];
     [self.view addSubview:headerView];
     
     
-    UIView *footerView=[[UIView alloc]initWithFrame:CGRectMake(0, 330,320, 44)];
+    UIView *footerView=[[UIView alloc]initWithFrame:CGRectMake(0, 356,320, 44)];
     [self addContentToFooterView:footerView];
     [self.view addSubview:footerView];
 
     
-    NSDictionary *data2=[[NSDictionary alloc]initWithObjectsAndKeys:
-                         @"5",@"event_id",
-                         @"test update event 3",         @"title",
-                         @"2012-10-31 11:00:00",         @"timeStart",
-                         @"2012-10-31 11:30:00",         @"timeEnd",
-                         @"0",        @"repeat",
-                         @"0",        @"timeRepeat",
-                         @"afd",         @"local",
-                         @"dfdf",         @"detail",
-                         
-                         nil];
-    BNEventEntity *testUpdate=[[BNEventEntity alloc ]initWithDictionary:data2];
-    [self getEventInput:testUpdate];
+    UIView *headView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 44)];
+    headView.backgroundColor=[UIColor clearColor];
+    self.tableView1.tableHeaderView=headView;
+    UIView *footer=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 100)];
+    footer.backgroundColor=[UIColor clearColor];
+    self.tableView1.tableFooterView=footer;
     
+        
     
 }
 -(void)addContentToHeadView:(UIView *)view{
@@ -179,6 +165,15 @@
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+-(void)dealloc{
+    [titletf release];
+    [startDatelb release];
+    [endDatelb release];
+    [description release];
+    [repeat release];
+    [repeatTime release];
+    [location release];
+}
 #pragma mark -Action
 -(IBAction)done:(id)sender{
     [self checkDataInput];
@@ -190,9 +185,21 @@
 }
 -(IBAction)closeTextField:(id)sender{
     [sender resignFirstResponder];
-    [self.tableView reloadData];
+    [self.tableView1 reloadData];
 }
-
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range 
+ replacementText:(NSString *)text
+{
+    
+    if ([text isEqualToString:@"\n"]) {
+        
+        [textView resignFirstResponder];
+        // Return FALSE so that the final '\n' character doesn't get added
+        return NO;
+    }
+    // For any other character return TRUE so that the text gets added to the view
+    return YES;
+}
 
 
 #pragma mark - Data IO
@@ -220,16 +227,29 @@
         
         
         eventEdited=event;
-        NSLog(@"editType : update");
-//        [titletf setText:event.title];
-//        [location setText:event.local];
-//        [startDatelb setText: event.timeStart];
-//        [endDatelb setText: event.timeEnd];
-//        [repeat setText:[NSString stringWithFormat:@"%d",event.repeat]];
-//        [repeatTime setText:event.timeRepeat];
-//        [description setText:event.detail];
-        //[self.tableView reloadData];
-        //NSLog(@"Update event");
+        
+        NSLog(@"EditType : update");
+        
+        NSLog(@" ___title %@",eventEdited.title);
+        NSLog(@" ___location %@",eventEdited.local);
+        NSLog(@" ___startDate %@",eventEdited.timeStart);
+        NSLog(@" ___endDate %@",eventEdited.timeEnd);
+        NSLog(@" ___repeat %d",eventEdited.repeat);
+        NSLog(@" ___time repeat %@",eventEdited.timeRepeat);
+        NSLog(@" ___description %@",eventEdited.detail);
+        
+        
+        
+        
+        [titletf setText:event.title];
+        [location setText:event.local];
+        [startDatelb setText: event.timeStart];
+        [endDatelb setText: event.timeEnd];
+        [repeat setText:[NSString stringWithFormat:@"%d",event.repeat]];
+        [repeatTime setText:event.timeRepeat];
+        [description setText:event.detail];
+        [self.tableView1 reloadData];
+      
     }
 }
 -(void)checkDataInput{
@@ -245,7 +265,7 @@
         }
         else{
             
-            if ([startDatelb.text isEqualToString:endDatelb.text]) {
+            if ([startDatelb.text isEqualToString:endDatelb.text]||startDatelb.text.length==0||endDatelb.text.length==0) {
                 [self showAlerView:@"Date" andSucces:NO];
             }
             else{
@@ -253,23 +273,24 @@
                 
                 [self saveData:EditType];
             }
-
+            
         }
         
-        
+
+                
         
     }
     
     
 }
 -(void)saveData:(int)type{
-//    eventEdited.title=titletf.text;
-//    eventEdited.local=location.text;
-//    eventEdited.timeStart=startDatelb.text;
-//    eventEdited.timeEnd=endDatelb.text;
-//    eventEdited.repeat=repeatInt;
-//    eventEdited.timeRepeat=repeatTime.text;
-//    eventEdited.detail=description.text;
+    eventEdited.title=titletf.text;
+    eventEdited.local=location.text;
+    eventEdited.timeStart=startDatelb.text;
+    eventEdited.timeEnd=endDatelb.text;
+    eventEdited.repeat=repeatInt;
+    eventEdited.timeRepeat=repeatTime.text;
+    eventEdited.detail=description.text;
     
      BOOL succes;
     NSString *action=[NSString stringWithFormat:@"Update "];
@@ -286,12 +307,10 @@
             succes=[dataSqlite updateDatabase:eventEdited];
         }
     //show Alert
-         [self showAlerView:action andSucces:succes];
-    
- 
-    
-   
+         
+    [self showAlerView:action andSucces:succes];
 }
+
 -(IBAction)deleteEvent:(id)sender{
     
     bool succes;
@@ -356,7 +375,14 @@
         switch ([indexPath indexAtPosition:0]) {
             case 0:
             {
-                titletf=[[UITextField alloc]initWithFrame:CGRectMake(25, 10, 180, 20)];
+                UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake(25, 10, 60, 20)];
+                label.text=@"Title";
+                label.font=[UIFont boldSystemFontOfSize:16];
+                label.backgroundColor=[UIColor clearColor];
+                [cell addSubview:label];
+                
+                
+                titletf=[[UITextField alloc]initWithFrame:CGRectMake(100, 10, 180, 20)];
                 titletf.backgroundColor=[UIColor clearColor];
                 titletf.textAlignment=UITextAlignmentLeft;
                 titletf.placeholder=@"Title";
@@ -370,10 +396,14 @@
                 break;
             case 1:
             {
-                
+                UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake(25, 10, 60, 20)];
+                label.text=@"Local";
+                label.font=[UIFont boldSystemFontOfSize:16];
+                label.backgroundColor=[UIColor clearColor];
+                [cell addSubview:label];
 
               
-                location=[[UITextField alloc]initWithFrame:CGRectMake(25, 10, 180, 20)];
+                location=[[UITextField alloc]initWithFrame:CGRectMake(100, 10, 180, 20)];
                 location.backgroundColor=[UIColor clearColor];
                 location.textAlignment=UITextAlignmentLeft;
                 location.placeholder=@"Location";
@@ -434,7 +464,23 @@
                 repeat=[[UILabel alloc]initWithFrame:CGRectMake(150, 10, 200, 20)];
                 repeat.textColor=[UIColor blueColor];
                 repeat.backgroundColor=[UIColor clearColor];
-                repeat.text=[NSString stringWithFormat:@"%d",eventEdited.repeat];
+                switch (eventEdited.repeat) {
+                    case 0:
+                        repeat.text=@"No repeat";
+                        break;
+                    case 1:
+                        repeat.text=@"Every day";
+                        break;
+                    case 2:
+                        repeat.text=@"Every week";
+                        break;
+                    case 3:
+                        repeat.text=@"Every month";
+                        break;
+                    default:
+                        repeat.text=@"No repeat";
+                        break;
+                }
                 [cell addSubview:repeat];
             }
                 break;
@@ -467,7 +513,7 @@
                 description.backgroundColor=[UIColor clearColor];
                 description.textAlignment=UITextAlignmentLeft;
                 description.text=eventEdited.detail;
-                
+                description.delegate=self;
                 [cell addSubview:description];
                 
             }
@@ -611,11 +657,11 @@
         }
        NSLog(@"select timeRepeat : %@",eventEdited.timeRepeat);
     }
-    [self.tableView reloadData]; 
+    [self.tableView1 reloadData]; 
 }
 #pragma mark - UIAlertView
 -(void)showAlerView:(NSString *)title andSucces :(BOOL)succes{
-    NSLog(@" %@ is error",title);
+    
     if (succes) {
         
         UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Succes" message:[NSString stringWithFormat:@"%@ succes",title] delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
@@ -623,7 +669,7 @@
         [alert show];
     }
     else{
-        NSString *msg=[NSString stringWithFormat:@"%@ is error",title];
+        NSString *msg=[NSString stringWithFormat:@"%@ is not acceptable , please recheck",title];
        
         
         UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Not succes" message:msg delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
@@ -637,6 +683,7 @@
 }
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (alertView.tag==2) {
+        [self.delegate reloadDatainView];
         [self.navigationController popViewControllerAnimated:YES];
     }
 }

@@ -11,21 +11,26 @@
 #import "FMDatabase.h"
 #import "EventDataSqlite.h"
 
+
 @class BNEventEditorController;
 
 @protocol EditEventDelegate <NSObject>
 
 -(void)CloseEditView:(BNEventEditorController *)sender;
+-(void)reloadDatainView;
 
 @end
 
 
-@interface BNEventEditorController : UIViewController<UIActionSheetDelegate>{
-    UITableView *tableView;
+@interface BNEventEditorController : UIViewController<UIActionSheetDelegate,UIAlertViewDelegate,UITextViewDelegate>{
+    int EditType;
+    
+    
+    UITableView *tableView1;
     
     BNEventEntity *eventEdited;
-    EventDataSqlite *dataSqlite;
-    int EditType;
+    EventDataSqlite  *dataSqlite;
+    
     UITextField *titletf;
     UITextField *location;
     UITextView *description;
@@ -37,13 +42,13 @@
     int repeatInt;
     int repeatTimeInt;
     
-    UIView *headView;
+    
     
 }
 @property(nonatomic,retain) BNEventEntity *eventEdited;
 
 
-@property(nonatomic,retain)IBOutlet UITableView *tableView;
+@property(nonatomic,retain)IBOutlet UITableView *tableView1;
 @property(nonatomic,strong) id<EditEventDelegate> delegate;
 @property(nonatomic,retain) UILabel *startDatelb;     
 @property(nonatomic,retain) UILabel *endDatelb;

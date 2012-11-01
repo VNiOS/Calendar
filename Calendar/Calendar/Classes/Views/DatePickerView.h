@@ -18,10 +18,12 @@
     BNEventEditorController *delegate;
     NSString *dateInput;
     bool dateType;
+    bool succes;
 }
 -(void)addContentToHeadView:(UIView *)view;
 -(IBAction)setDate:(id)sender;
 -(IBAction)done:(id)sender;
+-(void)checkDate;
 @property(nonatomic,retain) IBOutlet UITableView *tableView1;
 @property(nonatomic,strong) BNEventEditorController *delegate;
 

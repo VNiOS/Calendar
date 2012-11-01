@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "KalView.h"       // for the KalViewDelegate protocol
 #import "KalDataSource.h" // for the KalDataSourceCallbacks protocol
+#import "BNEventEditorController.h"
+#import "EventDataSqlite.h"
 
 @class KalLogic, KalDate;
-@interface BNCalendarController : UIViewController<KalViewDelegate, KalDataSourceCallbacks,UITableViewDelegate>{
+@interface BNCalendarController : UIViewController<KalViewDelegate, KalDataSourceCallbacks,UITableViewDelegate,EditEventDelegate>{
+    
     KalLogic *logic;
     UITableView *tableView;
     id <UITableViewDelegate> delegate;
@@ -27,5 +30,5 @@
 - (id)initWithSelectedDate:(NSDate *)selectedDate; 
 - (void)reloadData;                                 
 - (void)showAndSelectDate:(NSDate *)date;           
-
+- (IBAction)addNewEvent:(id)sender;
 @end

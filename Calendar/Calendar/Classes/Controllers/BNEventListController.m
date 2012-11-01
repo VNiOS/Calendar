@@ -35,8 +35,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UIBarButtonItem *addEventButton=[[UIBarButtonItem alloc]initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(addEvent:)];
-    [self.navigationItem setRightBarButtonItem:addEventButton];
+    
+    
+    
+    
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -52,15 +55,18 @@
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
--(void)CloseEditView:(BNEventEditorController *)sender{
-    [self dismissModalViewControllerAnimated:YES];
-}
--(IBAction)addEvent:(id)sender{
+#pragma mark Event action
+-(void)addOrUpdateEvent:(BNEventEntity *)event{
     BNEventEditorController *editView=[[BNEventEditorController alloc]initWithNibName:@"BNEventEditorController" bundle:nil];
     editView.delegate=self;
-    UINavigationController *navirControl=[[UINavigationController alloc]initWithRootViewController:editView];
-    [navirControl.navigationBar setHidden:YES];
-    navirControl.modalTransitionStyle=UIModalTransitionStyleCoverVertical;
-    [self presentModalViewController:navirControl animated:YES];
+    
+    [self.navigationController pushViewController:editView animated:YES];
+}
+#pragma mark BNEventEditor delegate
+-(void)CloseEditView:(BNEventEditorController *)sender{
+   
+}
+-(void)reloadDatainView{
+    
 }
 @end

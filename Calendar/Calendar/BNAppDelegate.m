@@ -33,12 +33,10 @@
     calendarController=[[BNCalendarController alloc]init];
     calendarController.delegate=self;
     
-    //dataSource=[[EventDataSqlite alloc]init];
-    //calendarController.dataSource=dataSource;
-    
-    
+      
     navController=[[UINavigationController alloc]initWithRootViewController:calendarController];
-    //[navController.navigationBar setHidden:YES];
+    [navController.view setFrame:CGRectMake(0, 80, 320, 400)];
+    [navController.navigationBar setHidden:YES];
     [self.window addSubview:navController.view];
     
     return YES;

@@ -10,7 +10,7 @@
 #import "BNCalendarController.h"
 
 
-@interface BNAppDelegate : UIResponder <UIApplicationDelegate,UITableViewDelegate>{
+@interface BNAppDelegate : UIResponder <UIApplicationDelegate,UITableViewDelegate, UINavigationControllerDelegate>{
     UINavigationController *navController;
     //id dataSource;
     BNCalendarController *calendarController;

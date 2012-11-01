@@ -17,6 +17,7 @@
     NSMutableArray *dayEvents;
     FMDatabase *database;
 }
+
 -(id)init;
 - (BNEventEntity *)eventAtIndexPath:(NSIndexPath *)indexPath;
 - (NSArray *)eventsFrom:(NSDate *)fromDate to:(NSDate *)toDate;

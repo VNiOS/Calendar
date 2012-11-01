@@ -11,5 +11,5 @@
 @interface BNEventListController : UIViewController<EditEventDelegate>{
     
 }
--(IBAction)addEvent:(id)sender;
+-(void)addOrUpdateEvent:(BNEventEntity *)event;
 @end

@@ -15,10 +15,20 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         
-        NSDate *today1=[NSDate date];
         NSDateFormatter *df = [[[NSDateFormatter alloc] init]autorelease];
         [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-        dateInput=[[df stringFromDate:today1]retain];
+        if (delegate.startDatelb.text.length==0&&delegate.endDatelb.text.length==0) {
+            NSDate *today1=[NSDate date];
+           
+            dateInput=[[df stringFromDate:today1]retain];
+        }
+        else{
+            self.dateStartlb.text=self.delegate.startDatelb.text;
+            self.dateEndlb.text=self.delegate.endDatelb.text;
+            
+            
+        }
+        
         // Custom initialization
     }
     return self;
@@ -38,6 +48,7 @@
 {
     [super viewDidLoad];
     dateType=YES;
+    succes=YES;
     UIView *headerView = [[[UIView alloc] initWithFrame:CGRectMake(0.f, 0, 320, 44)] autorelease];
     headerView.backgroundColor = [UIColor grayColor];
     [self.tableView1 setBackgroundColor:[UIColor clearColor]];
@@ -81,13 +92,24 @@
     [view addSubview:BackButton];
 }
 -(IBAction)done:(id)sender{
-    delegate.eventEdited.timeStart=dateStartlb.text;
-    delegate.eventEdited.timeEnd=dateEndlb.text;
     
-    delegate.startDatelb.text=dateStartlb.text;
-    delegate.endDatelb.text=dateEndlb.text;
     
-    [self.navigationController popViewControllerAnimated:YES];
+    
+    
+    if (succes) {
+        delegate.eventEdited.timeStart=dateStartlb.text;
+        delegate.eventEdited.timeEnd=dateEndlb.text;
+        
+        delegate.startDatelb.text=dateStartlb.text;
+        delegate.endDatelb.text=dateEndlb.text;
+        
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    else{
+        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Time is not acceptable , please reselect" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
+   
     
 }
 -(IBAction)setDate:(id)sender{
@@ -101,12 +123,34 @@
     if (dateType) {
         
         self.dateStartlb.text=dateString;
+        [dateStartlb setTextColor:[UIColor blueColor]];
     }
     else{
         self.dateEndlb.text=dateString;
+        [dateStartlb setTextColor:[UIColor blueColor]];
+    }
+    [self checkDate];
+    //[dateString release];
+}
+-(void)checkDate{
+    NSLog(@"Check date");
+    NSDateFormatter *df = [[[NSDateFormatter alloc] init]autorelease];
+    [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSDate *start=[df dateFromString:dateStartlb.text];
+    NSDate *end=[df dateFromString:dateEndlb.text];
+    if ([start compare:end]==NSOrderedDescending) {
+        NSLog(@"Ngay thang ko thoa man");
+        succes=NO;
+        [dateStartlb setTextColor:[UIColor redColor]];
+        [dateEndlb setTextColor:[UIColor redColor]];
+    }
+    else{
+        succes=YES;
+        [dateStartlb setTextColor:[UIColor blueColor]];
+        [dateEndlb setTextColor:[UIColor blueColor]];
     }
     
-    //[dateString release];
+    
 }
 - (void)viewDidUnload
 {
