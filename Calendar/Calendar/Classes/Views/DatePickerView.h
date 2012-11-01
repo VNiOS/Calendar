@@ -19,6 +19,7 @@
     NSString *dateInput;
     bool dateType;
     bool succes;
+    bool NewEvent;
 }
 -(void)addContentToHeadView:(UIView *)view;
 -(IBAction)setDate:(id)sender;

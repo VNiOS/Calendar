@@ -14,7 +14,22 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        NSDateFormatter *df = [[[NSDateFormatter alloc] init]autorelease];
+        [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+        NSDate *today1=[NSDate date];
         
+        dateInput=[[df stringFromDate:today1]retain];
+        if (delegate.startDatelb.text.length==0 && delegate.endDatelb.text.length==0 ) {
+            NSLog(@"Date input is nil");
+            NewEvent=1;
+            
+        }
+        else{
+            NSLog(@"date is edited");
+            NewEvent=0;
+            
+            
+        }
                 
         // Custom initialization
     }
@@ -37,25 +52,10 @@
     dateType=YES;
     succes=YES;
     
-    NSDateFormatter *df = [[[NSDateFormatter alloc] init]autorelease];
-    [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    
     NSLog(@"date start input %@",delegate.startDatelb.text);
      NSLog(@"end start input %@",delegate.endDatelb.text);
-    if (delegate.startDatelb.text.length==0 && delegate.endDatelb.text.length==0 ) {
-        NSLog(@"Date input is nil");
-        NSDate *today1=[NSDate date];
-        
-        dateInput=[[df stringFromDate:today1]retain];
-        self.dateStartlb.text=dateInput;
-        self.dateEndlb.text=dateInput;
-    }
-    else{
-        NSLog(@"date is edited");
-        [self.dateStartlb setText:delegate.startDatelb.text];
-        [self.dateEndlb setText:delegate.endDatelb.text];
-        
-        
-    }
+
 
     
     
@@ -210,7 +210,13 @@
                 [cell addSubview:label];
                 
                 self.dateStartlb=[[UILabel alloc]initWithFrame:CGRectMake(120, 15, 180, 20)];
-                self.dateStartlb.text=dateInput;
+                if (NewEvent) {
+                    self.dateStartlb.text=dateInput;
+                }
+                else{
+                  self.dateStartlb.text=delegate.startDatelb.text;  
+                }
+                
                 
                 [self.dateStartlb setBackgroundColor:[UIColor clearColor]];
                 [cell addSubview:self.dateStartlb];
@@ -228,7 +234,17 @@
                 
                 
                 self.dateEndlb=[[UILabel alloc]initWithFrame:CGRectMake(120, 15, 180, 20)];
-                self.dateEndlb.text=dateInput;
+                
+                if (NewEvent) {
+                    self.dateEndlb.text=dateInput;
+                }
+                else{
+                    self.dateEndlb.text=delegate.endDatelb.text;  
+                }
+                
+                
+                
+                
                 [self.dateEndlb setBackgroundColor:[UIColor clearColor]];
                 [cell addSubview:self.dateEndlb];
                 

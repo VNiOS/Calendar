@@ -26,8 +26,7 @@
 - (BOOL)updateDatabase:(BNEventEntity *)event;
 - (BOOL)insertDatabase:(BNEventEntity *)event;
 - (BOOL)deleteDatabase:(BNEventEntity *)event;
--(NSString *)convertDatetoString:(NSDate *)date;
--(NSDate *)convertStringtoDate:(NSString *)string;
+
 
 
 @end

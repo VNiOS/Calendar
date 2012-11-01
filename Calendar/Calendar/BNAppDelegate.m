@@ -33,6 +33,7 @@
     calendarController=[[BNCalendarController alloc]init];
     calendarController.delegate=self;
     
+    
       
     navController=[[UINavigationController alloc]initWithRootViewController:calendarController];
     [navController.view setFrame:CGRectMake(0, 80, 320, 400)];
@@ -44,7 +45,7 @@
 - (void)Checkdatabase 
 {
     BOOL success;
-    NSString *databaseName = @"EventsList.sqlite";
+    NSString *databaseName = @"EventsListData.sqlite";
     
     NSArray *documentPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentDir = [documentPath objectAtIndex:0];

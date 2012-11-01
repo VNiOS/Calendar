@@ -181,7 +181,10 @@
 }
 -(IBAction)back:(id)sender{
     NSLog(@"Back");
-    [self.navigationController popViewControllerAnimated:YES];
+    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Quitting " message:@"Are you sure ?" delegate:self cancelButtonTitle:@"Yes" otherButtonTitles:@"No", nil];
+    alert.tag=5;
+    [alert show];
+    
 }
 -(IBAction)closeTextField:(id)sender{
     [sender resignFirstResponder];
@@ -252,23 +255,33 @@
       
     }
 }
+-(int)strimTextLength:(NSString *)string{
+    NSString *trimmedString = [string stringByTrimmingCharactersInSet:
+                               [NSCharacterSet whitespaceCharacterSet]];
+    return trimmedString.length;
+}
 -(void)checkDataInput{
-    if (titletf.text.length==0) {
+       
+    
+    
+    if ([self strimTextLength:titletf.text]==0) {
+        
+        
+        
         [self showAlerView:@"Title" andSucces:NO];
     }
     else{
-        if ([description.text isEqualToString:@""]) {
+        
+        if ([self strimTextLength:description.text]==0) {
             [self showAlerView:@"Description" andSucces:NO];
         }
         else{
-            if ([eventEdited.timeStart isEqualToString: @""]|| [eventEdited.timeEnd isEqualToString:@""]) {
+            if ([self strimTextLength:startDatelb.text]==0||[self strimTextLength:endDatelb.text]==0) {
                 [self showAlerView:@"Date" andSucces:NO];
             }
             else{
                 [self saveData:EditType];
-
             }
-    
         }
     }
 
@@ -303,10 +316,10 @@
 
 -(IBAction)deleteEvent:(id)sender{
     
-    bool succes;
-        NSString *action=[NSString stringWithFormat:@"Delete Event "];
-        succes=[dataSqlite deleteDatabase:eventEdited];
-    [self showAlerView:action andSucces:succes];    
+    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Delete Event " message:@"Are you sure ?" delegate:self cancelButtonTitle:@"Yes" otherButtonTitles:@"No", nil];
+    alert.tag=6;
+    [alert show];
+     
 
 }
 
@@ -667,6 +680,25 @@
     if (alertView.tag==2) {
         [self.delegate reloadDatainView];
         [self.navigationController popViewControllerAnimated:YES];
+    }
+    else if(alertView.tag==5){
+        if (buttonIndex==0) {
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+        else{
+            
+        }
+    }
+    else if(alertView.tag==6){
+        if (buttonIndex==0) {
+            bool succes;
+            NSString *action=[NSString stringWithFormat:@"Delete Event "];
+            succes=[dataSqlite deleteDatabase:eventEdited];
+            [self showAlerView:action andSucces:succes];
+        }
+        else{
+            
+        }
     }
 }
 @end

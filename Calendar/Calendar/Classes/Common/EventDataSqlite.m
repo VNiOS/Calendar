@@ -180,13 +180,7 @@ NSString *const BNEventProperiesEventDetail1 = @"detail";
         NSNumber *repeat = [[NSNumber alloc]initWithInt:[results intForColumn:BNEventProperiesEventRepeat1]];
         NSString *title = [NSString stringWithFormat:@"%@",[results stringForColumn:BNEventProperiesEventTitle1]];
         NSString *timeStart = [NSString stringWithFormat:@"%@",[results stringForColumn:BNEventProperiesEventTimeStart1]];
-        NSDate *dateStart = [self convertStringtoDate:timeStart];
-        timeStart = [self convertDatetoString:dateStart];
-        
         NSString *timeEnd = [NSString stringWithFormat:@"%@",[results stringForColumn:BNEventProperiesEventTimeEnd1]];
-        NSDate *dateEnd = [self convertStringtoDate:timeEnd];
-        timeEnd = [self convertDatetoString:dateEnd];
-        
         NSString *timeRepeat = [NSString stringWithFormat:@"%@",[results stringForColumn:BNEventProperiesEventTimeRepeat1]];
         NSString *local = [NSString stringWithFormat:@"%@",[results stringForColumn:BNEventProperiesEventLocal1]];
         NSString *detail = [NSString stringWithFormat:@"%@",[results stringForColumn:BNEventProperiesEventDetail1]];
@@ -280,20 +274,7 @@ NSString *const BNEventProperiesEventDetail1 = @"detail";
    return  [dayEvents objectAtIndex:indexPath.row];
 }
 
--(NSDate *)convertStringtoDate:(NSString *)string{
-    NSDate *result;
-    NSDateFormatter *df = [[[NSDateFormatter alloc] init]autorelease];
-    [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    result=[df dateFromString:string];
-    return result;
-}
 
--(NSString *)convertDatetoString:(NSDate *)date{
-    NSDateFormatter *df = [[[NSDateFormatter alloc] init]autorelease];
-    [df setDateFormat:@"yyyy-MM-dd      HH:mm:ss"];
-    NSString *results = [df stringFromDate:date];
-    return results;
-}
 
 
 -(void)dealloc{

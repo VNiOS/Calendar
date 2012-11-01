@@ -59,7 +59,7 @@
 -(IBAction)back:(id)sender;
 -(IBAction)deleteEvent:(id)sender;
 
-
+-(int)strimTextLength:(NSString *)string;
 -(void)checkDataInput;
 -(void)saveData:(int)type;
 -(void)getEventInput:(BNEventEntity *)event;    

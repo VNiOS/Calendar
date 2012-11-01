@@ -84,7 +84,7 @@
 {
     self.titleLabel.text = event.title;
     
-    self.timeStartLabel.text = [self convertStringNoSecond:event.timeStart];
+    self.timeStartLabel.text =[self convertStringNoSecond:event.timeStart];
     self.timeEndLabel.text = [self convertStringNoSecond:event.timeEnd];
     
     self.LocalLabel.text = event.local;
@@ -120,11 +120,7 @@
 -(NSString *)convertStringNoSecond:(NSString *)dateString{
     NSDateFormatter *dfOld = [[[NSDateFormatter alloc] init]autorelease];
     [dfOld setDateFormat:@"yyyy-MM-dd   HH:mm:ss"];
-    
-    NSDate *date=[dfOld  dateFromString:dateString];
-    
-    
-    
+     NSDate *date=[dfOld  dateFromString:dateString];
     NSDateFormatter *dfNew = [[[NSDateFormatter alloc] init]autorelease];
     [dfNew setDateFormat:@"yyyy-MM-dd   HH:mm"];
     NSString *results = [dfNew stringFromDate:date];

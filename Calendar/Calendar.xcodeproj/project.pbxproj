@@ -18,11 +18,12 @@
 		A7AAA7541636998E00B3574D /* KalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AAA7451636998E00B3574D /* KalViewController.m */; };
 		A7AAA7571636998E00B3574D /* NSDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AAA7491636998E00B3574D /* NSDateAdditions.m */; };
 		A7AAA7581636998E00B3574D /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AAA74B1636998E00B3574D /* UIViewAdditions.m */; };
+		A7CD48C516427A970080AB0C /* EventsListData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A7CD48C416427A970080AB0C /* EventsListData.sqlite */; };
+		A7FA9AD916427F810084C20A /* BNEventEditorController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FA9AD816427F810084C20A /* BNEventEditorController.m */; };
 		ABBDFE98163F7BCA00C2451E /* BNGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBDFE82163F7BCA00C2451E /* BNGlobal.m */; };
 		ABBDFE99163F7BCA00C2451E /* BNUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBDFE84163F7BCA00C2451E /* BNUtility.m */; };
 		ABBDFE9A163F7BCA00C2451E /* EventDataSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBDFE86163F7BCA00C2451E /* EventDataSqlite.m */; };
 		ABBDFE9B163F7BCA00C2451E /* BNCalendarController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBDFE89163F7BCA00C2451E /* BNCalendarController.m */; };
-		ABBDFE9C163F7BCA00C2451E /* BNEventEditorController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBDFE8B163F7BCA00C2451E /* BNEventEditorController.m */; };
 		ABBDFE9D163F7BCA00C2451E /* BNEventListController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBDFE8D163F7BCA00C2451E /* BNEventListController.m */; };
 		ABBDFE9E163F7BCA00C2451E /* BNEventEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBDFE90163F7BCA00C2451E /* BNEventEntity.m */; };
 		ABBDFE9F163F7BCA00C2451E /* BNEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBDFE93163F7BCA00C2451E /* BNEventCell.m */; };
@@ -69,6 +70,8 @@
 		A7AAA7491636998E00B3574D /* NSDateAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDateAdditions.m; sourceTree = "<group>"; };
 		A7AAA74A1636998E00B3574D /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
 		A7AAA74B1636998E00B3574D /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
+		A7CD48C416427A970080AB0C /* EventsListData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = EventsListData.sqlite; sourceTree = "<group>"; };
+		A7FA9AD816427F810084C20A /* BNEventEditorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNEventEditorController.m; sourceTree = "<group>"; };
 		ABBDFE81163F7BCA00C2451E /* BNGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNGlobal.h; sourceTree = "<group>"; };
 		ABBDFE82163F7BCA00C2451E /* BNGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNGlobal.m; sourceTree = "<group>"; };
 		ABBDFE83163F7BCA00C2451E /* BNUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNUtility.h; sourceTree = "<group>"; };
@@ -78,7 +81,6 @@
 		ABBDFE88163F7BCA00C2451E /* BNCalendarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNCalendarController.h; sourceTree = "<group>"; };
 		ABBDFE89163F7BCA00C2451E /* BNCalendarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNCalendarController.m; sourceTree = "<group>"; };
 		ABBDFE8A163F7BCA00C2451E /* BNEventEditorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNEventEditorController.h; sourceTree = "<group>"; };
-		ABBDFE8B163F7BCA00C2451E /* BNEventEditorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNEventEditorController.m; sourceTree = "<group>"; };
 		ABBDFE8C163F7BCA00C2451E /* BNEventListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNEventListController.h; sourceTree = "<group>"; };
 		ABBDFE8D163F7BCA00C2451E /* BNEventListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNEventListController.m; sourceTree = "<group>"; };
 		ABBDFE8F163F7BCA00C2451E /* BNEventEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNEventEntity.h; sourceTree = "<group>"; };
@@ -191,7 +193,7 @@
 				ABBDFE88163F7BCA00C2451E /* BNCalendarController.h */,
 				ABBDFE89163F7BCA00C2451E /* BNCalendarController.m */,
 				ABBDFE8A163F7BCA00C2451E /* BNEventEditorController.h */,
-				ABBDFE8B163F7BCA00C2451E /* BNEventEditorController.m */,
+				A7FA9AD816427F810084C20A /* BNEventEditorController.m */,
 				ABBDFE8C163F7BCA00C2451E /* BNEventListController.h */,
 				ABBDFE8D163F7BCA00C2451E /* BNEventListController.m */,
 			);
@@ -235,6 +237,7 @@
 		ABBDFEA9163F7C2F00C2451E /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				A7CD48C416427A970080AB0C /* EventsListData.sqlite */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				ABBDFEB8163F7C2F00C2451E /* BNEventEditorController.xib in Resources */,
 				ABBDFEB9163F7C2F00C2451E /* BNEventListController.xib in Resources */,
 				ABBDFEBA163F7C2F00C2451E /* DatePickerView.xib in Resources */,
+				A7CD48C516427A970080AB0C /* EventsListData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,13 +417,13 @@
 				ABBDFE99163F7BCA00C2451E /* BNUtility.m in Sources */,
 				ABBDFE9A163F7BCA00C2451E /* EventDataSqlite.m in Sources */,
 				ABBDFE9B163F7BCA00C2451E /* BNCalendarController.m in Sources */,
-				ABBDFE9C163F7BCA00C2451E /* BNEventEditorController.m in Sources */,
 				ABBDFE9D163F7BCA00C2451E /* BNEventListController.m in Sources */,
 				ABBDFE9E163F7BCA00C2451E /* BNEventEntity.m in Sources */,
 				ABBDFE9F163F7BCA00C2451E /* BNEventCell.m in Sources */,
 				ABBDFEA0163F7BCA00C2451E /* DatePickerView.m in Sources */,
 				ABBDFEA1163F7BCA00C2451E /* EventCellView.m in Sources */,
 				ABBDFEBC163F7C2F00C2451E /* main.m in Sources */,
+				A7FA9AD916427F810084C20A /* BNEventEditorController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
