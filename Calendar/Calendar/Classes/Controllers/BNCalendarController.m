@@ -158,8 +158,9 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"tableView click");
-    BNEventListController *eventDay=[[BNEventListController alloc]init];
-    
+    BNEventListController *eventDay = [[BNEventListController alloc]init];
+    eventDay.delegate=self;
+    [eventDay updateContentDate:selectedDate];
     [self.navigationController pushViewController:eventDay animated:YES];
 }
 #pragma mark - BNEventEditor delegate and action
@@ -190,6 +191,12 @@
 }
 -(void)CloseEditView:(BNEventEditorController *)sender{
     
+}
+#pragma mark - EventlistDelegate
+-(void)reloadDataList{
+    
+    NSLog(@"reload data in calendar_________");
+    [self reloadData];
 }
 #pragma mark - life circle
 

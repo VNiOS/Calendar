@@ -17,27 +17,33 @@
 #define textSize 14
 
 @implementation BNEventListController
-@synthesize tableView = _tableView;
+@synthesize tableView = _tableView,delegate;
 
 #pragma mark - init
 
 - (id)init{
     self = [super init];
     if(self){
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 104, 320, 336) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, 320, 336) style:UITableViewStylePlain];
         [_tableView setDelegate:self];
         [_tableView setDataSource:self];
-        dateEvent = [[NSDate dateWithTimeIntervalSinceNow:-9*24*60*60]retain];
-        [self updateContentDate:dateEvent];
-    }  
+     }  
     return self;
 }
 
 - (void)updateContentDate:(NSDate *)withdate
 {
+    NSDateFormatter *format=[[NSDateFormatter alloc]init];
+    [format setDateFormat:@"dd/MM/YYYY"];
+    NSString *stringdate=[format stringFromDate:withdate];
+    NSLog(@"String with date is = %@",stringdate);
+   
+    
+    dateEvent=[withdate retain];
     EventDataSqlite *eventDataSqlite = [[EventDataSqlite alloc] init];
-    eventDay = [[NSArray arrayWithArray:[eventDataSqlite EventListIntoDate:withdate]]retain];
-    NSLog(@"with date is = %@",withdate);
+    eventDay = [[NSArray arrayWithArray:[eventDataSqlite EventListIntoDate:dateEvent]]retain];
+    
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,10 +61,10 @@
     [self.view addSubview:_tableView];
     
     // add Header View
-    UIView *headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320,104)];
+    UIView *headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320,44)];
     [headerView setBackgroundColor:[UIColor clearColor]];
     
-    UIView *barView=[[UIView alloc]initWithFrame:CGRectMake(0, 60, 320, 44)];
+    UIView *barView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 44)];
     [self addContentToHeadView:barView];
     [headerView addSubview:barView];
     [self.view addSubview:headerView];
@@ -66,10 +72,11 @@
     [self.navigationController setNavigationBarHidden:YES];
     
     //add Toolbar 
-    UIToolbar *toolBar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 416, 320, 44)];
-    [self.view addSubview:toolBar];
+    
     UIButton *addEventButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    addEventButton.frame = CGRectMake(0, 416, 320, 44);
+    addEventButton.frame = CGRectMake(0, 356, 320, 44);
+    [addEventButton setBackgroundImage:[UIImage imageNamed:@"Kal.bundle/kal_grid_background.png"] forState:UIControlStateNormal];
+    [addEventButton setTitleColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Kal.bundle/kal_header_text_fill.png"]] forState:UIControlStateNormal];
     [addEventButton addTarget:self action:@selector(addEvent:) forControlEvents:UIControlEventTouchUpInside];
     [addEventButton setTitle:@"Add new event" forState:UIControlStateNormal];
     [self.view addSubview:addEventButton];
@@ -95,6 +102,7 @@
 
 - (NSInteger )tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    NSLog(@"Event day count %d",eventDay.count);
     return [eventDay count];
 }
 
@@ -139,13 +147,13 @@
 - (void)bnEventCellDidClickedAtCell:(BNEventCell *)cell1
 {
     NSIndexPath *indexPathCell = [self.tableView indexPathForCell:cell1];
-    BNEventEntity *event1 = [eventDay objectAtIndex:indexPathCell.row];
+    BNEventEntity *selectedEvent = [eventDay objectAtIndex:indexPathCell.row];
     
     BNEventEditorController *editView=[[BNEventEditorController alloc]initWithNibName:@"BNEventEditorController" bundle:nil];
     editView.delegate = self;
-    UINavigationController *navirControl=[[UINavigationController alloc]initWithRootViewController:editView];
-    navirControl.modalTransitionStyle=UIModalTransitionStyleCoverVertical;
-    [self presentModalViewController:navirControl animated:YES];
+    [editView getEventInput:selectedEvent];
+    
+    [self.navigationController pushViewController:editView animated:YES];
 }
 
 
@@ -169,10 +177,8 @@
 -(IBAction)addEvent:(id)sender{
     BNEventEditorController *editView=[[BNEventEditorController alloc]initWithNibName:@"BNEventEditorController" bundle:nil];
     editView.delegate=self;
-    UINavigationController *navirControl=[[UINavigationController alloc]initWithRootViewController:editView];
-    
-    navirControl.modalTransitionStyle=UIModalTransitionStyleCoverVertical;
-    [self presentModalViewController:navirControl animated:YES];
+    [editView getEventInput:nil];
+    [self presentModalViewController:editView animated:YES];
 }
 
 #pragma mark - set content for Header
@@ -232,6 +238,7 @@
 
 
 -(IBAction)backToCalendar:(id)sender{
+    [self.delegate reloadDataList];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -280,7 +287,11 @@
     NSString *dayString = [dfDay stringFromDate:date2];
     return dayString;
 }
-
+-(void)reloadDatainView{
+    NSLog(@"reload data in list view");
+    [self updateContentDate:dateEvent];
+    
+}
 - (void) dealloc{
     [_tableView release];
     [dateEvent release];

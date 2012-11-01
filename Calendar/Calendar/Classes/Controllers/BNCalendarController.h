@@ -11,9 +11,10 @@
 #import "KalDataSource.h" // for the KalDataSourceCallbacks protocol
 #import "BNEventEditorController.h"
 #import "EventDataSqlite.h"
+#import "BNEventListController.h"
 
 @class KalLogic, KalDate;
-@interface BNCalendarController : UIViewController<KalViewDelegate, KalDataSourceCallbacks,UITableViewDelegate,EditEventDelegate>{
+@interface BNCalendarController : UIViewController<KalViewDelegate, KalDataSourceCallbacks,UITableViewDelegate,EditEventDelegate,BNEventListDelegate>{
     
     KalLogic *logic;
     UITableView *tableView;

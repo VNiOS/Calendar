@@ -9,16 +9,21 @@
 #import <UIKit/UIKit.h>
 #import "BNEventEditorController.h"
 #import "BNEventCell.h"
-@interface BNEventListController : UIViewController<EditEventDelegate,UITableViewDelegate,UITableViewDataSource,BNEventCellDelegate>{
+@protocol BNEventListDelegate
+-(void)reloadDataList;
+
+
+@end
+
+
+@interface BNEventListController : UIViewController<EditEventDelegate,UITableViewDelegate,UITableViewDataSource,BNEventCellDelegate,EditEventDelegate>{
     NSArray *eventDay;
     BNEventCell *cell;
     UILabel *titlelb;
     NSDate *dateEvent ;
-    UILabel *dayLabel;
-@interface BNEventListController : UIViewController<EditEventDelegate>{
-    
+    UILabel *dayLabel;    
 }
-
+@property(nonatomic,retain) id<BNEventListDelegate> delegate;
 @property (nonatomic, retain) UITableView *tableView;
 - (IBAction)addEvent:(id)sender;
 - (BNEventEntity *)eventAtIndexPath:(NSIndexPath *)indexPath;
@@ -33,5 +38,5 @@
 - (NSString *)conVertDateToStringDate:(NSDate *)date1;
 
 
-@end-(void)addOrUpdateEvent:(BNEventEntity *)event;
+
 @end
