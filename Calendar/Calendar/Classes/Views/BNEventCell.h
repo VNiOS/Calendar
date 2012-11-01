@@ -30,4 +30,5 @@
 @property(nonatomic, retain) UIButton *editButton;
 - (void)DidClickToEditButton:(UIButton *)button;
 - (void)UpdateContentCell:(BNEventEntity *)event;
+-(NSString *)convertStringNoSecond:(NSString *)dateString;
 @end

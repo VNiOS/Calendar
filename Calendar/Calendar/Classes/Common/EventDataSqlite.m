@@ -94,7 +94,7 @@ NSString *const BNEventProperiesEventDetail1 = @"detail";
 {
     // tra ve mang gom nhung phan tu startDate cua Event tuong ung
     NSArray *result=(NSArray *)[[self eventsFrom:fromDate to:toDate] valueForKeyPath:@"startDate"];
-    NSLog(@"Data is maked : %d", result.count);
+    //NSLog(@"Data is maked : %d", result.count);
 //    NSDateFormatter *format=[[NSDateFormatter alloc]init];
 //    [format setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
 //    for (NSDate *date in result) {
@@ -110,10 +110,10 @@ NSString *const BNEventProperiesEventDetail1 = @"detail";
     
     NSDateFormatter *format=[[NSDateFormatter alloc]init];
     [format setDateFormat:@"dd/MM/YYYY"];
-    NSString *string=[format stringFromDate:fromDate];
+    //NSString *string=[format stringFromDate:fromDate];
     [dayEvents removeAllObjects];
     [dayEvents addObjectsFromArray:[self eventsFrom:fromDate to:toDate]];
-    NSLog(@"Date %@ have %d events  ",string,[dayEvents count]);
+    //NSLog(@"Date %@ have %d events  ",string,[dayEvents count]);
 }
 - (NSArray *)getEventListFromDate:(NSDate *)fromdate toDate:(NSDate *)toDate{
     [database open];
@@ -166,12 +166,14 @@ NSString *const BNEventProperiesEventDetail1 = @"detail";
     NSDateFormatter *dateFomater = [[[NSDateFormatter alloc]init]autorelease];
     [dateFomater setDateFormat:@"yyyy-MM-dd"];
     NSString *dateString = [dateFomater stringFromDate:intoDate];
+   
     NSString *dayStart = [NSString stringWithFormat:@"%@ 00:00:00",dateString];
     NSString *dayEnd = [NSString stringWithFormat:@"%@ 23:59:59",dateString];
-    
+    NSLog(@"start day : %@",dayStart);
+    NSLog(@"end day : %@",dayEnd);
     [database open];
     NSMutableArray *eventListInDate = [[NSMutableArray alloc]init];
-    FMResultSet *results  = [database executeQuery:[NSString stringWithFormat:@"select *from Events where timeStart >= '%@' and timeStart <= '%@'",dayStart,dayEnd]];
+    FMResultSet *results  = [database executeQuery:[NSString stringWithFormat:@"select *from Events where timeStart >= '%@' and timeStart <= '%@' order by timeStart",dayStart,dayEnd]];
     while ([results next]) {
         NSMutableDictionary *event = [[NSMutableDictionary alloc] init];
         NSNumber *event_id = [[NSNumber alloc] initWithInt:[results intForColumn:BNEventProperiesEventId1]];
@@ -288,7 +290,7 @@ NSString *const BNEventProperiesEventDetail1 = @"detail";
 
 -(NSString *)convertDatetoString:(NSDate *)date{
     NSDateFormatter *df = [[[NSDateFormatter alloc] init]autorelease];
-    [df setDateFormat:@"yyyy-MM-dd     HH:mm"];
+    [df setDateFormat:@"yyyy-MM-dd      HH:mm:ss"];
     NSString *results = [df stringFromDate:date];
     return results;
 }

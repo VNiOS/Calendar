@@ -15,20 +15,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         
-        NSDateFormatter *df = [[[NSDateFormatter alloc] init]autorelease];
-        [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-        if (delegate.startDatelb.text.length==0&&delegate.endDatelb.text.length==0) {
-            NSDate *today1=[NSDate date];
-           
-            dateInput=[[df stringFromDate:today1]retain];
-        }
-        else{
-            self.dateStartlb.text=self.delegate.startDatelb.text;
-            self.dateEndlb.text=self.delegate.endDatelb.text;
-            
-            
-        }
-        
+                
         // Custom initialization
     }
     return self;
@@ -49,6 +36,30 @@
     [super viewDidLoad];
     dateType=YES;
     succes=YES;
+    
+    NSDateFormatter *df = [[[NSDateFormatter alloc] init]autorelease];
+    [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSLog(@"date start input %@",delegate.startDatelb.text);
+     NSLog(@"end start input %@",delegate.endDatelb.text);
+    if (delegate.startDatelb.text.length==0 && delegate.endDatelb.text.length==0 ) {
+        NSLog(@"Date input is nil");
+        NSDate *today1=[NSDate date];
+        
+        dateInput=[[df stringFromDate:today1]retain];
+        self.dateStartlb.text=dateInput;
+        self.dateEndlb.text=dateInput;
+    }
+    else{
+        NSLog(@"date is edited");
+        [self.dateStartlb setText:delegate.startDatelb.text];
+        [self.dateEndlb setText:delegate.endDatelb.text];
+        
+        
+    }
+
+    
+    
+    
     UIView *headerView = [[[UIView alloc] initWithFrame:CGRectMake(0.f, 0, 320, 44)] autorelease];
     headerView.backgroundColor = [UIColor grayColor];
     [self.tableView1 setBackgroundColor:[UIColor clearColor]];
@@ -60,7 +71,7 @@
     [self addContentToHeadView:headerView];
     [self.view addSubview:headerView];
 
-   
+    [tableView1 reloadData];
     // Do any additional setup after loading the view from its nib.
 }
 -(void)addContentToHeadView:(UIView *)view{
@@ -138,7 +149,7 @@
     [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     NSDate *start=[df dateFromString:dateStartlb.text];
     NSDate *end=[df dateFromString:dateEndlb.text];
-    if ([start compare:end]==NSOrderedDescending) {
+    if ([start compare:end]==NSOrderedDescending||[start compare:end]==NSOrderedSame) {
         NSLog(@"Ngay thang ko thoa man");
         succes=NO;
         [dateStartlb setTextColor:[UIColor redColor]];

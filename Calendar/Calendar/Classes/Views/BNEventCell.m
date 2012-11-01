@@ -29,7 +29,7 @@
         
         startLabel = [[UILabel alloc]initWithFrame:CGRectMake(15, 60, 60, 20)];
         startLabel.text = @"Start   : ";
-        [startLabel setFont:[UIFont systemFontOfSize:textSize]];
+        [startLabel setFont:[UIFont boldSystemFontOfSize:textSize]];
         [self addSubview:startLabel];
         self.timeStartLabel =[[UILabel alloc]init];
         [self.timeStartLabel setFont:[UIFont systemFontOfSize:textSize]];
@@ -39,7 +39,7 @@
         
         endLabel = [[UILabel alloc]init];
         endLabel.text = @"End    : ";
-        [endLabel setFont:[UIFont systemFontOfSize:textSize]];
+        [endLabel setFont:[UIFont boldSystemFontOfSize:textSize]];
         [self addSubview:endLabel];
         self.timeEndLabel =[[UILabel alloc]init];
         [self.timeEndLabel setFont:[UIFont systemFontOfSize:textSize]];
@@ -48,7 +48,7 @@
         
         localLabel = [[UILabel alloc]initWithFrame:CGRectMake(15, 70, 60, 20)];
         localLabel.text = @"Local  : ";
-        [localLabel setFont:[UIFont systemFontOfSize:textSize]];
+        [localLabel setFont:[UIFont boldSystemFontOfSize:textSize]];
         [self addSubview:localLabel];
         self.LocalLabel =[[UILabel alloc]init];
         [self.LocalLabel setFont:[UIFont systemFontOfSize:textSize]];
@@ -58,7 +58,7 @@
         
         detailLabel = [[UILabel alloc]initWithFrame:CGRectMake(15, 90, 60, 20)];
         detailLabel.text = @"Detail : ";
-        [detailLabel setFont:[UIFont systemFontOfSize:textSize]];
+        [detailLabel setFont:[UIFont boldSystemFontOfSize:textSize]];
         [self addSubview:detailLabel];
         self.DetailLabel =[[UILabel alloc]init];
         [self.DetailLabel setFont:[UIFont systemFontOfSize:textSize]];
@@ -68,6 +68,7 @@
         self.editButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [editButton setBackgroundColor:[UIColor greenColor]];
         [editButton setBackgroundImage:[UIImage imageNamed:@"Kal.bundle/kal_grid_background.png"] forState:UIControlStateNormal];
+        [editButton setTitleColor: [UIColor colorWithPatternImage:[UIImage imageNamed:@"Kal.bundle/kal_header_text_fill.png"]]  forState:UIControlStateNormal];
         [editButton setTitle:@"Edit" forState:UIControlStateNormal];
         [editButton addTarget:self action:@selector(DidClickToEditButton:) forControlEvents:UIControlEventTouchUpInside];
         [editButton.titleLabel setTextAlignment:UITextAlignmentCenter];
@@ -82,8 +83,10 @@
 - (void)UpdateContentCell:(BNEventEntity *)event
 {
     self.titleLabel.text = event.title;
-    self.timeStartLabel.text = event.timeStart;
-    self.timeEndLabel.text = event.timeEnd;
+    
+    self.timeStartLabel.text = [self convertStringNoSecond:event.timeStart];
+    self.timeEndLabel.text = [self convertStringNoSecond:event.timeEnd];
+    
     self.LocalLabel.text = event.local;
     self.DetailLabel.text = event.detail;
     
@@ -114,7 +117,19 @@
     editButton.frame = CGRectMake(250, 65 + titleSize.height + localLabelSize.height + detailLabelSize.height, 60, 20);
     
 }
-
+-(NSString *)convertStringNoSecond:(NSString *)dateString{
+    NSDateFormatter *dfOld = [[[NSDateFormatter alloc] init]autorelease];
+    [dfOld setDateFormat:@"yyyy-MM-dd   HH:mm:ss"];
+    
+    NSDate *date=[dfOld  dateFromString:dateString];
+    
+    
+    
+    NSDateFormatter *dfNew = [[[NSDateFormatter alloc] init]autorelease];
+    [dfNew setDateFormat:@"yyyy-MM-dd   HH:mm"];
+    NSString *results = [dfNew stringFromDate:date];
+    return results;
+}
 
 - (void)DidClickToEditButton:(UIButton *)button
 {

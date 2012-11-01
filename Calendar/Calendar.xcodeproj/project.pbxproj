@@ -28,7 +28,6 @@
 		ABBDFE9F163F7BCA00C2451E /* BNEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBDFE93163F7BCA00C2451E /* BNEventCell.m */; };
 		ABBDFEA0163F7BCA00C2451E /* DatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBDFE95163F7BCA00C2451E /* DatePickerView.m */; };
 		ABBDFEA1163F7BCA00C2451E /* EventCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBDFE97163F7BCA00C2451E /* EventCellView.m */; };
-		ABBDFEB6163F7C2F00C2451E /* EventsList.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = ABBDFEAA163F7C2F00C2451E /* EventsList.sqlite */; };
 		ABBDFEB7163F7C2F00C2451E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ABBDFEAC163F7C2F00C2451E /* InfoPlist.strings */; };
 		ABBDFEB8163F7C2F00C2451E /* BNEventEditorController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABBDFEAF163F7C2F00C2451E /* BNEventEditorController.xib */; };
 		ABBDFEB9163F7C2F00C2451E /* BNEventListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABBDFEB0163F7C2F00C2451E /* BNEventListController.xib */; };
@@ -90,7 +89,6 @@
 		ABBDFE95163F7BCA00C2451E /* DatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerView.m; sourceTree = "<group>"; };
 		ABBDFE96163F7BCA00C2451E /* EventCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventCellView.h; sourceTree = "<group>"; };
 		ABBDFE97163F7BCA00C2451E /* EventCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventCellView.m; sourceTree = "<group>"; };
-		ABBDFEAA163F7C2F00C2451E /* EventsList.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = EventsList.sqlite; sourceTree = "<group>"; };
 		ABBDFEAD163F7C2F00C2451E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ABBDFEAF163F7C2F00C2451E /* BNEventEditorController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BNEventEditorController.xib; sourceTree = "<group>"; };
 		ABBDFEB0163F7C2F00C2451E /* BNEventListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BNEventListController.xib; sourceTree = "<group>"; };
@@ -237,7 +235,6 @@
 		ABBDFEA9163F7C2F00C2451E /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				ABBDFEAA163F7C2F00C2451E /* EventsList.sqlite */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -382,7 +379,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7AAA74C1636998E00B3574D /* Kal.bundle in Resources */,
-				ABBDFEB6163F7C2F00C2451E /* EventsList.sqlite in Resources */,
 				ABBDFEB7163F7C2F00C2451E /* InfoPlist.strings in Resources */,
 				ABBDFEB8163F7C2F00C2451E /* BNEventEditorController.xib in Resources */,
 				ABBDFEB9163F7C2F00C2451E /* BNEventListController.xib in Resources */,

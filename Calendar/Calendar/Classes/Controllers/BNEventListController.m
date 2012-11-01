@@ -69,7 +69,7 @@
     [headerView addSubview:barView];
     [self.view addSubview:headerView];
     [headerView release];
-    [self.navigationController setNavigationBarHidden:YES];
+    
     
     //add Toolbar 
     
@@ -80,6 +80,17 @@
     [addEventButton addTarget:self action:@selector(addEvent:) forControlEvents:UIControlEventTouchUpInside];
     [addEventButton setTitle:@"Add new event" forState:UIControlStateNormal];
     [self.view addSubview:addEventButton];
+    
+    UIView *footerView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 60)];
+    UILabel *label=[[UILabel alloc]initWithFrame:footerView.frame];
+    label.textColor= [UIColor colorWithPatternImage:[UIImage imageNamed:@"Kal.bundle/kal_header_text_fill.png"]];
+    [label setFont:[UIFont boldSystemFontOfSize:22]];
+    label.textAlignment=UITextAlignmentCenter;
+    label.text=@"No event ";
+    label.alpha=0.7;
+    [footerView addSubview:label];
+    _tableView.tableFooterView=footerView;
+    [_tableView reloadData];
     
 }
 
@@ -102,7 +113,17 @@
 
 - (NSInteger )tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"Event day count %d",eventDay.count);
+    
+    
+    
+    
+    if ([eventDay count]==0) {
+        [_tableView.tableFooterView setHidden:NO];
+    }
+    else{
+        [_tableView.tableFooterView setHidden:YES];
+    }
+    
     return [eventDay count];
 }
 
@@ -178,7 +199,7 @@
     BNEventEditorController *editView=[[BNEventEditorController alloc]initWithNibName:@"BNEventEditorController" bundle:nil];
     editView.delegate=self;
     [editView getEventInput:nil];
-    [self presentModalViewController:editView animated:YES];
+    [self.navigationController pushViewController:editView animated:YES];
 }
 
 #pragma mark - set content for Header

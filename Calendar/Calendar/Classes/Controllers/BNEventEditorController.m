@@ -253,35 +253,25 @@
     }
 }
 -(void)checkDataInput{
-    
-    
-    
     if (titletf.text.length==0) {
         [self showAlerView:@"Title" andSucces:NO];
     }
     else{
-        if (description.text.length==0) {
+        if ([description.text isEqualToString:@""]) {
             [self showAlerView:@"Description" andSucces:NO];
         }
         else{
-            
-            if ([startDatelb.text isEqualToString:endDatelb.text]||startDatelb.text.length==0||endDatelb.text.length==0) {
+            if ([eventEdited.timeStart isEqualToString: @""]|| [eventEdited.timeEnd isEqualToString:@""]) {
                 [self showAlerView:@"Date" andSucces:NO];
             }
             else{
-                
-                
                 [self saveData:EditType];
-            }
-            
-        }
-        
 
-                
-        
+            }
+    
+        }
     }
-    
-    
+
 }
 -(void)saveData:(int)type{
     eventEdited.title=titletf.text;
@@ -303,7 +293,7 @@
         }
         else{
             
-            NSLog(@"update event");
+            NSLog(@"update event with id %d",eventEdited.event_id);
             succes=[dataSqlite updateDatabase:eventEdited];
         }
     //show Alert
@@ -521,15 +511,7 @@
             default:
                 break;
         }
-        
-        
-        
-        
-        
     }
-    
-    // Configure the cell...
-    
     return cell;
 }
 
