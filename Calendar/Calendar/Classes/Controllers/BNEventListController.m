@@ -201,6 +201,7 @@
 -(IBAction)addEvent:(id)sender{
     BNEventEditorController *editView=[[BNEventEditorController alloc]initWithNibName:@"BNEventEditorController" bundle:nil];
     editView.delegate=self;
+    [editView getDateStart:dateEvent];
     [editView getEventInput:nil];
     [self.navigationController pushViewController:editView animated:YES];
 }
@@ -274,7 +275,7 @@
     titlelb.text = [self conVertDateToStringDate:dateEvent];
     dayLabel.text = [self conVertDateToStringDay:dateEvent];
     [self updateContentDate:nextDay];
-    [self.tableView reloadData];
+    
     NSLog(@"date event is = %@",dateEvent);
     
 }
@@ -289,7 +290,7 @@
     titlelb.text = [self conVertDateToStringDate:dateEvent];
     dayLabel.text = [self conVertDateToStringDay:dateEvent];
     [self updateContentDate:prevDay];
-    [self.tableView reloadData];
+    
     
 }
 

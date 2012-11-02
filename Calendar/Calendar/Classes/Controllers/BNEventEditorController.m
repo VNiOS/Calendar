@@ -41,12 +41,6 @@
     self.title=@" Event";
     repeatInt=0;
     repeatTimeInt=0;
-   
-    
-    
-    
-
-     
     
     UIView *headerView = [[[UIView alloc] initWithFrame:CGRectMake(0.f, 0, 320, 44)] autorelease];
     headerView.backgroundColor = [UIColor grayColor];
@@ -181,12 +175,14 @@
 }
 -(IBAction)back:(id)sender{
     NSLog(@"Back");
-    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Quitting " message:@"Are you sure ?" delegate:self cancelButtonTitle:@"Yes" otherButtonTitles:@"No", nil];
+    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Quit without save " message:@"Are you sure ?" delegate:self cancelButtonTitle:@"Yes" otherButtonTitles:@"No", nil];
     alert.tag=5;
     [alert show];
     
 }
 -(IBAction)closeTextField:(id)sender{
+    eventEdited.title=titletf.text;
+    eventEdited.local=location.text;
     [sender resignFirstResponder];
     [self.tableView1 reloadData];
 }
@@ -195,12 +191,10 @@
 {
     
     if ([text isEqualToString:@"\n"]) {
-        
-        [textView resignFirstResponder];
-        // Return FALSE so that the final '\n' character doesn't get added
-        return NO;
+         [textView resignFirstResponder];
+        eventEdited.detail=textView.text;
+          return NO;
     }
-    // For any other character return TRUE so that the text gets added to the view
     return YES;
 }
 
@@ -230,8 +224,6 @@
     }
     else{
         EditType=EventUpdate;
-        
-        
         eventEdited=event;
         
         NSLog(@"EditType : update");
@@ -246,15 +238,14 @@
         
         
         
-        
-        [titletf setText:event.title];
-        [location setText:event.local];
-        [startDatelb setText: event.timeStart];
-        [endDatelb setText: event.timeEnd];
-        [repeat setText:[NSString stringWithFormat:@"%d",event.repeat]];
-        [repeatTime setText:event.timeRepeat];
-        [description setText:event.detail];
-        [self.tableView1 reloadData];
+//         [titletf setText:event.title];
+//        [location setText:event.local];
+//        [startDatelb setText: event.timeStart];
+//        [endDatelb setText: event.timeEnd];
+//        [repeat setText:[NSString stringWithFormat:@"%d",event.repeat]];
+//        [repeatTime setText:event.timeRepeat];
+//        [description setText:event.detail];
+//        [self.tableView1 reloadData];
       
     }
 }
@@ -264,7 +255,8 @@
     return trimmedString.length;
 }
 -(void)checkDataInput{
-       
+    CGRect end=self.tableView1.tableFooterView.bounds;
+    [self.tableView1 scrollRectToVisible:end animated:YES];  
     
     
     if ([self strimTextLength:titletf.text]==0) {
@@ -274,29 +266,27 @@
         [self showAlerView:@"Title" andSucces:NO];
     }
     else{
-        
-        if ([self strimTextLength:description.text]==0) {
-            [self showAlerView:@"Description" andSucces:NO];
-        }
-        else{
+
             if ([self strimTextLength:startDatelb.text]==0||[self strimTextLength:endDatelb.text]==0) {
                 [self showAlerView:@"Date" andSucces:NO];
             }
             else{
                 [self saveData:EditType];
             }
-        }
+ 
     }
 
 }
 -(void)saveData:(int)type{
-    eventEdited.title=titletf.text;
-    eventEdited.local=location.text;
-    eventEdited.timeStart=startDatelb.text;
-    eventEdited.timeEnd=endDatelb.text;
-    eventEdited.repeat=repeatInt;
-    eventEdited.timeRepeat=repeatTime.text;
-    eventEdited.detail=description.text;
+   
+//    eventEdited.title=titletf.text;
+//    eventEdited.local=location.text;
+//    eventEdited.timeStart=startDatelb.text;
+//    eventEdited.timeEnd=endDatelb.text;
+//    eventEdited.repeat=repeatInt;
+//    eventEdited.timeRepeat=repeatTime.text;
+    
+    
     
      BOOL succes;
     NSString *action=[NSString stringWithFormat:@"Update "];
@@ -358,7 +348,6 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 
-    // Return the number of sections.
     return 6;
 }
 
@@ -465,8 +454,6 @@
 
                 [cell addSubview:label];
                 
-                
-                
                 repeat=[[UILabel alloc]initWithFrame:CGRectMake(150, 10, 200, 20)];
                 repeat.textColor=[UIColor blueColor];
                 repeat.backgroundColor=[UIColor clearColor];
@@ -519,6 +506,7 @@
                 description.backgroundColor=[UIColor clearColor];
                 description.textAlignment=UITextAlignmentLeft;
                 description.text=eventEdited.detail;
+                NSLog(@"set event detail %@ is %@",description.text,eventEdited.detail);
                 description.delegate=self;
                 [cell addSubview:description];
                 
@@ -531,44 +519,6 @@
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - Table view delegate
 
