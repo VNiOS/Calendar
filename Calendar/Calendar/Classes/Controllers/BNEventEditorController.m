@@ -167,6 +167,7 @@
     [repeat release];
     [repeatTime release];
     [location release];
+    [super dealloc];
 }
 #pragma mark -Action
 -(IBAction)done:(id)sender{

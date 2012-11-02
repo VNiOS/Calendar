@@ -33,16 +33,9 @@
 
 - (void)updateContentDate:(NSDate *)withdate
 {
-    NSDateFormatter *format=[[NSDateFormatter alloc]init];
-    [format setDateFormat:@"dd/MM/YYYY"];
-    NSString *stringdate=[format stringFromDate:withdate];
-    NSLog(@"String with date is = %@",stringdate);
-    
-    
     dateEvent=[withdate retain];
     EventDataSqlite *eventDataSqlite = [[EventDataSqlite alloc] init];
     eventDay = [[NSArray arrayWithArray:[eventDataSqlite EventListIntoDate:dateEvent]]retain];
-    
     [self.tableView reloadData];
 }
 
@@ -113,10 +106,6 @@
 
 - (NSInteger )tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    
-    
-    
-    
     if ([eventDay count]==0) {
         [_tableView.tableFooterView setHidden:NO];
     }
@@ -280,7 +269,6 @@
     
 }
 
-
 -(IBAction)eventPrevDay:(id)sender
 {
     [eventDay release];
@@ -290,10 +278,7 @@
     titlelb.text = [self conVertDateToStringDate:dateEvent];
     dayLabel.text = [self conVertDateToStringDay:dateEvent];
     [self updateContentDate:prevDay];
-    
-    
 }
-
 
 // function Convert Date to string format @"yyyy-MM-dd"
 -(NSString *)conVertDateToStringDate:(NSDate *)date1
@@ -323,7 +308,6 @@
     [eventDay release];
     [super dealloc];
 }
-
 
 @end
 
